@@ -106,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Cadastros_info\Cad_Locador.aspx" />
+    <Content Include="Cadastros_info\Cad_Locatario.aspx" />
+    <Content Include="Cadastros_info\TelaPrincipal.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -169,6 +172,27 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cadastros_info\Cad_Locador.aspx.cs">
+      <DependentUpon>Cad_Locador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros_info\Cad_Locador.aspx.designer.cs">
+      <DependentUpon>Cad_Locador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros_info\Cad_Locatario.aspx.cs">
+      <DependentUpon>Cad_Locatario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros_info\Cad_Locatario.aspx.designer.cs">
+      <DependentUpon>Cad_Locatario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros_info\TelaPrincipal.aspx.cs">
+      <DependentUpon>TelaPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros_info\TelaPrincipal.aspx.designer.cs">
+      <DependentUpon>TelaPrincipal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
