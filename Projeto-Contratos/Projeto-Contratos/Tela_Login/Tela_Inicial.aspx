@@ -47,15 +47,18 @@
 
         <div class="row">
             <div class="col-sm-4 text-center" style="padding: 50px">
-                <p style="font-size: 100px">Login</p>
+
+                <img src="../imgs/logoc.png" style="width: 400px; height: 200px" />
+
+                <p style="font-size: 70px; font-family:'Times New Roman', Times, serif">Login</p>
                 <br />
                 <br />
                 <br />
 
                 <div class="row text-left">
                     <div class="col-sm-3"></div>
-                    <div class="col-sm-5">
-                        <h style="font-size: 15px">Username</h>
+                    <div class="col-sm-6">
+                        <h style="font-size: 15px; font-family:'Times New Roman', Times, serif"">Usuário</h>
                         <asp:TextBox runat="server" ID="TextBox1" Width="200"></asp:TextBox>
                     </div>
                     <div class="col-sm-3"></div>
@@ -65,17 +68,26 @@
                 <br />
                 <br />
                 <br />
-                <br />
-                <br />
                 <div class="row text-left">
                     <div class="col-sm-3"></div>
-                    <div class="col-sm-5">
-                        <h style="font-size: 15px">Password
-                        </h>
+                    <div class="col-sm-6">
+                        <h style="font-size: 15px; font-family:'Times New Roman', Times, serif"">Senha</h>
                         <asp:TextBox runat="server" ID="txt_Senha" Width="200"></asp:TextBox>
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
+                <br />
+                <br />
+                <br />
+
+                <div class="row text-left">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <asp:Button runat="server" Text="Entrar" Font-Size="20px" Width="80" />
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
 
             </div>
 
