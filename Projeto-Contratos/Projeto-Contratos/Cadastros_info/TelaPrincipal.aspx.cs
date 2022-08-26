@@ -13,5 +13,20 @@ namespace Projeto_Contratos.Cadastros_info
         {
 
         }
+
+        protected void btnLocador_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cad_Locador.aspx");
+        }
+
+        protected void btnLocatario_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cad_Locatario.aspx");
+        }
+
+        protected void btnImovel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cad_Imovel.aspx"); 
+        }
     }
 }

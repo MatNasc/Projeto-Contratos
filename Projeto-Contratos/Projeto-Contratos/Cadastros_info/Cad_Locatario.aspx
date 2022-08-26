@@ -1,6 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cad_Locatario.aspx.cs" Inherits="Projeto_Contratos.Cadastros_info.Cad_Locatario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1 class="text-center"; style="font-family:'Times New Roman'; font-size:70px">Cadastro de Locatário</h1>
+    <!--<style>
+        body{
+            background-image:url(/imgteste/1.jpg);
+            background-repeat:no-repeat;
+            background-size:1600px 900px;
+        }
+    </style> -->
     <div class="container">
         <div class="jumbotron">
             <div class="row">
@@ -45,5 +52,6 @@
         <div class="text-center">
             <!-- Botão de cadastro, centralizado dentro do container -->
             <asp:Button runat="server" ID="btnCadastrarLT" Text="Cadastrar" CssClass="btn btn-primary" />
+    </div>
     </div>
 </asp:Content>
