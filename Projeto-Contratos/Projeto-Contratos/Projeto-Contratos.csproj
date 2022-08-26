@@ -246,8 +246,10 @@
       <DependentUpon>Tela_Inicial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    
     <Compile Include="Tela_Login\Tela_Inicial.aspx.designer.cs">
       <DependentUpon>Tela_Inicial.aspx</DependentUpon>
+    </Compile>
 
     <Compile Include="TelaBusca\TelaBuscaContrato.aspx.cs">
       <DependentUpon>TelaBuscaContrato.aspx</DependentUpon>
