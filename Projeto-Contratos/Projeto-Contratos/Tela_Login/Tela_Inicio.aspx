@@ -3,15 +3,16 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-        <style>
+    <style>
         body {
-            background-image: url(/imgs/011.jpg);
+            background-image: url(/imgs/backcolor.jpg);
             background-repeat: no-repeat;
             background-size: 1600px 900px;
         }
@@ -24,6 +25,7 @@
 </head>
 
 <body>
+
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -45,7 +47,15 @@
         </asp:ScriptManager>
     </form>
 
-    
+    <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+    </div>
 
 </body>
 </html>
