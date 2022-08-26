@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cad_Locador.aspx.cs" Inherits="Projeto_Contratos.Cadastros_info.Cad_Locador" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<h1 class="text-center"; style="font-family:'Times New Roman'; font-size:70px">Cadastro de Locador</h1>
+    <h1 class="text-center"; style="font-family:'Times New Roman'; font-size:70px">Cadastro de Locador</h1>
     <div class="container">
         <!--Os campos para inserção dos dados ficam todos organizados dentro de um "Jumbotron" -->
         <div class="jumbotron">
@@ -11,9 +12,9 @@
                     separatória, onde mais a frente é alocado o botão de cadastro, e a última contém os campos para os dados de
                     endereço fixo do locador (Cidade, Bairro, Numero e Rua)-->
                 <div class="col-sm-5">
-                       <!-- Para fins de organização do espaço, a coluna para dados básicos pessoais, foi dividida em duas outras colunas
+                    <!-- Para fins de organização do espaço, a coluna para dados básicos pessoais, foi dividida em duas outras colunas
                             de valor 6 cada uma. No lado esquerdo, ficaram os campos para "Nome", "Profissão" e um DropdownList com as opções
-                            de "estado civíl".--> 
+                            de "estado civíl".-->
                     <div class="col-sm-6">
                         <!-- Campos para inserção de "Nome" e "Profissão" -->
                         <asp:Label runat="server" ID="lblNome" Text="Nome:"></asp:Label>
@@ -46,7 +47,7 @@
                         <asp:Label runat="server" ID="lblRG" Text="RG:"></asp:Label>
                         <br />
                         <asp:TextBox runat="server" ID="txtRG" placeholder="Digite seu RG"></asp:TextBox>
-                    </div>                              
+                    </div>
                 </div>
                 <!-- Coluna do meio -->
                 <div class="col-sm-2 text-center">

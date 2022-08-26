@@ -25,9 +25,20 @@ namespace Projeto_Contratos.TelaBusca
             DataTable tabela = new DataTable();
 
             tabela.Columns.Add("nome");
+            tabela.Columns.Add("profissao");
+            tabela.Columns.Add("estadocivil");
+            tabela.Columns.Add("cpf");
+            tabela.Columns.Add("rg");
+            tabela.Columns.Add("rua");
+            tabela.Columns.Add("numero");
+            tabela.Columns.Add("bairro");
+            tabela.Columns.Add("cidade");
+
+
             var linha = tabela.NewRow();
-            linha["nome"] = "Thalles";
+            linha["nome"] = "Thalles";            
             tabela.Rows.Add(linha);
+
             grdClientes.DataSource = tabela;
             grdClientes.DataBind();
         }
