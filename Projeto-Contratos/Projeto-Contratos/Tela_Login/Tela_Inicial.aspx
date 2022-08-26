@@ -4,10 +4,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-    <head runat="server">
+<head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-   
+
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <!-- Latest compiled and minified CSS -->
@@ -45,13 +45,40 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="row">            
-            <div class="col-sm-4 p-5 text-center">            
-                    <h2>Login</h2>
-                    <br />
-                    <asp:TextBox runat="server"></asp:TextBox>
+        <div class="row">
+            <div class="col-sm-4 text-center" style="padding: 50px">
+                <p style="font-size: 100px">Login</p>
+                <br />
+                <br />
+                <br />
+
+                <div class="row text-left">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-5">
+                        <h style="font-size: 15px">Username</h>
+                        <asp:TextBox runat="server" ID="TextBox1" Width="200"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
                 </div>
-            
+
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="row text-left">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-5">
+                        <h style="font-size: 15px">Password
+                        </h>
+                        <asp:TextBox runat="server" ID="txt_Senha" Width="200"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+            </div>
+
             <div class="col-sm-8 bg-black">
                 <img src="../imgs/backcolor.jpg" />
             </div>
