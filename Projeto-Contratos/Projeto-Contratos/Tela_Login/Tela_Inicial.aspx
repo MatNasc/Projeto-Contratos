@@ -92,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-8 bg-black">
+            <div class="col-sm-8">
                 <img src="../imgs/backcolor.jpg" />
             </div>
         </div>
