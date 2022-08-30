@@ -1,0 +1,9 @@
+
+INSERT INTO usuario (usuario, senha) VALUES( 'admin', 'admin');
+
+INSERT INTO locatario (nome, cpf, rg, estado_civil) VALUES ( 'Mateus', '56644232000', '10.063.999-9', 'casado');
+
+INSERT INTO locador (nome, cpf, rg, estado_civil, endereco) VALUES ('Jhonatan', '63360308069', ' 43.442.167-4', 'casado', 'Rua Afonso Pena,10, Sagrado Coração de Jesus, Lages, SC');
+
+INSERT INTO imovel (id_locador, rua, numero, bairro, cidade, n_agua, n_luz) VALUES (0, 'Quadra SQS 411 Bloco F', 10, 'Asa Sul', 'Brasília', 
+1001, 1002);
