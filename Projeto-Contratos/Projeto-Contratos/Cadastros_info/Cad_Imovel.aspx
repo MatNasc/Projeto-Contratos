@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cad_Imovel.aspx.cs" Inherits="Projeto_Contratos.Cadastros_info.Cad_Imovel" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
+     <div style="padding:50px"></div>
     <h1 class="text-center"; style="font-family:'Times New Roman'; font-size:60px">Cadastro de Imóvel</h1>
     <div class="container">
         <div class="jumbotron">
