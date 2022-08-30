@@ -4,7 +4,7 @@
 
     <style>
         body {
-            background-image: url("../imgs/backcolor.jpg");
+            background-image: url(../imgs/backcolor.jpg);
         }
 
         .jumbotron {
