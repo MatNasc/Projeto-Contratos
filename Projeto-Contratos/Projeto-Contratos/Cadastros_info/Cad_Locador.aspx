@@ -23,7 +23,7 @@
                         <br />
                         <asp:Label runat="server" ID="lbl" Text="Profissão:"></asp:Label>
                         <br />
-                        <asp:TextBox runat="server" ID="TextBox1" placeholder="Digite sua Profissão"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txtProfissão" placeholder="Digite sua Profissão"></asp:TextBox>
                         <br />
                         <br />
                         <!-- DropdownList para "Estado Civíl" -->
@@ -88,7 +88,7 @@
         </div>
         <div class="text-center">
             <!-- Botão de cadastro, centralizado dentro da segunda coluna principal -->
-            <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" CssClass="btn btn-primary" />
+            <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" OnClick="btnCadastrar_Click" CssClass="btn btn-primary" />
         </div>
     </div>
 </asp:Content>
