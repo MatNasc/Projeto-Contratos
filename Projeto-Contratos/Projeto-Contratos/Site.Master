@@ -55,7 +55,7 @@
                         <li><a runat="server" href="~/Cadastros_info/TelaPrincipal">Cadastro de informações</a></li>
                         <!--<li><a runat="server" href="~/About">Sobre</a></li>-->
                         <!--<li><a runat="server" href="~/Contact">Contato</a></li>-->
-                          <li><a runat="server" href="~/TelaBusca/TelaBuscaContrato">Tela de Contrato</a></li>
+                          <li><a runat="server" href="~/TelaBusca/TeladeBusca1">Busca de informações</a></li>
                     </ul>
                 </div>
             </div>
