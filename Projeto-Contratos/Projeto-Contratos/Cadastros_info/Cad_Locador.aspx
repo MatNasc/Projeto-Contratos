@@ -21,19 +21,19 @@
                         <asp:TextBox runat="server" ID="txtNome" placeholder="Digite seu Nome"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:Label runat="server" ID="lbl" Text="Profissão:"></asp:Label>
+                        <asp:Label runat="server" ID="lblProfissao" Text="Profissão:"></asp:Label>
                         <br />
-                        <asp:TextBox runat="server" ID="TextBox1" placeholder="Digite sua Profissão"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txtProfissao" placeholder="Digite sua Profissão"></asp:TextBox>
                         <br />
                         <br />
                         <!-- DropdownList para "Estado Civíl" -->
                         <asp:Label runat="server" ID="lblEC" Text="Estado Civíl: "></asp:Label>
                         <asp:DropDownList ID="DropList" AutoPostBack="true" runat="Server">
-                            <asp:ListItem Text="Solteiro" Value="1" />
-                            <asp:ListItem Text="Casado" Value="2" />
-                            <asp:ListItem Text="Divorciado" Value="3" />
-                            <asp:ListItem Text="Separado" Value="4" />
-                            <asp:ListItem Text="Viúvo" Value="5" />
+                            <asp:ListItem Text="Solteiro" Value="Solteiro" />
+                            <asp:ListItem Text="Casado" Value="Casado" />
+                            <asp:ListItem Text="Divorciado" Value="Divorciado" />
+                            <asp:ListItem Text="Separado" Value="Separado" />
+                            <asp:ListItem Text="Viúvo" Value="Viúvo" />
                         </asp:DropDownList>
                     </div>
                     <!-- Do lado direito, ficaram os campos para inserção de documentos -->
@@ -88,7 +88,7 @@
         </div>
         <div class="text-center">
             <!-- Botão de cadastro, centralizado dentro da segunda coluna principal -->
-            <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" CssClass="btn btn-primary" />
+            <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" OnClick="btnCadastrar_Click" CssClass="btn btn-primary" />
         </div>
     </div>
 </asp:Content>
