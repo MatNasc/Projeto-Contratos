@@ -55,7 +55,7 @@
     padding: 15px 25px;
     font-size: 24px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to right, rgb(204, 108, 207) , rgba(76, 8, 94, 0.301));
+    background-image: linear-gradient(to right, rgb(204, 108, 207), rgba(76, 8, 94, 0.301));
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -67,7 +67,7 @@
     background-color: #2e1f68;
     border: none;
     border-radius: 15px;
-  }
+}
 
   .button:hover {
     background-color: rgb(53, 53, 53)
