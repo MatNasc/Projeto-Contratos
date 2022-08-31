@@ -25,19 +25,19 @@
                                 <asp:TextBox runat="server" ID="txtNome" placeholder="Digite seu Nome" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                                 <br />
                                 <br />
-                                <asp:Label runat="server" ID="lbl" Text="Profissão:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                                <asp:Label runat="server" ID="lblProfissao" Text="Profissão:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                                 <br />
-                                <asp:TextBox runat="server" ID="TextBox1" placeholder="Digite sua Profissão" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                                <asp:TextBox runat="server" ID="txtProfissao" placeholder="Digite sua Profissão" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                                 <br />
                                 <br />
                                 <!-- DropdownList para "Estado Civíl" -->
                                 <asp:Label runat="server" ID="lblEC" Text="Estado Civíl: " Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                                 <asp:DropDownList ID="DropList" AutoPostBack="true" runat="Server">
-                                    <asp:ListItem Text="Solteiro" Value="1" />
-                                    <asp:ListItem Text="Casado" Value="2" />
-                                    <asp:ListItem Text="Divorciado" Value="3" />
-                                    <asp:ListItem Text="Separado" Value="4" />
-                                    <asp:ListItem Text="Viúvo" Value="5" />
+                                    <asp:ListItem Text="Solteiro" Value="Solteiro" />
+                                    <asp:ListItem Text="Casado" Value="Casado" />
+                                    <asp:ListItem Text="Divorciado" Value="Divorciado" />
+                                    <asp:ListItem Text="Separado" Value="Separado" />
+                                    <asp:ListItem Text="Viúvo" Value="Viúvo" />
                                 </asp:DropDownList>
                             </div>
                             <!-- Coluna para dar um espaçamento entre as "TextBox" -->
@@ -94,11 +94,12 @@
                             </div>
                         </div>
                         <div class="col-sm-1"></div>
+
                     </div>
                 </div>
                 <div class="text-center">
                     <!-- Botão de cadastro, centralizado dentro da segunda coluna principal -->
-                    <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" CssClass="button" />
+                    <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" OnClick="btnCadastrar_Click" CssClass="button" />
                 </div>
             </div>
 </asp:Content>
