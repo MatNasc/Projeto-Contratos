@@ -31,6 +31,15 @@ namespace Projeto_Contratos.TelaBusca {
         protected global::System.Web.UI.WebControls.Button btnBusca;
         
         /// <summary>
+        /// Controle DropListLL.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropListLL;
+        
+        /// <summary>
         /// Controle grdClientes.
         /// </summary>
         /// <remarks>

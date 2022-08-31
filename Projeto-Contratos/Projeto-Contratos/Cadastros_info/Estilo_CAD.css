@@ -1,0 +1,119 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/**********INICIO DAS ALTERAÇÕES DO ESCOPO**********/
+body {
+    padding: 50px;
+    background-image: url(/imgs/backcolor-desf.png);
+}
+/***********FINAL DAS ALTERAÇÕES DO ESCOPO**********/
+
+/**********INICIO DA DECLARAÇÃO DE CLASSES **********/
+
+/*****CONTAINERS*****/
+.container-principal{
+    display: grid;
+    height: 100vh;    
+    grid-template-rows: 1fr 10fr 1fr;
+}
+
+.main-content{
+    display:grid;
+    grid-template-columns: 10fr 1fr 10fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "cont-1 cont-2 cont-3";
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 75vh;
+}
+/*****FIM DOS CONTAINERS*****/
+
+/*****CAIXAS DIVISÓRIAS*****/
+.content-box{
+    background-color: rgba(0, 0, 0,0.5);
+    height: 500px;
+    /**margin-top: 90px;
+    margin-left: 250px;
+    margin-right: 250px;**/
+    border: 1px solid #BFBFBF;
+    box-shadow: 10px 10px 20px #030303;
+    border-radius: 20px;
+}
+
+/*****FIM DASCAIXAS DIVISÓRIAS*****/
+
+/*****INICIO DOS ESTILOS DE TEXTO *****/
+.box-title{
+    color:aliceblue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:30px;
+    text-align: center;
+   /* margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;*/
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right, rgb(204, 108, 207) , rgba(76, 8, 94, 0.301));
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-block-start: 200px;
+    margin-left: 120px;
+    height: 100px;
+    outline: none;
+    color: #fff;
+    background-color: #2e1f68;
+    border: none;
+    border-radius: 15px;
+  }
+
+  .button:hover {
+    background-color: rgb(53, 53, 53)
+}
+
+.button:active {
+  background-color: #2e1f68;
+  box-shadow: 0 5px 5px rgb(56, 55, 55);
+  transform: translateY(4px);
+}
+/*****FIM DOS ESTILOS DE TEXTO*****/
+/**********FINAL DA DECLARAÇÃO DE CLASSES **********/
+
+
+/**********DISTRIBUIÇÃO DE DIVS**********/
+/*CONTAINER PRINCIPAL
+#nav{
+    background-color: rgb(44, 42, 42);
+}
+
+#footer{
+    background-color: rgb(44, 42, 42);
+}*/
+
+/*CONTAINER DE CONTENT*/
+#cont-1{
+    grid-area: cont-1;
+    background-color:lightblue;
+}
+
+#cont-2{
+    grid-area:cont-2;
+    background-color:lightcoral;
+}
+
+#cont-3{
+    grid-area: cont-3;
+    background-color:lightgoldenrodyellow;
+}
+
+/**********FINAL DA DISTRIBUIÇÃO DE DIVS**********/

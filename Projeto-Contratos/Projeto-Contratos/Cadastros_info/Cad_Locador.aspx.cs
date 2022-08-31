@@ -36,5 +36,6 @@ namespace Projeto_Contratos.Cadastros_info
             SiteMaster.ExibirAlert(this, " Locador cadastrado com sucesso!");
             txtNome.Text = "";
         }
+
     }
 }
