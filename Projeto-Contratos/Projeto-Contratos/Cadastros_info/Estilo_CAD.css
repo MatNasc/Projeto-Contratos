@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -36,9 +37,9 @@ body {
 .content-box{
     background-color: rgba(0, 0, 0,0.5);
     height: 500px;
-    margin-top: 90px;
+    /**margin-top: 90px;
     margin-left: 250px;
-    margin-right: 250px;
+    margin-right: 250px;**/
     border: 1px solid #BFBFBF;
     box-shadow: 10px 10px 20px #030303;
     border-radius: 20px;
@@ -54,7 +55,7 @@ body {
     text-align: center;
    /* margin-top: 50px;
     margin-left: 25px;
-    margin-right: 25px;
+    margin-right: 25px;*/
 }
 
 .button {
@@ -97,19 +98,22 @@ body {
 
 #footer{
     background-color: rgb(44, 42, 42);
-}
+}*/
 
-/*CONTAINER DE CONTENT
+/*CONTAINER DE CONTENT*/
 #cont-1{
     grid-area: cont-1;
-}
-
-#cont-3{
-    grid-area:cont-2
+    background-color:lightblue;
 }
 
 #cont-2{
+    grid-area:cont-2;
+    background-color:lightcoral;
+}
+
+#cont-3{
     grid-area: cont-3;
+    background-color:lightgoldenrodyellow;
 }
 
 /**********FINAL DA DISTRIBUIÇÃO DE DIVS**********/
