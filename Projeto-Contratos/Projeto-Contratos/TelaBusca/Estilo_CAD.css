@@ -20,11 +20,11 @@ body {
     grid-template-rows: 1fr 10fr 1fr;
 }
 
-.main-content{
-    display:grid;
-    grid-template-columns: 10fr 1fr 10fr;
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "cont-1 cont-2 cont-3";
+    grid-template-areas: "cont-1 cont-2 cont-3 cont-4 cont-5";
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 50px;
@@ -37,8 +37,8 @@ body {
 .content-box{
     background-color: rgba(0, 0, 0,0.5);
     height: 500px;
-    /**margin-top: 90px;
-    margin-left: 250px;
+    margin-top: 90px;
+    /**margin-left: 250px;
     margin-right: 250px;**/
     border: 1px solid #BFBFBF;
     box-shadow: 10px 10px 20px #030303;
@@ -67,7 +67,7 @@ body {
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    margin-block-start: 200px;
+    /*margin-block-start: 100px;*/
     margin-left: 120px;
     height: 100px;
     outline: none;
@@ -86,6 +86,15 @@ body {
   box-shadow: 0 5px 5px rgb(56, 55, 55);
   transform: translateY(4px);
 }
+
+.txt-box{
+    width:25%;
+    padding: 20px 20px;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius:20px;
+    box-sizing: border-box;
+}
 /*****FIM DOS ESTILOS DE TEXTO*****/
 /**********FINAL DA DECLARAÇÃO DE CLASSES **********/
 
@@ -103,17 +112,27 @@ body {
 /*CONTAINER DE CONTENT*/
 #cont-1{
     grid-area: cont-1;
-    background-color:lightblue;
+
 }
 
 #cont-2{
     grid-area:cont-2;
-    background-color:lightcoral;
+
 }
 
 #cont-3{
     grid-area: cont-3;
-    background-color:lightgoldenrodyellow;
+
+}
+
+#cont-4 {
+    grid-area: cont-4;
+
+}
+
+#cont-5 {
+    grid-area: cont-5;
+
 }
 
 /**********FINAL DA DISTRIBUIÇÃO DE DIVS**********/
