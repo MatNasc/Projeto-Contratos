@@ -59,6 +59,8 @@
                 <asp:Button runat="server" ID="btnCadastrar_IM" Text="Cadastrar" CssClass="buttonT" />
             </div>
         </div>
-
+        <div class="text-center">
+            <asp:Button runat="server" ID="btnCadastrar_IM" Text="Cadastrar" Onclick="btnCadastrar_IM_Click" CssClass="btn btn-primary" />
+        </div>
     </div>
 </asp:Content>
