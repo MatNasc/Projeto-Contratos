@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -36,9 +37,9 @@ body {
 .content-box{
     background-color: rgba(0, 0, 0,0.5);
     height: 500px;
-    margin-top: 90px;
+    /**margin-top: 90px;
     margin-left: 250px;
-    margin-right: 250px;
+    margin-right: 250px;**/
     border: 1px solid #BFBFBF;
     box-shadow: 10px 10px 20px #030303;
     border-radius: 20px;
@@ -54,46 +55,27 @@ body {
     text-align: center;
    /* margin-top: 50px;
     margin-left: 25px;
-    margin-right: 25px;
+    margin-right: 25px;*/
 }
 
-.button{
+.button {
     display: inline-block;
-    padding: 10px;
+    padding: 15px 25px;
     font-size: 24px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to right, rgb(204, 108, 207), rgba(76, 8, 94, 0.301));
+    background-image: linear-gradient(to right, rgb(204, 108, 207) , rgba(76, 8, 94, 0.301));
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    margin-top: 50px;
-    height: 70px;
+    margin-block-start: 200px;
+    margin-left: 120px;
+    height: 100px;
     outline: none;
     color: #fff;
     background-color: #2e1f68;
     border: none;
     border-radius: 15px;
-}
-
-
-.buttonT {
-    display: inline-block;
-    padding: 10px;
-    font-size: 24px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to right, rgb(204, 108, 207), rgba(76, 8, 94, 0.301));
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 50px;
-    height: 70px;
-    outline: none;
-    color: #fff;
-    background-color: #2e1f68;
-    border: none;
-    border-radius: 15px;
-}
-
+  }
 
   .button:hover {
     background-color: rgb(53, 53, 53)
@@ -116,19 +98,22 @@ body {
 
 #footer{
     background-color: rgb(44, 42, 42);
-}
+}*/
 
-/*CONTAINER DE CONTENT
+/*CONTAINER DE CONTENT*/
 #cont-1{
     grid-area: cont-1;
-}
-
-#cont-3{
-    grid-area:cont-2
+    background-color:lightblue;
 }
 
 #cont-2{
+    grid-area:cont-2;
+    background-color:lightcoral;
+}
+
+#cont-3{
     grid-area: cont-3;
+    background-color:lightgoldenrodyellow;
 }
 
 /**********FINAL DA DISTRIBUIÇÃO DE DIVS**********/
