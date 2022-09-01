@@ -57,24 +57,43 @@ body {
     margin-right: 25px;
 }
 
-.button {
+.button{
     display: inline-block;
-    padding: 15px 25px;
+    padding: 10px;
     font-size: 24px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-image: linear-gradient(to right, rgb(204, 108, 207), rgba(76, 8, 94, 0.301));
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    margin-block-start: 200px;
-    margin-left: 120px;
-    height: 100px;
+    margin-top: 50px;
+    height: 70px;
     outline: none;
     color: #fff;
     background-color: #2e1f68;
     border: none;
     border-radius: 15px;
 }
+
+
+.buttonT {
+    display: inline-block;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right, rgb(204, 108, 207), rgba(76, 8, 94, 0.301));
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 50px;
+    height: 70px;
+    outline: none;
+    color: #fff;
+    background-color: #2e1f68;
+    border: none;
+    border-radius: 15px;
+}
+
 
   .button:hover {
     background-color: rgb(53, 53, 53)
