@@ -13,7 +13,7 @@ namespace Projeto_Contratos.Negócio
 
         private MySqlConnection connection;
 
-        public void usuario()
+        public Usuario()
         {
 
             connection = new MySqlConnection(SiteMaster.ConnectionString);
@@ -37,6 +37,10 @@ namespace Projeto_Contratos.Negócio
                     user.ID = reader.GetInt32("id");
                     user.User = reader.GetString("usuario");
                    
+                }
+                else
+                {
+                    user = null;
                 }
 
             }

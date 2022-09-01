@@ -27,7 +27,7 @@ namespace Projeto_Contratos.Tela_Login
             }
             else
             {
-               
+                SiteMaster.ExibirAlert(this, "Usuário e/ou senhas incorretos");
             }
 
            
