@@ -63,7 +63,6 @@
         <div class="container-fluid">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
             <footer>
                 <!--<p>&copy; <%: DateTime.Now.Year %> - Consultoria e Administrção</p>-->
             </footer>
