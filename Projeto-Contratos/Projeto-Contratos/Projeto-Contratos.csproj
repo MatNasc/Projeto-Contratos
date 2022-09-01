@@ -132,6 +132,7 @@
     <Content Include="Cadastros_info\Cad_Imovel.aspx" />
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
+    <Content Include="TelaBusca\Estilo_CAD.css" />
     <Content Include="Cadastros_info\TelaPrincipal.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
