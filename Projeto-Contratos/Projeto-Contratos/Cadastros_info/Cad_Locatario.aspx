@@ -23,11 +23,11 @@
                     <br />
                     <asp:Label runat="server" ID="lbl_LTEC" Text="Estado Civíl: " Style="font-size: 18px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                     <asp:DropDownList ID="DropList" AutoPostBack="true" CssClass="" runat="Server">
-                        <asp:ListItem Text="Solteiro" Value="1" />
-                        <asp:ListItem Text="Casado" Value="2" />
-                        <asp:ListItem Text="Divorciado" Value="3" />
-                        <asp:ListItem Text="Separado" Value="4" />
-                        <asp:ListItem Text="Viúvo" Value="5" />
+                        <asp:ListItem Text="Solteiro" Value="Solteiro" />
+                        <asp:ListItem Text="Casado" Value="Casado" />
+                        <asp:ListItem Text="Divorciado" Value="Divorciado" />
+                        <asp:ListItem Text="Separado" Value="Separado" />
+                        <asp:ListItem Text="Viúvo" Value="Viúvo" />
                     </asp:DropDownList>
                 </div>
 
@@ -49,7 +49,7 @@
             </div>
             <div class="text-center">
                 <!-- Botão de cadastro, centralizado dentro do container -->
-                <asp:Button runat="server" ID="btnCadastrarLT" Text="Cadastrar" class="button" />
+                <asp:Button runat="server" ID="btnCadastrarLT" Text="Cadastrar" Onclick="btnCadastrarLT_Click" class="button" />
             </div>
         </div>
     </div>
