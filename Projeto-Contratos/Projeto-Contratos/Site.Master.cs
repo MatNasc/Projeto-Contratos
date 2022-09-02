@@ -10,7 +10,8 @@ namespace Projeto_Contratos
     public partial class SiteMaster : MasterPage
     {
 
-        public static string ConnectionString = "Server=127.0.0.1;User ID=root;Password=;Database=imobiliaria";
+        public static string ConnectionString = "Server=127.0.0.1;User ID=root;Password=root;Database=imobiliaria";
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -24,5 +25,16 @@ namespace Projeto_Contratos
                  "<script language='javascript'>alert('" + mensagem + "');</script>"
               );
         }
+
+
+        public static void ExibirAlert(Page page, string mensagem, string pagina)
+        {
+            page.ClientScript.RegisterStartupScript(
+                 page.GetType(),
+                 "MessageBox" + Guid.NewGuid(),
+                 "<script language='javascript'>alert('" + mensagem + "');window.location = '" + pagina + "';</script>"
+              );
+        }
+
     }
 }
