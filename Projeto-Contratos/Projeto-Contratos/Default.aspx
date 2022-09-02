@@ -17,7 +17,7 @@
                     <asp:Button runat="server" ID="btnbuscaC" OnClick="btnbuscaC_Click" CssClass="button" style="margin-top:170px; margin-left:80px" Text="Buscar" />
                 </div>
             </div>
-            <div id="cont-3">
+            <div id="central">
                 <div id="box-3" class="content-box" style="margin-left:10px; margin-right:10px;">
                     <h1 class="box-title">Cadastro de Locadores</h1>
                     <asp:Button runat="server" ID="btnCADld" OnClick="btnCADld_Click" CssClass="button" style="margin-top:170px; margin-left:80px" Text="Buscar" />

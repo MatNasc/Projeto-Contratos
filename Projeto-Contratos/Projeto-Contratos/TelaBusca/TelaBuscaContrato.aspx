@@ -13,17 +13,13 @@
                 <br />
                 <asp:GridView CssClass="table" runat="server" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;" ID="grd_Contratos" Width="100%" OnRowCommand="grd_Contratos_RowCommand" AutoGenerateColumns="false" PageSize="20">
                     <Columns>
-
                         <asp:BoundField DataField="Locatario" HeaderText="Locatario" />
                         <asp:BoundField DataField="Locador" HeaderText="Locador" />
-
                         <asp:BoundField DataField="Código do Imóvel" HeaderText="Código do Imóvel" />
                         <asp:BoundField DataField="Nº do Contrato" HeaderText="Nº do Contrato" />
                         <asp:BoundField DataField="Data de Inicio" HeaderText="Data de Inicio" />
                         <asp:BoundField DataField="Data de Termino" HeaderText="Data de Termino" />
-
-                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="editar" Text="Editar" />
-                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-danger" CommandName="excluir" Text="Excluir" />
+                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="Visualizar" Text="Visualizar" />
                     </Columns>
                 </asp:GridView>
             </div>

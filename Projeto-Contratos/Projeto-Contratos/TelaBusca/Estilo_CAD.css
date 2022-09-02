@@ -24,7 +24,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "cont-1 cont-2 cont-3 cont-4 cont-5";
+    grid-template-areas: "cont-1 cont-2 central cont-4 cont-5";
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 50px;
@@ -121,7 +121,7 @@ body {
 }
 
 #cont-3{
-    grid-area: cont-3;
+    grid-area: central;
 
 }
 
