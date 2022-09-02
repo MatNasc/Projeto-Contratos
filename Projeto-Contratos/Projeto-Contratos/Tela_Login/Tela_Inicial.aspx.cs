@@ -23,7 +23,7 @@ namespace Projeto_Contratos.Tela_Login
             {
                 Session["user"] = user;
                 SiteMaster.ExibirAlert(this,"Usuário logado");
-                //Response.Redirect("");
+                Response.Redirect("../Default.aspx");
             }
             else
             {

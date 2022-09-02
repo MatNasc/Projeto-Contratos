@@ -10,7 +10,7 @@
                 <asp:TextBox runat="server" ID="txtBusca" placeholder="Digite um Nome" style="border-radius:10px; border:1px solid #ccc;width:25%; height:40px; padding:20px 20px; display:inline-block; margin-top:50px; margin-left:36%; font-size:16px"></asp:TextBox>
                 <asp:Button runat="server" ID="btnBusca" OnClick="btnBusca_Click" class="button" Style="margin-left: 20px; height: 65px;" Text="Procurar" />
                 <br />
-                <asp:RadioButton ID="RadioButton" Text="Locador" Checked="false" runat="server" GroupName="Pesquisa" style="margin-left:36%" />
+                <asp:RadioButton ID="RadioButton" Text="Locador" Checked="false" runat="server" GroupName="Pesquisa" style="margin-left:36%;" />
                 <asp:RadioButton ID="RadioButton2" Text="Locatário" Checked="false" runat="server" GroupName="Pesquisa" style="margin-left:10%;" />
                 <br />
                 <br />
