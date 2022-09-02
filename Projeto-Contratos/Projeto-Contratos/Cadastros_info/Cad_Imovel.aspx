@@ -54,13 +54,9 @@
                 <br />
                 <asp:TextBox runat="server" ID="txtLuz" placeholder="Insira o Número de sua conta de luz" Width="250px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
             </div>
-
-            <div class="text-center">
-                <asp:Button runat="server" ID="btnCadastrar_IM" Text="Cadastrar" CssClass="buttonT" />
-            </div>
         </div>
         <div class="text-center">
-            <asp:Button runat="server" ID="btnCadastrar_IM" Text="Cadastrar" Onclick="btnCadastrar_IM_Click" CssClass="btn btn-primary" />
+            <asp:Button runat="server" ID="btnCadastrar_IM" Text="Cadastrar" Onclick="btnCadastrar_IM_Click"  CssClass="buttonT" />
         </div>
     </div>
 </asp:Content>
