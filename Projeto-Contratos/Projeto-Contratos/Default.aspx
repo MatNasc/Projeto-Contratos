@@ -20,19 +20,19 @@
             <div id="central">
                 <div id="box-3" class="content-box" style="margin-left:10px; margin-right:10px;">
                     <h1 class="box-title">Cadastro de Locadores</h1>
-                    <asp:Button runat="server" ID="btnCADld" OnClick="btnCADld_Click" CssClass="button" style="margin-top:170px; margin-left:80px" Text="Buscar" />
+                    <asp:Button runat="server" ID="btnCADld" OnClick="btnCADld_Click" CssClass="button" style="margin-top:170px; margin-left:80px" Text="Cadastrar" />
                 </div>
             </div>
             <div id="cont-4">
                 <div id="box-4" class="content-box" style="margin-left:10px; margin-right:10px;">
                     <h1 class="box-title">Cadastro de Locatários</h1>
-                    <asp:Button runat="server" ID="btnCADlt" OnClick="btnCADlt_Click" CssClass="button" style="margin-top:170px; margin-left:80px" Text="Buscar" />
+                    <asp:Button runat="server" ID="btnCADlt" OnClick="btnCADlt_Click" CssClass="button" style="margin-top:170px; margin-left:80px" Text="Cadastrar" />
                 </div>
             </div>
             <div id="cont-5">
                 <div id="box-5" class="content-box" style="margin-left:10px; margin-right:10px;">
                     <h1 class="box-title">Cadastro de Imóveis</h1>
-                    <asp:Button runat="server" ID="btnCADim" OnClick="btnCADim_Click" CssClass="button" style="margin-top:170px; margin-left:80px" Text="Buscar" />
+                    <asp:Button runat="server" ID="btnCADim" OnClick="btnCADim_Click" CssClass="button" style="margin-top:170px; margin-left:80px" Text="Cadastrar" />
                 </div>
             </div>
         </div>
