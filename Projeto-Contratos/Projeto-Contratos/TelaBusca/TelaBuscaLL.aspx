@@ -1,49 +1,24 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TelaBuscaLL.aspx.cs" Inherits="Projeto_Contratos.TelaBusca.TelaBuscaLL" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <style>
-        body {
-            background-image: url(../imgs/backcolor.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+    <link rel="stylesheet" href="Estilo_CAD.css" />
 
-        corners 
-        { 
-            border: 1px solid green; 
-            -moz-border-radius: 8px; 
-            border-radius: 8px;
-            overflow: hidden;
-            -webkit-border-radius: 8px;
-        }
-    </style>
-
-    <div class="container">
-        <br />
-        <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <div class="row">
-                    <asp:TextBox runat="server" ID="txtBusca" placeholder="Digite um Nome" Width="200px" Height="40px" Style="border-radius: 10px;"></asp:TextBox>
-                    <asp:Button runat="server" ID="btnBusca" OnClick="btnBusca_Click" class="btn btn-black" Text="Procurar" />
-                </div>
+    <div class="container-principal">
+        <div id="main">
+            <h1 class="box-title" style="font-family:'Times New Roman'; font-size:70px">Busca de Locadores e Locatários</h1>
+            <div class="content-box" style="margin-right: 150px; margin-left: 150px; padding-bottom: 150px; margin-top:50px">         
+                <asp:TextBox runat="server" ID="Consultar" placeholder="Digite o nome de um cliente" style="border-radius:10px; border:1px solid #ccc;;width:25%; height:40px; padding:20px 20px; display:inline-block; margin-top:50px; margin-left:36%; font-size:16px"></asp:TextBox>
+                 <asp:Button runat="server" ID="btnBusca" OnClick="btnBusca_Click" class="button" Style="margin-left: 20px; height: 65px;" Text="Procurar" />
+                <br />
+                <br />
+                <asp:GridView runat="server" ID="grdClientes" CssClass="table" AutoGenerateColumns="false" OnRowCommand="grdClientes_RowCommand" Width="100%" AllowPaging="true" PageSize="20" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
+                    <Columns>
+                        <asp:BoundField DataField="nome" HeaderText="NOME" />
+                         <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="Editar" Text="Editar" />
+                         <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-danger" CommandName="Excluir" Text="Excluir" />
+                    </Columns>
+                </asp:GridView>
             </div>
-            <div class="col-sm-4"></div>
         </div>
-        <br />
-        <div class="row">
-            <asp:GridView runat="server" ID="grdClientes" AutoGenerateColumns="false" OnRowCommand="grdClientes_RowCommand" Width="100%" AllowPaging="true" PageSize="20" CssClass="table table-bordered table-condensed table-responsive table-hover">
-                <AlternatingRowStyle BackColor="White" />
-                <HeaderStyle BackColor="#000000" Font-Bold="true" Font-Size="Larger" ForeColor="White" />
-                <RowStyle BackColor="#000000" ForeColor="White" />
-                <SelectedRowStyle BackColor="#669999" Font-Bold="true" ForeColor="White" />
-                <Columns>
-                    <asp:BoundField DataField="nome" HeaderText="NOME" />
-                </Columns>
-            </asp:GridView>
-        </div>
-        <a></a>
-
-
     </div>
 </asp:Content>
