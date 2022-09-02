@@ -13,5 +13,24 @@ namespace Projeto_Contratos.Tela_Login
         {
 
         }
+
+        protected void btn_entrar_Click(object sender, EventArgs e)
+        {
+
+            var user = new Negócio.Usuario().Verifica_usuario(txt_usuario.Text, txt_Senha.Text);
+
+            if (user!=null)
+            {
+                Session["user"] = user;
+                SiteMaster.ExibirAlert(this,"Usuário logado");
+                //Response.Redirect("");
+            }
+            else
+            {
+                SiteMaster.ExibirAlert(this, "Usuário e/ou senhas incorretos");
+            }
+
+           
+        }
     }
 }
