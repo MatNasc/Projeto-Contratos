@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-sm-4 text-center" style="padding: 50px">
 
-                <img src="../imgs/logoc.png" style="width: 400px; height: 200px" />
+                <img src="../imgs/logo2.png" style="width: 300px; height: 300px" />
 
                 <p style="font-size: 70px; font-family:'Times New Roman', Times, serif">Login</p>
 

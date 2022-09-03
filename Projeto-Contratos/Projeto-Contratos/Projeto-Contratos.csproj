@@ -130,6 +130,7 @@
     <Content Include="Cadastros_info\Cad_Imovel.aspx" />
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
+    <Content Include="imgs\logo2.png" />
     <Content Include="PaginasEditar\EditaInfoLocador.aspx" />
     <Content Include="PaginasEditar\EditaInfoLocatario.aspx" />
     <Content Include="TelaBusca\Estilo_CAD.css" />
