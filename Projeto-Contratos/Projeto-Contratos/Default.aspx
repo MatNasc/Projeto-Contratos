@@ -9,7 +9,7 @@
             <div id="cont-1">
                 <div id="box-1" class="content-box" style="margin-left:10px; margin-right:10px;">
                     <h1 class="box-title" style="font-size:27px; margin-left:10px">Busca de Locadores e Locatários</h1>
-                    <asp:Button runat="server" ID="btnbuscaLL" OnClick="btnbuscaLL_Click" CssClass="button" style="margin-top:180px; margin-left:80px" Text="Buscar" />
+                    <asp:Button runat="server" ID="btnbuscaLL" OnClick="btnbuscaLL_Click1" CssClass="button" style="margin-top:180px; margin-left:80px" Text="Buscar" />
                 </div>
             </div>
             <div id="cont-2">
