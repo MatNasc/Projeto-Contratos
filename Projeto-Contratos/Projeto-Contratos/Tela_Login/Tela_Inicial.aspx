@@ -62,7 +62,6 @@
 
                 <div class="row text-left">
                     <div class="col-sm-3">
-                        
                     </div>
                     <div class="col-sm-3">
                         <h2 style="font-size: 15px; font-family: Corbel">Senha</h2>
@@ -77,13 +76,13 @@
                 <div class="row text-left">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-                        <asp:Button runat="server" ID="btnLogin" Width="300px" Height="35px" Text="Log in" Font-Size="20px" CssClass="btn"/>
+                        <asp:Button runat="server" ID="btnLogin" Width="300px" Height="35px" Text="Log in" Font-Size="20px" CssClass="btn" />
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
                 <br />
-                
-                <p style="font-family:Corbel;font-size:15px">Esqueceu sua senha?</p>
+
+                <p style="font-family: Corbel; font-size: 15px">Esqueceu sua senha?</p>
             </div>
 
             <div class="col-sm-8">
