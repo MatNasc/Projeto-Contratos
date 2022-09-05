@@ -7,10 +7,10 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Projeto_Contratos.Cadastros_info {
+namespace Projeto_Contratos.PaginasEditar {
     
     
-    public partial class Cad_Locador {
+    public partial class EditaInfoLocador {
         
         /// <summary>
         /// Controle lblNome.
@@ -175,12 +175,12 @@ namespace Projeto_Contratos.Cadastros_info {
         protected global::System.Web.UI.WebControls.TextBox txtCidade;
         
         /// <summary>
-        /// Controle btnCadastrar.
+        /// Controle btnEditar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCadastrar;
+        protected global::System.Web.UI.WebControls.Button btnEditar;
     }
 }
