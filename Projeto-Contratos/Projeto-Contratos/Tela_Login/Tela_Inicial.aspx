@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-sm-4 text-center" style="padding: 50px">
 
-                <img src="../imgs/logoc.png" style="width: 400px; height: 200px" />
+                <img src="../imgs/logo2.png" style="width: 300px; height: 300px" />
 
                 <p style="font-size: 70px; font-family:'Times New Roman', Times, serif">Login</p>
 
@@ -60,7 +60,9 @@
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
                         <h style="font-size: 15px; font-family:'Times New Roman', Times, serif"">Usuário</h>
-                        <asp:TextBox runat="server" ID="TextBox1" Width="200px" Height="40px" style="border-radius:10px" ></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txt_usuario" Width="200px" Height="40px" style="border-radius:10px" ></asp:TextBox>
+                        <asp:Label runat="server" ID="txt_usuario_verifica"></asp:Label>
+
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
@@ -75,6 +77,7 @@
                     <div class="col-sm-6">
                         <h style="font-size: 15px; font-family:'Times New Roman', Times, serif"">Senha</h>
                         <asp:TextBox runat="server" ID="txt_Senha" Width="200px"  Height="40px" style="border-radius:10px;"></asp:TextBox>
+                        <asp:Label runat="server" ID="txt_senha_verifica"></asp:Label>
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
@@ -86,7 +89,7 @@
                 <div class="row text-left">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-                        <asp:Button runat="server" Text="Entrar" Font-Size="20px" Width="80px" />
+                        <asp:Button runat="server" ID="btn_entrar" Text="Entrar" OnClick="btn_entrar_Click" Font-Size="20px" Width="80px" />
                     </div>
                     <div class="col-sm-3"></div>
                 </div>

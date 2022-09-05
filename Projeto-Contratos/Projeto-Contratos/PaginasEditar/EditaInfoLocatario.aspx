@@ -1,25 +1,24 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cad_Locatario.aspx.cs" Inherits="Projeto_Contratos.Cadastros_info.Cad_Locatario" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditaInfoLocatario.aspx.cs" Inherits="Projeto_Contratos.PaginasEditar.EditaInfoLocatario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <link rel="stylesheet" href="../projeto_contrato_css/estilo.css" />
 
+    <p class="box-title" style="font-family: 'Times New Roman'; font-size: 70px">Editar Informações Locatário</p>
     <br />
-    <p class="box-title" style="font-family: 'Times New Roman'; font-size: 70px">Cadastro de Locatário</p>
     <div class="container">
-        <div class="content-box" style="border-radius: 30px; border: outset; width: 700px; height: 400px; padding: 35px; margin: auto">
+        <div class="content-box" style="border: outset; width: 700px; height: 400px; padding: 35px; margin: auto">
             <div class="row">
                 <div class="col-sm-1"></div>
 
                 <div class="col-sm-4">
                     <asp:Label runat="server" ID="lbl_nomeLT" Text="Nome:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                     <br />
-                    <asp:TextBox runat="server" ID="txt_nomeLT" placeholder="Digite seu Nome" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txt_nomeLT" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label runat="server" ID="lbl_profLT" Text="Profissão:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                     <br />
-                    <asp:TextBox runat="server" ID="txt_profLT" placeholder="Digite sua Profissão" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txt_profLT" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label runat="server" ID="lbl_LTEC" Text="Estado Civíl: " Style="font-size: 18px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
@@ -31,19 +30,16 @@
                         <asp:ListItem Text="Viúvo" Value="Viúvo" />
                     </asp:DropDownList>
                 </div>
-                <!-- Lado esquerdo (Nome, profissão e estado civíl) -->
                 <div class="col-sm-1 "></div>
-
-                <!-- Lado direito (CPF e RG) -->
                 <div class="col-sm-5">
                     <asp:Label runat="server" ID="lbl_LTCPF" Text="CPF:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                     <br />
-                    <asp:TextBox runat="server" ID="txt_LTCPF" placeholder="Digite seu CPF" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txt_LTCPF" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label runat="server" ID="lbl_LCRG" Text="RG:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                     <br />
-                    <asp:TextBox runat="server" ID="txt_LTRG" placeholder="Digite seu RG" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txt_LTRG" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                 </div>
                 <div class="col-sm-1"></div>
             </div>
@@ -52,14 +48,11 @@
                 <div class="col-sm-3"></div>
                 <div class="col-sm-6">
                     <div class="text-center">
-                        <!-- Botão de cadastro, centralizado dentro do container -->
-                        <asp:Button runat="server" ID="btnCadastrarLT" Text="Cadastrar" OnClick="btnCadastrarLT_Click" class="buttonT" />
+                        <asp:Button runat="server" ID="btnEditarLT" OnClick="btnEditarLT_Click" Text="Editar" Width="150px" Height="50px" CssClass="buttonT" Font-Size="25px" />
                     </div>
                 </div>
                 <div class="col-sm-3"></div>
             </div>
         </div>
     </div>
-
-
 </asp:Content>

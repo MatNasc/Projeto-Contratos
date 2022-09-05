@@ -13,13 +13,22 @@ namespace Projeto_Contratos.Tela_Login {
     public partial class Tela_Inicial {
         
         /// <summary>
-        /// Controle TextBox1.
+        /// Controle txt_usuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txt_usuario;
+        
+        /// <summary>
+        /// Controle txt_usuario_verifica.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txt_usuario_verifica;
         
         /// <summary>
         /// Controle txt_Senha.
@@ -29,5 +38,23 @@ namespace Projeto_Contratos.Tela_Login {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_Senha;
+        
+        /// <summary>
+        /// Controle txt_senha_verifica.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txt_senha_verifica;
+        
+        /// <summary>
+        /// Controle btn_entrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_entrar;
     }
 }

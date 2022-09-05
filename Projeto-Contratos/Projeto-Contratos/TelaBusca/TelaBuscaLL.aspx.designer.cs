@@ -31,6 +31,24 @@ namespace Projeto_Contratos.TelaBusca {
         protected global::System.Web.UI.WebControls.Button btnBusca;
         
         /// <summary>
+        /// Controle RadioButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton;
+        
+        /// <summary>
+        /// Controle RadioButton2.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
+        
+        /// <summary>
         /// Controle grdClientes.
         /// </summary>
         /// <remarks>
@@ -38,5 +56,14 @@ namespace Projeto_Contratos.TelaBusca {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdClientes;
+        
+        /// <summary>
+        /// Controle grdClientes2.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdClientes2;
     }
 }
