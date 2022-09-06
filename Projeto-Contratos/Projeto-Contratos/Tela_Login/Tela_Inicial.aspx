@@ -7,19 +7,17 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../Content/Estilo_Projeto.css" />
 </head>
 
 <body>
@@ -46,12 +44,33 @@
         </asp:ScriptManager>
 
         <div class="row">
-            <div class="col-sm-4 text-center" style="padding: 50px">
 
-                <img src="../imgs/logoc.png" style="width: 400px; height: 200px" />
 
-                <p style="font-size: 70px; font-family:'Times New Roman', Times, serif">Login</p>
+            <div class="col-sm-4 text-center" style="padding: 40px">
+                <img src="../imgs/logoc.png" style="width: 400px; height: 200px" /><br />
 
+
+                <div class="row text-left">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <h2 style="font-size: 15px; font-family: Corbel">Usuário</h2>
+                        <asp:TextBox runat="server" ID="txtUsuario" Width="300px" Height="35px" Style="border-radius: 5px" BorderColor="#CCCCCC"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <br />
+                <br />
+                <br />
+
+                <div class="row text-left">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-3">
+                        <h2 style="font-size: 15px; font-family: Corbel">Senha</h2>
+                        <asp:TextBox runat="server" ID="txtSenha" Width="300px" Height="35px" Style="border-radius: 5px" BorderColor="#CCCCCC"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
                 <br />
                 <br />
                 <br />
@@ -59,19 +78,22 @@
                 <div class="row text-left">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
+<<<<<<< HEAD
+                        <asp:Button runat="server" ID="btnLogin" Width="300px" Height="35px" Text="Log in" Font-Size="20px" CssClass="btn" />
+=======
                         <h style="font-size: 15px; font-family:'Times New Roman', Times, serif"">Usuário</h>
                         <asp:TextBox runat="server" ID="txt_usuario" Width="200px" Height="40px" style="border-radius:10px" ></asp:TextBox>
                         <asp:Label runat="server" ID="txt_usuario_verifica"></asp:Label>
 
+>>>>>>> ba058fbba14bcfad4dd398ffba46eb4a34d005fc
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
-
-
-                <br />
-                <br />
                 <br />
 
+<<<<<<< HEAD
+                <p style="font-family: Corbel; font-size: 15px">Esqueceu sua senha?</p>
+=======
                 <div class="row text-left">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
@@ -93,13 +115,13 @@
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
+>>>>>>> ba058fbba14bcfad4dd398ffba46eb4a34d005fc
             </div>
 
             <div class="col-sm-8">
                 <img src="../imgs/backcolor.jpg" />
             </div>
         </div>
-
     </form>
 </body>
 </html>
