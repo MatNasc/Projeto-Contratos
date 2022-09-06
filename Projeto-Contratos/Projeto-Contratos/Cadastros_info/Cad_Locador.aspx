@@ -106,10 +106,6 @@
                 <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" OnClick="btnCadastrar_Click" CssClass="buttonT" />
             </div>
         </div>
-        <div class="text-center">
-            <!-- Botão de cadastro, centralizado dentro da segunda coluna principal -->
-            <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" OnClick="btnCadastrar_Click" CssClass="btn btn-primary" />
 
-        </div>
     </div>
 </asp:Content>

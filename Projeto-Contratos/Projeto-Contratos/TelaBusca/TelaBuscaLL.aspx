@@ -22,6 +22,8 @@
                         <asp:BoundField DataField="profissao" HeaderText="PROFISSÃO" />
                         <asp:BoundField DataField="estadocivil" HeaderText="ESTADO CIVIL" />
                         <asp:BoundField DataField="endereco" HeaderText="ENDEREÇO" />
+                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="EditarLocador" Text="Editar" />
+                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" ControlStyle-BackColor="Red" CommandName="ExcluirLocador" Text="Excluir" />
                     </Columns>
                 </asp:GridView>
 
@@ -32,6 +34,8 @@
                         <asp:BoundField DataField="rg" HeaderText="RG" />
                         <asp:BoundField DataField="profissao" HeaderText="PROFISSÃO" />
                         <asp:BoundField DataField="estadocivil" HeaderText="ESTADO CIVIL" />
+                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="EditarLocatario" Text="Editar" />
+                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" ControlStyle-BackColor="Red" CommandName="ExcluirLocatario" Text="Excluir" />
                     </Columns>
 
                 </asp:GridView>
