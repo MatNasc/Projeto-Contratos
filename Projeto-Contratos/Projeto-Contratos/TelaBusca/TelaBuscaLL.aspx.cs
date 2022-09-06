@@ -17,7 +17,7 @@ namespace Projeto_Contratos.TelaBusca
             if (!IsPostBack)
             {
             }
-            connection = new MySqlConnection(SiteMaster.ConnectionString);
+                
 
 
         }
