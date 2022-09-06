@@ -46,3 +46,5 @@ CREATE TABLE contrato(
 	data_inicio date,
 	data_fim date   
 );
+
+INSERT INTO usuario (usuario, senha) VALUES ('admin', 'admin');

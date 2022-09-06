@@ -14,7 +14,7 @@
                 <asp:RadioButton ID="RadioButton2" Text="Locatário" Checked="false" runat="server" GroupName="Pesquisa" style="margin-left:10%;" />
                 <br />
                 <br />
-                <asp:GridView runat="server" ID="grdClientes" AutoGenerateColumns="false" OnRowCommand="grdClientes_RowCommand" Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
+                <asp:GridView runat="server" ID="grdClientes" AutoGenerateColumns="false" OnRowCommand="grdClientes_RowCommand" Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:80%; margin-left:120px; border:thin;">
                     <Columns>
                         <asp:BoundField DataField="nome" HeaderText="NOME" />
                         <asp:BoundField DataField="cpf" HeaderText="CPF" />
@@ -22,8 +22,14 @@
                         <asp:BoundField DataField="profissao" HeaderText="PROFISSÃO" />
                         <asp:BoundField DataField="estadocivil" HeaderText="ESTADO CIVIL" />
                         <asp:BoundField DataField="endereco" HeaderText="ENDEREÇO" />
+<<<<<<< HEAD
                         <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="EditarLocador" Text="Editar" />
                         <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" ControlStyle-BackColor="Red" CommandName="ExcluirLocador" Text="Excluir" />
+=======
+                        <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-primary" Text="Editar" />
+                        <asp:ButtonField ButtonType="Link" CommandName="cad_imovel" ControlStyle-CssClass="btn btn-success" Text="Cadastrar Imóvel" />
+
+>>>>>>> 0f575d254fb7f60c2626cb15cd6819c3b7d15178
                     </Columns>
                 </asp:GridView>
 
@@ -34,8 +40,12 @@
                         <asp:BoundField DataField="rg" HeaderText="RG" />
                         <asp:BoundField DataField="profissao" HeaderText="PROFISSÃO" />
                         <asp:BoundField DataField="estadocivil" HeaderText="ESTADO CIVIL" />
+<<<<<<< HEAD
                         <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="EditarLocatario" Text="Editar" />
                         <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" ControlStyle-BackColor="Red" CommandName="ExcluirLocatario" Text="Excluir" />
+=======
+                        <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-primary" Text="Editar" />
+>>>>>>> 0f575d254fb7f60c2626cb15cd6819c3b7d15178
                     </Columns>
 
                 </asp:GridView>
