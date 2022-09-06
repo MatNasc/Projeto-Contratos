@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Cadastros_info\Cad_Contrato.aspx" />
     <Content Include="Cadastros_info\Cad_Imovel.aspx" />
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
@@ -205,6 +206,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cadastros_info\Cad_Contrato.aspx.cs">
+      <DependentUpon>Cad_Contrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros_info\Cad_Contrato.aspx.designer.cs">
+      <DependentUpon>Cad_Contrato.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros_info\Cad_Imovel.aspx.cs">
       <DependentUpon>Cad_Imovel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -226,6 +234,10 @@
     <Compile Include="Cadastros_info\Cad_Locatario.aspx.designer.cs">
       <DependentUpon>Cad_Locatario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classe\Contrato.cs" />
+    <Compile Include="Classe\Imovel.cs" />
+    <Compile Include="Classe\Locador.cs" />
+    <Compile Include="Classe\Locatário.cs" />
     <Compile Include="Classe\Usuario.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -244,6 +256,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Negócio\Contrato.cs" />
+    <Compile Include="Negócio\Locador.cs" />
+    <Compile Include="Negócio\Locatario.cs" />
     <Compile Include="PaginasEditar\EditaInfoLocador.aspx.cs">
       <DependentUpon>EditaInfoLocador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
