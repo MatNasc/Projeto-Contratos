@@ -30,6 +30,7 @@ namespace Projeto_Contratos.TelaBusca
 
         protected void btnBusca_Click(object sender, EventArgs e)
         {
+
             if (RadioButton.Checked == true)
             {
 
@@ -61,6 +62,7 @@ namespace Projeto_Contratos.TelaBusca
                 while (reader1.Read())
 
                 {
+
                     var linha = locador.NewRow();
                     linha["nome"] = reader1.GetString("nome");
                     linha["cpf"] = reader1.GetString("cpf");
@@ -71,6 +73,7 @@ namespace Projeto_Contratos.TelaBusca
 
                     locador.Rows.Add(linha);
                 }
+                
                 Session["tabela"] = locador;
                 grdClientes.DataSource = locador;
                 grdClientes.DataBind();
@@ -113,7 +116,9 @@ namespace Projeto_Contratos.TelaBusca
                     linha["nome"] = reader2.GetString("nome");
                     linha["cpf"] = reader2.GetString("cpf");
                     linha["rg"] = reader2.GetString("rg");
-                    linha["profissao"] = reader2.GetString("profissao");
+                                      
+                    linha["profissao"] = reader2.IsDBNull(3) ? "" : reader2.GetString("profissao");
+                    
                     linha["estadocivil"] = reader2.GetString("estado_civil");
 
                     locatario.Rows.Add(linha);

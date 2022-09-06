@@ -11,6 +11,7 @@ namespace Projeto_Contratos {
     
     
     public partial class _Default {
+
         
         /// <summary>
         /// Controle btnbuscaLL.
@@ -56,5 +57,6 @@ namespace Projeto_Contratos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCADim;
+
     }
 }
