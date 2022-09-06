@@ -85,6 +85,15 @@ namespace Projeto_Contratos.Cadastros_info {
         protected global::System.Web.UI.WebControls.TextBox txtCPF;
         
         /// <summary>
+        /// Controle lblAlertaCpf.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAlertaCpf;
+        
+        /// <summary>
         /// Controle lblRG.
         /// </summary>
         /// <remarks>
@@ -101,6 +110,15 @@ namespace Projeto_Contratos.Cadastros_info {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRG;
+        
+        /// <summary>
+        /// Controle lblAlertaRG.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAlertaRG;
         
         /// <summary>
         /// Controle lblRua.
