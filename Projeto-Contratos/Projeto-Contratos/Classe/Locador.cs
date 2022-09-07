@@ -7,12 +7,12 @@ namespace Projeto_Contratos.Classe
 {
     public class Locador
     {
-        public int id { get; set; }
-        public string nome { get; set; }
-        public string cpf { get; set; }
-        public string rg { get;  set; }
-        public string profissao { get; set; }
-        public string estado_civil { get; set; }
-        public string endereco { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public string Rg { get;  set; }
+        public string Profissao { get; set; }
+        public string Estado_civil { get; set; }
+        public string Endereco { get; set; }
     }
 }
