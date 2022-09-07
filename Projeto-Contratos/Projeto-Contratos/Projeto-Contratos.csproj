@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Cadastros_info\CAD_Contrato.aspx" />
     <Content Include="Cadastros_info\Cad_Imovel.aspx" />
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
@@ -205,6 +206,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cadastros_info\CAD_Contrato.aspx.cs">
+      <DependentUpon>CAD_Contrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros_info\CAD_Contrato.aspx.designer.cs">
+      <DependentUpon>CAD_Contrato.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros_info\Cad_Imovel.aspx.cs">
       <DependentUpon>Cad_Imovel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
