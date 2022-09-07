@@ -16,8 +16,36 @@ namespace Projeto_Contratos.TelaBusca
         protected void Page_Load(object sender, EventArgs e)
         {
             connection = new MySqlConnection(SiteMaster.ConnectionString);
+
             if (!IsPostBack)
             {
+                connection.Open();
+
+                droplistCidade.Items.Clear();
+                var reader = new MySqlCommand("SELECT cidade FROM imovel",connection).ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var cidade = new ListItem(reader.GetString("cidade"));
+                    droplistCidade.Items.Add(cidade);
+
+                }
+
+                connection.Close();
+
+                connection.Open();
+
+                droplistBairro.Items.Clear();
+                var reader2 = new MySqlCommand("SELECT bairro FROM imovel", connection).ExecuteReader();
+
+                while(reader2.Read())
+                {
+                    var bairro = new ListItem(reader2.GetString("bairro"));
+                    droplistBairro.Items.Add(bairro);
+                }
+
+                connection.Close();
+
                 DataTable imovel = new DataTable();
 
                 imovel.Columns.Add("locador");
@@ -29,24 +57,22 @@ namespace Projeto_Contratos.TelaBusca
                 imovel.Columns.Add("n_luz");
                 imovel.Columns.Add("valor");
 
-
                 connection.Open();
 
-                var comando = new MySqlCommand("SELECT id_locador,rua,numero,bairro,cidade,n_agua,n_luz,valor FROM imovel", connection);
-                var reader = comando.ExecuteReader();
-
-                
-                while(reader.Read())
+                var comando = new MySqlCommand($"SELECT id_locador,rua,numero,bairro,cidade,n_agua,n_luz,valor FROM imovel",connection);
+                var reader3 = comando.ExecuteReader();
+              
+                while(reader3.Read())
                 {
                     var linha = imovel.NewRow();
-                    linha["locador"] = reader.GetInt32("id_locador");
-                    linha["rua"] = reader.GetString("rua");
-                    linha["numero"] = reader.GetInt32("numero");
-                    linha["bairro"] = reader.GetString("bairro");
-                    linha["cidade"] = reader.GetString("cidade");
-                    linha["n_agua"] = reader.GetString("n_agua");
-                    linha["n_luz"] = reader.GetString("n_luz");
-                    linha["valor"] = reader.IsDBNull(7) ? "" : reader.GetString("valor");
+                    linha["locador"] = reader3.GetInt32("id_locador");
+                    linha["rua"] = reader3.GetString("rua");
+                    linha["numero"] = reader3.GetInt32("numero");
+                    linha["bairro"] = reader3.GetString("bairro");
+                    linha["cidade"] = reader3.GetString("cidade");
+                    linha["n_agua"] = reader3.GetString("n_agua");
+                    linha["n_luz"] = reader3.GetString("n_luz");
+                    linha["valor"] = reader3.IsDBNull(7) ? "" : reader.GetString("valor");
 
                     imovel.Rows.Add(linha);
                 }
@@ -63,7 +89,7 @@ namespace Projeto_Contratos.TelaBusca
 
         protected void btnbuscaIM_Click(object sender, EventArgs e)
         {
-
+       
         }
 
         protected void grdImovel_RowCommand(object sender, GridViewCommandEventArgs e)

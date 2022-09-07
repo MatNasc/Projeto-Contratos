@@ -14,12 +14,13 @@ namespace Projeto_Contratos.TelaBusca
         private MySqlConnection connection;
         protected void Page_Load(object sender, EventArgs e)
         {
+            connection = new MySqlConnection(SiteMaster.ConnectionString);
             if (!IsPostBack)
             {
             }
-                
 
 
+            connection = new MySqlConnection(SiteMaster.ConnectionString);
         }
 
         protected void grdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
