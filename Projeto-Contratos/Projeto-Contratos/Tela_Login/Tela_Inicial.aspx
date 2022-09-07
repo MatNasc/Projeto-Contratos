@@ -44,84 +44,42 @@
         </asp:ScriptManager>
 
         <div class="row">
-
-
-            <div class="col-sm-4 text-center" style="padding: 40px">
-                <img src="../imgs/logoc.png" style="width: 400px; height: 200px" /><br />
-
-
-                <div class="row text-left">
+            <div class="col-sm-4 text-center">
+                <div style="padding: 50px;"></div>
+                <div class="row">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-                        <h2 style="font-size: 15px; font-family: Corbel">Usuário</h2>
-                        <asp:TextBox runat="server" ID="txtUsuario" Width="300px" Height="35px" Style="border-radius: 5px" BorderColor="#CCCCCC"></asp:TextBox>
+                        <img src="img/WhatsApp Image 2022-09-02 at 21.01.48.jpeg" width="200px" alt="">
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
-                <br />
-                <br />
-                <br />
-
-                <div class="row text-left">
-                    <div class="col-sm-3">
-                    </div>
-                    <div class="col-sm-3">
-                        <h2 style="font-size: 15px; font-family: Corbel">Senha</h2>
-                        <asp:TextBox runat="server" ID="txtSenha" Width="300px" Height="35px" Style="border-radius: 5px" BorderColor="#CCCCCC"></asp:TextBox>
-                    </div>
-                    <div class="col-sm-3"></div>
-                </div>
-                <br />
-                <br />
-                <br />
-
-                <div class="row text-left">
+                <div style="padding: 20px;"></div>
+                <div class="row">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-<<<<<<< HEAD
-                        <asp:Button runat="server" ID="btnLogin" Width="300px" Height="35px" Text="Log in" Font-Size="20px" CssClass="btn" />
-=======
-                        <h style="font-size: 15px; font-family:'Times New Roman', Times, serif"">Usuário</h>
-                        <asp:TextBox runat="server" ID="txt_usuario" Width="200px" Height="40px" style="border-radius:10px" ></asp:TextBox>
-                        <asp:Label runat="server" ID="txt_usuario_verifica"></asp:Label>
-
->>>>>>> ba058fbba14bcfad4dd398ffba46eb4a34d005fc
-                    </div>
-                    <div class="col-sm-3"></div>
-                </div>
-                <br />
-
-<<<<<<< HEAD
-                <p style="font-family: Corbel; font-size: 15px">Esqueceu sua senha?</p>
-=======
-                <div class="row text-left">
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-6">
-                        <h style="font-size: 15px; font-family:'Times New Roman', Times, serif"">Senha</h>
-                        <asp:TextBox runat="server" ID="txt_Senha" Width="200px"  Height="40px" style="border-radius:10px;"></asp:TextBox>
-                        <asp:Label runat="server" ID="txt_senha_verifica"></asp:Label>
-                    </div>
-                    <div class="col-sm-3"></div>
-                </div>
-
-                <br />
-                <br />
-                <br />
-
-                <div class="row text-left">
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Usuario</label>
+                            <asp:TextBox runat="server" ID="txtUsuario" Width="300px" Height="35px" Style="border-radius: 5px" BorderColor="#CCCCCC"></asp:TextBox>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Senha</label>
+                            <asp:TextBox runat="server" ID="txtSenha" Width="300px" Height="35px" Style="border-radius: 5px" BorderColor="#CCCCCC"></asp:TextBox>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
                         <asp:Button runat="server" ID="btn_entrar" Text="Entrar" OnClick="btn_entrar_Click" Font-Size="20px" Width="80px" />
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
->>>>>>> ba058fbba14bcfad4dd398ffba46eb4a34d005fc
             </div>
 
             <div class="col-sm-8">
-                <img src="../imgs/backcolor.jpg" />
+                <img src="img/backcolor.jpg" alt="">
             </div>
         </div>
+
     </form>
 </body>
 </html>
