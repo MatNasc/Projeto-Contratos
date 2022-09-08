@@ -94,7 +94,7 @@
 
             </div>
             <div class="text-center">
-                <asp:Button runat="server" ID="btnEditar" OnClick="btnEditar_Click" Text="Editar" Width="150px" Height="50px" CssClass="buttonT" Font-Size="25px" /> 
+                <asp:Button runat="server" ID="btnEditarLD" OnClick="btnEditar_Click" Text="Editar" Width="150px" Height="50px" CssClass="buttonT" Font-Size="25px" /> 
             </div>
         </div>
     </div>

@@ -30,11 +30,12 @@
                     <asp:Button runat="server" ID="btnCADlt" OnClick="btnCADlt_Click" CssClass="button" style="margin-top:170px; margin-left:80px" Text="Cadastrar" />
                 </div>
             </div>
-            <div id="cont-5">
+           <%--> <div id="cont-5">
                 <div id="box-5" class="content-box" style="margin-left:10px; margin-right:10px;">
                     <h1 class="box-title">Cadastro de Imóveis</h1>
                     <asp:Button runat="server" ID="btnCADim" OnClick="btnCADim_Click" CssClass="button" style="margin-top:170px; margin-left:80px" Text="Cadastrar" />
                 </div>
+            <--%>
             </div>
         </div>
 

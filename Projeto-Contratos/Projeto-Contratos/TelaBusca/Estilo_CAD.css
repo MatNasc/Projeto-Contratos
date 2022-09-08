@@ -8,6 +8,7 @@
 body {
     padding: 50px;
     background-image: url(/imgs/backcolor-desf.png);
+    background-size:auto;
 }
 /***********FINAL DAS ALTERAÇÕES DO ESCOPO**********/
 
@@ -77,6 +78,8 @@ body {
     border-radius: 15px;
   }
 
+
+
   .button:hover {
     background-color: rgb(53, 53, 53)
 }
@@ -112,7 +115,6 @@ body {
 /*CONTAINER DE CONTENT*/
 #cont-1{
     grid-area: cont-1;
-
 }
 
 #cont-2{

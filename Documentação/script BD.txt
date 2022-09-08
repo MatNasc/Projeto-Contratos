@@ -34,7 +34,8 @@ CREATE TABLE imovel(
 	bairro varchar(20),
 	cidade varchar(50),
 	n_agua varchar(20),
-	n_luz varchar(20)
+	n_luz varchar(20),
+	valor float
 );
 
 CREATE TABLE contrato(
