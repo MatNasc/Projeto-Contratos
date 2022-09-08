@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-                        <img src="img/WhatsApp Image 2022-09-02 at 21.01.48.jpeg" width="200px" alt="">
+                        <img src="img/WhatsApp Image 2022-09-02 at 21.01.48.jpeg" width="200" alt=""//>
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="col-sm-8">
-                <img src="img/backcolor.jpg" alt="">
+                <img src="img/backcolor.jpg" alt=""/>
             </div>
         </div>
 
