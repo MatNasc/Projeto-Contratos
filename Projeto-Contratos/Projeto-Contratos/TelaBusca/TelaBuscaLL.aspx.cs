@@ -20,11 +20,33 @@ namespace Projeto_Contratos.TelaBusca
             }
 
 
-            connection = new MySqlConnection(SiteMaster.ConnectionString);
         }
+
+        protected void grdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+            var locador = (DataTable)Session["tabela"];
+
+            if (e.CommandName == "excluir")
+            {
+                if (new Negócio.Locador().Delete(locador.Rows[index]["id"].ToString()))
+                    SiteMaster.ExibirAlert(this, "Locador excluído com sucesso!");
+                else
+                    SiteMaster.ExibirAlert(this, "Locador não pode ser excluído porque ele está sendo usado! ");
+                TelaBusca.TelaBuscaLL buscaLL = new TelaBusca.TelaBuscaLL();
+                buscaLL.BtnBusca_Click(null, null);
+            }
+
+            if (e.CommandName == "editar")
+            {
+                Response.Redirect("~/PaginasEditar/EditaInfoLocador.aspx?id=" + locador.Rows[index]["id"].ToString());
+            }
+
+        }
+
         /*CODIGO DE BUSCA DO LOCADOR E LOCATARIO*/
 
-        protected void btnBusca_Click(object sender, EventArgs e)
+        protected void BtnBusca_Click(object sender, EventArgs e)
         {
 
             if (RadioButton.Checked == true)
@@ -61,7 +83,6 @@ namespace Projeto_Contratos.TelaBusca
                 {
 
                     var linha = locador.NewRow();
-
                     linha["id"] = reader1.GetInt32("id");
                     linha["nome"] = reader1.GetString("nome");
                     linha["cpf"] = reader1.GetString("cpf");
@@ -118,7 +139,9 @@ namespace Projeto_Contratos.TelaBusca
                     linha["nome"] = reader2.GetString("nome");
                     linha["cpf"] = reader2.GetString("cpf");
                     linha["rg"] = reader2.GetString("rg");
-                    linha["profissao"] = reader2.IsDBNull(4) ? "" : reader2.GetString("profissao");
+
+                    linha["profissao"] = reader2.IsDBNull(3) ? "" : reader2.GetString("profissao");
+
                     linha["estadocivil"] = reader2.GetString("estado_civil");
 
                     locatario.Rows.Add(linha);
@@ -152,4 +175,5 @@ namespace Projeto_Contratos.TelaBusca
             
         }
     }
+
 }

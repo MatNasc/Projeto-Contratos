@@ -30,7 +30,9 @@
                         <br />
                         <asp:Label runat="server" ID="lblProfissao" Text="Profissão:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                         <br />
+
                         <asp:TextBox runat="server" ID="txtProfissao" placeholder="Digite sua Profissão" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+
                         <br />
                         <br />
                         <!-- DropdownList para "Estado Civíl" -->
@@ -106,5 +108,6 @@
                 <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" OnClick="btnCadastrar_Click" CssClass="buttonT" />
             </div>
         </div>
+
     </div>
 </asp:Content>

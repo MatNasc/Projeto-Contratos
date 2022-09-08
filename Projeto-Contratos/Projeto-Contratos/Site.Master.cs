@@ -27,6 +27,7 @@ namespace Projeto_Contratos
         }
 
 
+
         public static void ExibirAlert(Page page, string mensagem, string pagina)
         {
             page.ClientScript.RegisterStartupScript(
@@ -35,6 +36,7 @@ namespace Projeto_Contratos
                  "<script language='javascript'>alert('" + mensagem + "');window.location = '" + pagina + "';</script>"
               );
         }
+
 
     }
 }

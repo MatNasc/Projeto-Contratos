@@ -236,6 +236,8 @@
     <Compile Include="Cadastros_info\Cad_Locatario.aspx.designer.cs">
       <DependentUpon>Cad_Locatario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classe\Locador.cs" />
+    <Compile Include="Classe\Locatario.cs" />
     <Compile Include="Classe\Usuario.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -261,6 +263,7 @@
     <Compile Include="PaginasEditar\EditaImovel.aspx.designer.cs">
       <DependentUpon>EditaImovel.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="PaginasEditar\EditaInfoLocador.aspx.cs">
       <DependentUpon>EditaInfoLocador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -329,6 +332,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Classes\" />
+    <Folder Include="Negocio\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
