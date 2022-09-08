@@ -14,12 +14,13 @@ namespace Projeto_Contratos.TelaBusca
         private MySqlConnection connection;
         protected void Page_Load(object sender, EventArgs e)
         {
+            connection = new MySqlConnection(SiteMaster.ConnectionString);
             if (!IsPostBack)
             {
             }
+
+
             connection = new MySqlConnection(SiteMaster.ConnectionString);
-
-
         }
         /*CODIGO DE BUSCA DO LOCADOR E LOCATARIO*/
 
