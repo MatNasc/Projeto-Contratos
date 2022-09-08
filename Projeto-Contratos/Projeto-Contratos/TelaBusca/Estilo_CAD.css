@@ -77,6 +77,8 @@ body {
     border-radius: 15px;
   }
 
+
+
   .button:hover {
     background-color: rgb(53, 53, 53)
 }
@@ -112,7 +114,6 @@ body {
 /*CONTAINER DE CONTENT*/
 #cont-1{
     grid-area: cont-1;
-
 }
 
 #cont-2{
