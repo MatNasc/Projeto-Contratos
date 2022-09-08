@@ -7,45 +7,45 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Projeto_Contratos {
+namespace Projeto_Contratos.TelaBusca {
     
     
-    public partial class _Default {
+    public partial class TelaBuscaImovel {
         
         /// <summary>
-        /// Controle btnbuscaLL.
+        /// Controle droplistCidade.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnbuscaLL;
+        protected global::System.Web.UI.WebControls.DropDownList droplistCidade;
         
         /// <summary>
-        /// Controle btnbuscaC.
+        /// Controle droplistBairro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnbuscaC;
+        protected global::System.Web.UI.WebControls.DropDownList droplistBairro;
         
         /// <summary>
-        /// Controle btnCADld.
+        /// Controle btnbuscaIM.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCADld;
+        protected global::System.Web.UI.WebControls.Button btnbuscaIM;
         
         /// <summary>
-        /// Controle btnCADlt.
+        /// Controle grdImovel.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCADlt;
+        protected global::System.Web.UI.WebControls.GridView grdImovel;
     }
 }

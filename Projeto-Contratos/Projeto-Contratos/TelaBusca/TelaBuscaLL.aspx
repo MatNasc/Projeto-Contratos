@@ -14,7 +14,7 @@
                 <asp:RadioButton ID="RadioButton2" Text="Locatário" Checked="false" runat="server" GroupName="Pesquisa" style="margin-left:10%;" />
                 <br />
                 <br />
-                <asp:GridView runat="server" ID="grdClientes" AutoGenerateColumns="false" OnRowCommand="grdClientes_RowCommand" Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
+                <asp:GridView runat="server" ID="grdClientes" AutoGenerateColumns="false" OnRowCommand="grdClientes_RowCommand" Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:80%; margin-left:120px; border:thin;">
                     <Columns>
                         <asp:BoundField DataField="nome" HeaderText="NOME" />
                         <asp:BoundField DataField="cpf" HeaderText="CPF" />
@@ -22,16 +22,20 @@
                         <asp:BoundField DataField="profissao" HeaderText="PROFISSÃO" />
                         <asp:BoundField DataField="estadocivil" HeaderText="ESTADO CIVIL" />
                         <asp:BoundField DataField="endereco" HeaderText="ENDEREÇO" />
+                        <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-primary" Text="Editar" />
+                        <asp:ButtonField ButtonType="Link" CommandName="cad_imovel" ControlStyle-CssClass="btn btn-success" Text="Cadastrar Imóvel" />
+
                     </Columns>
                 </asp:GridView>
 
-                <asp:GridView runat="server" ID="grdClientes2" AutoGenerateColumns="false" OnRowCommand="grdClientes2_RowCommand" Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
+                <asp:GridView runat="server" ID="grdClientes2" AutoGenerateColumns="false"  Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
                     <Columns>
                         <asp:BoundField DataField="nome" HeaderText="NOME" />
                         <asp:BoundField DataField="cpf" HeaderText="CPF" />
                         <asp:BoundField DataField="rg" HeaderText="RG" />
                         <asp:BoundField DataField="profissao" HeaderText="PROFISSÃO" />
                         <asp:BoundField DataField="estadocivil" HeaderText="ESTADO CIVIL" />
+                        <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-primary" Text="Editar" />
                     </Columns>
 
                 </asp:GridView>

@@ -127,9 +127,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Cadastros_info\CAD_Contrato.aspx" />
     <Content Include="Cadastros_info\Cad_Imovel.aspx" />
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
+    <Content Include="PaginasEditar\EditaImovel.aspx" />
     <Content Include="imgs\logo2.png" />
     <Content Include="imgs\WhatsApp Image 2022-09-02 at 21.01.48.jpeg" />
     <Content Include="PaginasEditar\EditaInfoLocador.aspx" />
@@ -187,6 +189,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="TelaBusca\TelaBuscaImovel.aspx" />
     <Content Include="Tela_Login\Tela_Inicial.aspx" />
     <Content Include="TelaBusca\TelaBuscaContrato.aspx" />
     <Content Include="TelaBusca\TelaBuscaLL.aspx" />
@@ -206,6 +209,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cadastros_info\CAD_Contrato.aspx.cs">
+      <DependentUpon>CAD_Contrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros_info\CAD_Contrato.aspx.designer.cs">
+      <DependentUpon>CAD_Contrato.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros_info\Cad_Imovel.aspx.cs">
       <DependentUpon>Cad_Imovel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,6 +255,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="PaginasEditar\EditaImovel.aspx.cs">
+      <DependentUpon>EditaImovel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasEditar\EditaImovel.aspx.designer.cs">
+      <DependentUpon>EditaImovel.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PaginasEditar\EditaInfoLocador.aspx.cs">
       <DependentUpon>EditaInfoLocador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -274,6 +291,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TelaBusca\TelaBuscaImovel.aspx.cs">
+      <DependentUpon>TelaBuscaImovel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TelaBusca\TelaBuscaImovel.aspx.designer.cs">
+      <DependentUpon>TelaBuscaImovel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tela_Login\Tela_Inicial.aspx.cs">
       <DependentUpon>Tela_Inicial.aspx</DependentUpon>
