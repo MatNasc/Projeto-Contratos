@@ -52,8 +52,6 @@ namespace Projeto_Contratos.TelaBusca
             if (RadioButton.Checked == true)
             {
 
-
-
                 /*CODIGO DE BUSCA DO LOCADOR*/
                 DataTable locador = new DataTable();
 
@@ -65,18 +63,17 @@ namespace Projeto_Contratos.TelaBusca
                 locador.Columns.Add("rg");
                 locador.Columns.Add("endereco");
 
-
                 string FiltroLocador = " (1=1) ";
                 if (txtBusca.Text.Equals("") == false)
                 {
                     FiltroLocador = FiltroLocador + $" AND nome like '%{txtBusca.Text}%'";
                 }
 
-
                 connection.Open();
 
 
-                var commando1 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
+                var commando1 = new MySqlCommand($"SELECT nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
+
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
 
