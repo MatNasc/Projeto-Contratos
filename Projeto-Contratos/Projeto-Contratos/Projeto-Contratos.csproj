@@ -131,6 +131,7 @@
     <Content Include="Cadastros_info\Cad_Imovel.aspx" />
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
+    <Content Include="Cadastros_info\Contrato.aspx" />
     <Content Include="PaginasEditar\EditaImovel.aspx" />
     <Content Include="imgs\logo2.png" />
     <Content Include="PaginasEditar\EditaInfoLocador.aspx" />
@@ -236,6 +237,13 @@
     <Compile Include="Cadastros_info\Cad_Locatario.aspx.designer.cs">
       <DependentUpon>Cad_Locatario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros_info\Contrato.aspx.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros_info\Contrato.aspx.designer.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Classe\Locador.cs" />
     <Compile Include="Classe\Locatario.cs" />
     <Compile Include="Classe\Usuario.cs" />
@@ -256,6 +264,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Negócio\Locador.cs" />
+    <Compile Include="Negócio\Locatario.cs" />
     <Compile Include="PaginasEditar\EditaImovel.aspx.cs">
       <DependentUpon>EditaImovel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -263,7 +273,6 @@
     <Compile Include="PaginasEditar\EditaImovel.aspx.designer.cs">
       <DependentUpon>EditaImovel.aspx</DependentUpon>
     </Compile>
-
     <Compile Include="PaginasEditar\EditaInfoLocador.aspx.cs">
       <DependentUpon>EditaInfoLocador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
