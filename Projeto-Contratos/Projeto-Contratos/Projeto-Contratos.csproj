@@ -261,7 +261,6 @@
     <Compile Include="PaginasEditar\EditaImovel.aspx.designer.cs">
       <DependentUpon>EditaImovel.aspx</DependentUpon>
     </Compile>
-
     <Compile Include="PaginasEditar\EditaInfoLocador.aspx.cs">
       <DependentUpon>EditaInfoLocador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -331,7 +330,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Classes\" />
-    <Folder Include="Negocio\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

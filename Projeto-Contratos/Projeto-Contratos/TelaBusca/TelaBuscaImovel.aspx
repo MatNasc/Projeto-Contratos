@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <link rel="stylesheet" href="Estilo_CAD.css" />
+    <link rel="stylesheet" href="Estilo_CAD.css"/>
 
     <div class="container-principal">
         <div id="main">
