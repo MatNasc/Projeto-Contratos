@@ -23,8 +23,7 @@
                         <asp:BoundField DataField="estadocivil" HeaderText="ESTADO CIVIL" />
                         <asp:BoundField DataField="endereco" HeaderText="ENDEREÇO" />
 
-                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="EditarLocador" Text="Editar" />
-                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" ControlStyle-BackColor="Red" CommandName="ExcluirLocador" Text="Excluir" />
+                        
 
                         <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-primary" Text="Editar" />
                         <asp:ButtonField ButtonType="Link" CommandName="cad_imovel" ControlStyle-CssClass="btn btn-success" Text="Cadastrar Imóvel" />
@@ -33,7 +32,7 @@
                     </Columns>
                 </asp:GridView>
 
-                <asp:GridView runat="server" ID="grdClientes2" AutoGenerateColumns="false"  Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
+                <asp:GridView runat="server" ID="grdClientes2" AutoGenerateColumns="false" OnRowCommand="grdClientes2_RowCommand"  Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
                     <Columns>
                         <asp:BoundField DataField="nome" HeaderText="NOME" />
                         <asp:BoundField DataField="cpf" HeaderText="CPF" />
@@ -41,8 +40,7 @@
                         <asp:BoundField DataField="profissao" HeaderText="PROFISSÃO" />
                         <asp:BoundField DataField="estadocivil" HeaderText="ESTADO CIVIL" />
 
-                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="EditarLocatario" Text="Editar" />
-                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" ControlStyle-BackColor="Red" CommandName="ExcluirLocatario" Text="Excluir" />
+                       
 
                         <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-primary" Text="Editar" />
 
