@@ -41,5 +41,11 @@ namespace Projeto_Contratos
         {
             Response.Redirect("/TelaBusca/TelaBuscaLL.aspx");
         }
+
+
+        protected void btnBuscaImovel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

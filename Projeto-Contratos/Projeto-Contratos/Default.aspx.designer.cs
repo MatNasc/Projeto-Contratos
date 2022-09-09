@@ -31,6 +31,15 @@ namespace Projeto_Contratos {
         protected global::System.Web.UI.WebControls.Button btnbuscaC;
         
         /// <summary>
+        /// Controle btnBuscaImovel.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBuscaImovel;
+        
+        /// <summary>
         /// Controle btnCADld.
         /// </summary>
         /// <remarks>
