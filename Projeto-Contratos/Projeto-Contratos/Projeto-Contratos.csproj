@@ -131,9 +131,8 @@
     <Content Include="Cadastros_info\Cad_Imovel.aspx" />
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
+    <Content Include="imgs\LogoFinal.jpeg" />
     <Content Include="PaginasEditar\EditaImovel.aspx" />
-    <Content Include="imgs\logo2.png" />
-    <Content Include="imgs\WhatsApp Image 2022-09-02 at 21.01.48.jpeg" />
     <Content Include="PaginasEditar\EditaInfoLocador.aspx" />
     <Content Include="PaginasEditar\EditaInfoLocatario.aspx" />
     <Content Include="TelaBusca\Estilo_CAD.css" />
@@ -156,9 +155,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="imgs\backcolor-desf.png" />
     <Content Include="imgs\backcolor.jpg" />
-    <Content Include="imgs\logoc.png" />
     <Content Include="projeto_contrato_css\estilo.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

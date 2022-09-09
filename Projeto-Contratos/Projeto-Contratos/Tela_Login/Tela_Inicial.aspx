@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../Content/Estilo_Projeto.css" />
+    <link rel="stylesheet" href="../projeto_contrato_css/estilo.css" />
 </head>
 
 <body>
@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-                        <img src="img/WhatsApp Image 2022-09-02 at 21.01.48.jpeg" width="200" alt=""//>
+                        <img src="../imgs/LogoFinal.jpeg" width="200" />
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
@@ -57,26 +57,33 @@
                 <div class="row">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Usuario</label>
-                            <asp:TextBox runat="server" ID="txtUsuario" Width="300px" Height="35px" Style="border-radius: 5px" BorderColor="#CCCCCC"></asp:TextBox>
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h2 style="font-size: 20px; font-family: 'Franklin Gothic Book'">Usuário</h2>
+                            </div>
+                            <div class="col-sm-9"></div>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Senha</label>
-                            <asp:TextBox runat="server" ID="txtSenha" Width="300px" Height="35px" Style="border-radius: 5px" BorderColor="#CCCCCC"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txtUsuario" CssClass="form-control" Width="250px" Height="40px" Style="border-radius: 5px" BorderColor="#CCCCCC"></asp:TextBox>
+
+                        <br />
+                        <br />
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h2 style="font-size: 20px; font-family: 'Franklin Gothic Book'">Senha</h2>
+                            </div>
+                            <div class="col-sm-9"></div>
                         </div>
-                        <div class="mb-3 form-check">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <asp:Button runat="server" ID="btn_entrar" Text="Entrar" OnClick="btn_entrar_Click" Font-Size="20px" Width="80px" />
+                        <asp:TextBox runat="server" ID="txtSenha" CssClass="form-control" TextMode="Password" Width="250px" Height="40px" Style="border-radius: 5px" BorderColor="#CCCCCC"></asp:TextBox>
+
+                        <asp:Button runat="server" ID="btn_entrar" CssClass="button" Text="Entrar" OnClick="btn_entrar_Click" Font-Size="20px" Width="200px" Height="35px" />
+
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
             </div>
-
-            <div class="col-sm-8">
-                <img src="img/backcolor.jpg" alt=""/>
+        <div class="col-sm-8">
+                <img src="../imgs/backcolor.jpg" alt="" />
             </div>
         </div>
 

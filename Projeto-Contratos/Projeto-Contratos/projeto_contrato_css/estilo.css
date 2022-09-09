@@ -3,12 +3,7 @@
     padding: 0;
 }
 
-/**********INICIO DAS ALTERAÇÕES DO ESCOPO**********/
-body {
-    padding: 50px;
-    background-image: url(/imgs/backcolor-desf.png);
-    
-}
+
 /***********FINAL DAS ALTERAÇÕES DO ESCOPO**********/
 
 /**********INICIO DA DECLARAÇÃO DE CLASSES **********/
@@ -60,7 +55,7 @@ body {
 
 .button{
     display: inline-block;
-    padding: 10px;
+    padding: 2px;
     font-size: 24px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-image: linear-gradient(to right, rgb(204, 108, 207), rgba(76, 8, 94, 0.301));
