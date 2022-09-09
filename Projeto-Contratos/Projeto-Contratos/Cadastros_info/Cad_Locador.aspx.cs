@@ -11,12 +11,15 @@ namespace Projeto_Contratos.Cadastros_info
 {
 
     public partial class Cad_Locador : System.Web.UI.Page
-    {       
+
+    {
+
         private MySqlConnection connection;
         protected void Page_Load(object sender, EventArgs e)
         {
             connection = new MySqlConnection(SiteMaster.ConnectionString);
         }
+
 
         
             public static bool IsCpf(string cpf)
@@ -117,6 +120,7 @@ namespace Projeto_Contratos.Cadastros_info
                 return false;
             }
         }
+
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
