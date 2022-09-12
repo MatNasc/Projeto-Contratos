@@ -42,7 +42,8 @@ CREATE TABLE contrato(
 	id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	id_locador int, FOREIGN KEY (id_locador) REFERENCES locador(id),
 	id_locatario int, FOREIGN KEY (id_locatario) REFERENCES locatario(id),
-	id_imovel int, FOREIGN KEY (id_imovel) REFERENCES imovel(id),    
+	id_imovel int, FOREIGN KEY (id_imovel) REFERENCES imovel(id),
+	valor_imovel float, FOREIGN KEY (valor_imovel) REFERENCES imovel(valor),
 	n_contrato int,
 	data_inicio date,
 	data_fim date   
