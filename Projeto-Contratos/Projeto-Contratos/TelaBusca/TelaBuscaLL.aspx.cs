@@ -20,17 +20,37 @@ namespace Projeto_Contratos.TelaBusca
             }
 
 
-            connection = new MySqlConnection(SiteMaster.ConnectionString);
         }
+
+        protected void grdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+            var locador = (DataTable)Session["tabela"];
+
+            if (e.CommandName == "excluir")
+            {
+                if (new Negócio.Locador().Delete(locador.Rows[index]["id"].ToString()))
+                    SiteMaster.ExibirAlert(this, "Locador excluído com sucesso!");
+                else
+                    SiteMaster.ExibirAlert(this, "Locador não pode ser excluído porque ele está sendo usado! ");
+                TelaBusca.TelaBuscaLL buscaLL = new TelaBusca.TelaBuscaLL();
+                buscaLL.BtnBusca_Click(null, null);
+            }
+
+            if (e.CommandName == "editar")
+            {
+                Response.Redirect("~/PaginasEditar/EditaInfoLocador.aspx?id=" + locador.Rows[index]["id"].ToString());
+            }
+
+        }
+
         /*CODIGO DE BUSCA DO LOCADOR E LOCATARIO*/
 
-        protected void btnBusca_Click(object sender, EventArgs e)
+        protected void BtnBusca_Click(object sender, EventArgs e)
         {
 
             if (RadioButton.Checked == true)
             {
-
-
 
                 /*CODIGO DE BUSCA DO LOCADOR*/
                 DataTable locador = new DataTable();
@@ -43,25 +63,23 @@ namespace Projeto_Contratos.TelaBusca
                 locador.Columns.Add("rg");
                 locador.Columns.Add("endereco");
 
-
                 string FiltroLocador = " (1=1) ";
                 if (txtBusca.Text.Equals("") == false)
                 {
                     FiltroLocador = FiltroLocador + $" AND nome like '%{txtBusca.Text}%'";
                 }
 
-
                 connection.Open();
 
 
-                var commando1 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
+                var commando1 = new MySqlCommand($"SELECT nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
+
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
 
                 {
 
                     var linha = locador.NewRow();
-
                     linha["id"] = reader1.GetInt32("id");
                     linha["nome"] = reader1.GetString("nome");
                     linha["cpf"] = reader1.GetString("cpf");
@@ -118,7 +136,9 @@ namespace Projeto_Contratos.TelaBusca
                     linha["nome"] = reader2.GetString("nome");
                     linha["cpf"] = reader2.GetString("cpf");
                     linha["rg"] = reader2.GetString("rg");
-                    linha["profissao"] = reader2.IsDBNull(4) ? "" : reader2.GetString("profissao");
+
+                    linha["profissao"] = reader2.IsDBNull(3) ? "" : reader2.GetString("profissao");
+
                     linha["estadocivil"] = reader2.GetString("estado_civil");
 
                     locatario.Rows.Add(linha);
@@ -134,12 +154,12 @@ namespace Projeto_Contratos.TelaBusca
             }
         }
 
-        protected void grdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int index = Convert.ToInt32(e.CommandArgument);
             var locadores = (DataTable)Session["tabela"];
 
-            if(e.CommandName == "cad_imovel")
+            if (e.CommandName == "cad_imovel")
             {
                 Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locadores.Rows[index]["id"].ToString());
             }
@@ -150,6 +170,25 @@ namespace Projeto_Contratos.TelaBusca
             }
 
             
+        }
+
+        protected void grdClientes2_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+            var locatario = (DataTable)Session["tabela"];
+
+            if (e.CommandName == "cad_imovel")
+            {
+                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locatario.Rows[index]["id"].ToString());
+            }
+
+            if (e.CommandName == "editar")
+            {
+                Response.Redirect("~/PaginasEditar/EditaInfoLocatario.aspx?id=" + locatario.Rows[index]["id"].ToString());
+            }
+
+
+
         }
     }
 }
