@@ -175,12 +175,12 @@ namespace Projeto_Contratos.PaginasEditar {
         protected global::System.Web.UI.WebControls.TextBox txtCidade;
         
         /// <summary>
-        /// Controle btnEditar.
+        /// Controle btnEditarLD.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEditar;
+        protected global::System.Web.UI.WebControls.Button btnEditarLD;
     }
 }

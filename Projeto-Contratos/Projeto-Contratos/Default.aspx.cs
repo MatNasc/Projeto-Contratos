@@ -14,10 +14,8 @@ namespace Projeto_Contratos
 
         }
 
-        protected void btnbuscaLL_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("/TelaBusca/TelaBuscaLL.aspx");
-        }
+     
+
 
         protected void btnbuscaC_Click(object sender, EventArgs e)
         {
@@ -37,6 +35,17 @@ namespace Projeto_Contratos
         protected void btnCADim_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Cadastros_info/Cad_Imovel.aspx");
+        }
+
+        protected void btnbuscaLL_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("/TelaBusca/TelaBuscaLL.aspx");
+        }
+
+
+        protected void btnBuscaImovel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

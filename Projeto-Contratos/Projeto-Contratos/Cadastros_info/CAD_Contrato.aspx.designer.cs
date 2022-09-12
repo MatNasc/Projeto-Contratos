@@ -10,195 +10,267 @@
 namespace Projeto_Contratos.Cadastros_info {
     
     
-    public partial class Cad_Locador {
+    public partial class CAD_Contrato {
         
         /// <summary>
-        /// Controle lblNome.
+        /// Controle lbl_CPFlt.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNome;
+        protected global::System.Web.UI.WebControls.Label lbl_CPFlt;
         
         /// <summary>
-        /// Controle txtNome.
+        /// Controle txt_CPFlt.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNome;
+        protected global::System.Web.UI.WebControls.TextBox txt_CPFlt;
         
         /// <summary>
-        /// Controle lblProfissao.
+        /// Controle lbl_NomeLD.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProfissao;
+        protected global::System.Web.UI.WebControls.Label lbl_NomeLD;
         
         /// <summary>
-        /// Controle txtProfissao.
+        /// Controle txt_NomeLD.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProfissao;
+        protected global::System.Web.UI.WebControls.TextBox txt_NomeLD;
         
         /// <summary>
-        /// Controle lblEC.
+        /// Controle lbl_RGlt.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEC;
+        protected global::System.Web.UI.WebControls.Label lbl_RGlt;
         
         /// <summary>
-        /// Controle DropList.
+        /// Controle txt_RGlt.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropList;
+        protected global::System.Web.UI.WebControls.TextBox txt_RGlt;
         
         /// <summary>
-        /// Controle lblCPF.
+        /// Controle lbl_EClt.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCPF;
+        protected global::System.Web.UI.WebControls.Label lbl_EClt;
         
         /// <summary>
-        /// Controle txtCPF.
+        /// Controle txt_EClt.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCPF;
+        protected global::System.Web.UI.WebControls.TextBox txt_EClt;
         
         /// <summary>
-        /// Controle lblAlertaCpf.
+        /// Controle lbl_DataI.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlertaCpf;
+        protected global::System.Web.UI.WebControls.Label lbl_DataI;
         
         /// <summary>
-        /// Controle lblRG.
+        /// Controle txt_DataI.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRG;
+        protected global::System.Web.UI.WebControls.TextBox txt_DataI;
         
         /// <summary>
-        /// Controle txtRG.
+        /// Controle lbl_NomeLT.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRG;
+        protected global::System.Web.UI.WebControls.Label lbl_NomeLT;
         
         /// <summary>
-        /// Controle lblAlertaRG.
+        /// Controle txt_NomeLT.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlertaRG;
+        protected global::System.Web.UI.WebControls.TextBox txt_NomeLT;
         
         /// <summary>
-        /// Controle lblRua.
+        /// Controle LBL_ProfLT.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRua;
+        protected global::System.Web.UI.WebControls.Label LBL_ProfLT;
         
         /// <summary>
-        /// Controle txtRua.
+        /// Controle txt_ProfLT.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRua;
+        protected global::System.Web.UI.WebControls.TextBox txt_ProfLT;
         
         /// <summary>
-        /// Controle lblNum.
+        /// Controle lbl_DataF.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNum;
+        protected global::System.Web.UI.WebControls.Label lbl_DataF;
         
         /// <summary>
-        /// Controle txtNum.
+        /// Controle txt_DataF.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNum;
+        protected global::System.Web.UI.WebControls.TextBox txt_DataF;
         
         /// <summary>
-        /// Controle lblBairro.
+        /// Controle lbl_Rua.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBairro;
+        protected global::System.Web.UI.WebControls.Label lbl_Rua;
         
         /// <summary>
-        /// Controle txtBairro.
+        /// Controle txt_Rua.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBairro;
+        protected global::System.Web.UI.WebControls.TextBox txt_Rua;
         
         /// <summary>
-        /// Controle lblCidade.
+        /// Controle lbl_Bairro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCidade;
+        protected global::System.Web.UI.WebControls.Label lbl_Bairro;
         
         /// <summary>
-        /// Controle txtCidade.
+        /// Controle txt_Bairro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCidade;
+        protected global::System.Web.UI.WebControls.TextBox txt_Bairro;
         
         /// <summary>
-        /// Controle btnCadastrar.
+        /// Controle lbl_nAgua.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCadastrar;
+        protected global::System.Web.UI.WebControls.Label lbl_nAgua;
+        
+        /// <summary>
+        /// Controle txt_nAgua.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_nAgua;
+        
+        /// <summary>
+        /// Controle lbl_num.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_num;
+        
+        /// <summary>
+        /// Controle txt_num.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_num;
+        
+        /// <summary>
+        /// Controle lbl_cidade.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_cidade;
+        
+        /// <summary>
+        /// Controle txt_Cidade.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_Cidade;
+        
+        /// <summary>
+        /// Controle lbl_nLuz.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_nLuz;
+        
+        /// <summary>
+        /// Controle tzt_nLuz.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tzt_nLuz;
+        
+        /// <summary>
+        /// Controle btnCadastrarCont.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCadastrarCont;
     }
 }

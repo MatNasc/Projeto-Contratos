@@ -34,7 +34,8 @@ CREATE TABLE imovel(
 	bairro varchar(20),
 	cidade varchar(50),
 	n_agua varchar(20),
-	n_luz varchar(20)
+	n_luz varchar(20),
+	valor float
 );
 
 CREATE TABLE contrato(
@@ -46,3 +47,5 @@ CREATE TABLE contrato(
 	data_inicio date,
 	data_fim date   
 );
+
+INSERT INTO usuario (usuario, senha) VALUES ('admin', 'admin');

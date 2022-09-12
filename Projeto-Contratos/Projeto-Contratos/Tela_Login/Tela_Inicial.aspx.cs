@@ -17,13 +17,13 @@ namespace Projeto_Contratos.Tela_Login
         protected void btn_entrar_Click(object sender, EventArgs e)
         {
 
-            var user = new Negócio.Usuario().Verifica_usuario(txt_usuario.Text, txt_Senha.Text);
+            var user = new Negócio.Usuario().Verifica_usuario(txtUsuario.Text, txtSenha.Text);
 
             if (user!=null)
             {
                 Session["user"] = user;
                 SiteMaster.ExibirAlert(this,"Usuário logado");
-                //Response.Redirect("");
+                Response.Redirect("../Default.aspx");
             }
             else
             {

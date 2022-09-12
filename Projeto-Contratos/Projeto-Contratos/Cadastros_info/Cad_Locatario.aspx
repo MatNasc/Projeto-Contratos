@@ -38,12 +38,16 @@
                 <div class="col-sm-5">
                     <asp:Label runat="server" ID="lbl_LTCPF" Text="CPF:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                     <br />
-                    <asp:TextBox runat="server" ID="txt_LTCPF" placeholder="Digite seu CPF" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txt_LTCPF" placeholder="Digite seu CPF" OnTextChanged="txt_LTCPF_TextChanged" AutoPostBack="true" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                       <br /> <asp:Label runat="server" ID="lblAlertaCpf"></asp:Label>
+
                     <br />
                     <br />
                     <asp:Label runat="server" ID="lbl_LCRG" Text="RG:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                     <br />
-                    <asp:TextBox runat="server" ID="txt_LTRG" placeholder="Digite seu RG" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txt_LTRG" placeholder="Digite seu RG" OnTextChanged="txt_LTRG_TextChanged" AutoPostBack="true" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                      <br />  <asp:Label runat="server" ID="lblAlertaRG"></asp:Label>
+
                 </div>
                 <div class="col-sm-1"></div>
             </div>

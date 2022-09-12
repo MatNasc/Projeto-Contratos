@@ -7,126 +7,126 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Projeto_Contratos.Cadastros_info {
+namespace Projeto_Contratos.PaginasEditar {
     
     
-    public partial class Cad_Locatario {
+    public partial class EditaImovel {
         
         /// <summary>
-        /// Controle lbl_nomeLT.
+        /// Controle lblRua_IM.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_nomeLT;
+        protected global::System.Web.UI.WebControls.Label lblRua_IM;
         
         /// <summary>
-        /// Controle txt_nomeLT.
+        /// Controle txtRua_IM.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_nomeLT;
+        protected global::System.Web.UI.WebControls.TextBox txtRua_IM;
         
         /// <summary>
-        /// Controle lbl_profLT.
+        /// Controle lblNum_IM.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_profLT;
+        protected global::System.Web.UI.WebControls.Label lblNum_IM;
         
         /// <summary>
-        /// Controle txt_profLT.
+        /// Controle txtNum_IM.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_profLT;
+        protected global::System.Web.UI.WebControls.TextBox txtNum_IM;
         
         /// <summary>
-        /// Controle lbl_LTEC.
+        /// Controle lblBairro_IM.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_LTEC;
+        protected global::System.Web.UI.WebControls.Label lblBairro_IM;
         
         /// <summary>
-        /// Controle DropList.
+        /// Controle txtBairro_IM.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropList;
+        protected global::System.Web.UI.WebControls.TextBox txtBairro_IM;
         
         /// <summary>
-        /// Controle lbl_LTCPF.
+        /// Controle lblCidadeIM.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_LTCPF;
+        protected global::System.Web.UI.WebControls.Label lblCidadeIM;
         
         /// <summary>
-        /// Controle txt_LTCPF.
+        /// Controle txtCidade_IM.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_LTCPF;
+        protected global::System.Web.UI.WebControls.TextBox txtCidade_IM;
         
         /// <summary>
-        /// Controle lblAlertaCpf.
+        /// Controle lblAgua.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlertaCpf;
+        protected global::System.Web.UI.WebControls.Label lblAgua;
         
         /// <summary>
-        /// Controle lbl_LCRG.
+        /// Controle txtAgua.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_LCRG;
+        protected global::System.Web.UI.WebControls.TextBox txtAgua;
         
         /// <summary>
-        /// Controle txt_LTRG.
+        /// Controle lblLuz.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_LTRG;
+        protected global::System.Web.UI.WebControls.Label lblLuz;
         
         /// <summary>
-        /// Controle lblAlertaRG.
+        /// Controle txtLuz.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlertaRG;
+        protected global::System.Web.UI.WebControls.TextBox txtLuz;
         
         /// <summary>
-        /// Controle btnCadastrarLT.
+        /// Controle btnEditar_IM.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCadastrarLT;
+        protected global::System.Web.UI.WebControls.Button btnEditar_IM;
     }
 }
