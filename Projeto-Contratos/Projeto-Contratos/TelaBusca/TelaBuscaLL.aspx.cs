@@ -34,7 +34,7 @@ namespace Projeto_Contratos.TelaBusca
                 else
                     SiteMaster.ExibirAlert(this, "Locador não pode ser excluído porque ele está sendo usado! ");
                 TelaBusca.TelaBuscaLL buscaLL = new TelaBusca.TelaBuscaLL();
-                buscaLL.BtnBusca_Click(null, null);
+                buscaLL.btnBusca_Click(null, null);
             }
 
             if (e.CommandName == "editar")
@@ -46,7 +46,45 @@ namespace Projeto_Contratos.TelaBusca
 
         /*CODIGO DE BUSCA DO LOCADOR E LOCATARIO*/
 
-        protected void BtnBusca_Click(object sender, EventArgs e)
+
+        protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+            var locadores = (DataTable)Session["tabela"];
+
+            if (e.CommandName == "cad_imovel")
+            {
+                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locadores.Rows[index]["id"].ToString());
+            }
+
+            if (e.CommandName == "editar")
+            {
+                Response.Redirect("~/PaginasEditar/EditarInfoLocador.aspx?id=" + locadores.Rows[index]["id"].ToString());
+            }
+
+
+        }
+
+        protected void grdClientes2_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+            var locatario = (DataTable)Session["tabela"];
+
+            if (e.CommandName == "cad_imovel")
+            {
+                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locatario.Rows[index]["id"].ToString());
+            }
+
+            if (e.CommandName == "editar")
+            {
+                Response.Redirect("~/PaginasEditar/EditaInfoLocatario.aspx?id=" + locatario.Rows[index]["id"].ToString());
+            }
+
+
+
+        }
+
+        protected void btnBusca_Click(object sender, EventArgs e)
         {
 
             if (RadioButton.Checked == true)
@@ -154,41 +192,9 @@ namespace Projeto_Contratos.TelaBusca
             }
         }
 
-        protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void txtBusca_TextChanged(object sender, EventArgs e)
         {
-            int index = Convert.ToInt32(e.CommandArgument);
-            var locadores = (DataTable)Session["tabela"];
-
-            if (e.CommandName == "cad_imovel")
-            {
-                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locadores.Rows[index]["id"].ToString());
-            }
-
-            if (e.CommandName == "editar")
-            {
-                Response.Redirect("~/PaginasEditar/EditarInfoLocador.aspx?id=" + locadores.Rows[index]["id"].ToString());
-            }
-
-            
-        }
-
-        protected void grdClientes2_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            int index = Convert.ToInt32(e.CommandArgument);
-            var locatario = (DataTable)Session["tabela"];
-
-            if (e.CommandName == "cad_imovel")
-            {
-                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locatario.Rows[index]["id"].ToString());
-            }
-
-            if (e.CommandName == "editar")
-            {
-                Response.Redirect("~/PaginasEditar/EditaInfoLocatario.aspx?id=" + locatario.Rows[index]["id"].ToString());
-            }
-
-
 
         }
     }
-}
+    }
