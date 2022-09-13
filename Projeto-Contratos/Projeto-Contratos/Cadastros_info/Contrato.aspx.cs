@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace Projeto_Contratos.Cadastros_info
 {
-    public partial class CAD_Contrato : System.Web.UI.Page
+    public partial class Contrato : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnCadastrarCont_Click(object sender, EventArgs e)
         {
 
         }

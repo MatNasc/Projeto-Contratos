@@ -49,6 +49,24 @@ namespace Projeto_Contratos.Cadastros_info {
         protected global::System.Web.UI.WebControls.TextBox txt_NomeLD;
         
         /// <summary>
+        /// Controle lbl_Valor.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Valor;
+        
+        /// <summary>
+        /// Controle txt_Valor.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_Valor;
+        
+        /// <summary>
         /// Controle lbl_RGlt.
         /// </summary>
         /// <remarks>

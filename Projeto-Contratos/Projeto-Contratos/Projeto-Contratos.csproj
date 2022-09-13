@@ -131,7 +131,11 @@
     <Content Include="Cadastros_info\Cad_Imovel.aspx" />
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
+
+    <Content Include="Cadastros_info\Contrato.aspx" />
+
     <Content Include="imgs\LogoFinal.jpeg" />
+
     <Content Include="PaginasEditar\EditaImovel.aspx" />
     <Content Include="PaginasEditar\EditaInfoLocador.aspx" />
     <Content Include="PaginasEditar\EditaInfoLocatario.aspx" />
@@ -233,6 +237,13 @@
     </Compile>
     <Compile Include="Cadastros_info\Cad_Locatario.aspx.designer.cs">
       <DependentUpon>Cad_Locatario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros_info\Contrato.aspx.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros_info\Contrato.aspx.designer.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
     </Compile>
     <Compile Include="Classe\Locador.cs" />
     <Compile Include="Classe\Locatario.cs" />

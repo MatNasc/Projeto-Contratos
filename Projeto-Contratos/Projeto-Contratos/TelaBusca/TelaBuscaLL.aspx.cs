@@ -154,6 +154,7 @@ namespace Projeto_Contratos.TelaBusca
             }
         }
 
+
         protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int index = Convert.ToInt32(e.CommandArgument);
@@ -164,12 +165,10 @@ namespace Projeto_Contratos.TelaBusca
                 Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locadores.Rows[index]["id"].ToString());
             }
 
-            if (e.CommandName == "editar")
-            {
-                Response.Redirect("~/PaginasEditar/EditarInfoLocador.aspx?id=" + locadores.Rows[index]["id"].ToString());
-            }
 
-            
+        protected void grdClientes2_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
         }
 
         protected void grdClientes2_RowCommand(object sender, GridViewCommandEventArgs e)
