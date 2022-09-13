@@ -76,9 +76,9 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -131,9 +131,12 @@
     <Content Include="Cadastros_info\Cad_Imovel.aspx" />
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
+
     <Content Include="Cadastros_info\Contrato.aspx" />
+
+    <Content Include="imgs\LogoFinal.jpeg" />
+
     <Content Include="PaginasEditar\EditaImovel.aspx" />
-    <Content Include="imgs\logo2.png" />
     <Content Include="PaginasEditar\EditaInfoLocador.aspx" />
     <Content Include="PaginasEditar\EditaInfoLocatario.aspx" />
     <Content Include="TelaBusca\Estilo_CAD.css" />
@@ -156,9 +159,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="imgs\backcolor-desf.png" />
     <Content Include="imgs\backcolor.jpg" />
-    <Content Include="imgs\logoc.png" />
     <Content Include="projeto_contrato_css\estilo.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -342,7 +343,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Classes\" />
-    <Folder Include="Negocio\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
