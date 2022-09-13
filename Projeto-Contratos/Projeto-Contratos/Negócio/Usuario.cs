@@ -46,7 +46,7 @@ namespace Projeto_Contratos.Negócio
             }
             catch
             {
-              
+                user = null;
             }
             finally
             {
