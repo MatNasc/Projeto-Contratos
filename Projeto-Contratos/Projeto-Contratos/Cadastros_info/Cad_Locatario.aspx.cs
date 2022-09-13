@@ -139,7 +139,7 @@ namespace Projeto_Contratos.Cadastros_info
 
             if (validateRg(txt_LTRG.Text) == false)
             {
-                lblAlertaRG.Text = "CPF invalido!";
+                lblAlertaRG.Text = "RG invalido!";
                 lblAlertaRG.ForeColor = Color.Red;
             }
 
