@@ -72,8 +72,8 @@ namespace Projeto_Contratos.TelaBusca
                 connection.Open();
 
 
-                var commando1 = new MySqlCommand($"SELECT nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
-
+                var commando1 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE @filtrolocador", connection);
+                commando1.Parameters.Add(new MySqlParameter("filtrolocador",FiltroLocador));
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
 
@@ -125,7 +125,8 @@ namespace Projeto_Contratos.TelaBusca
                 connection.Open();
 
 
-                var commando2 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil FROM locatario WHERE {FiltroLocatario}", connection);
+                var commando2 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil FROM locatario WHERE @filtrolocatario", connection);
+                commando2.Parameters.Add(new MySqlParameter("filtrolocatario", FiltroLocatario));
                 var reader2 = commando2.ExecuteReader();
                 while (reader2.Read())
 
@@ -137,7 +138,7 @@ namespace Projeto_Contratos.TelaBusca
                     linha["cpf"] = reader2.GetString("cpf");
                     linha["rg"] = reader2.GetString("rg");
 
-                    linha["profissao"] = reader2.IsDBNull(3) ? "" : reader2.GetString("profissao");
+                    linha["profissao"] = reader2.IsDBNull(4) ? "" : reader2.GetString("profissao");
 
                     linha["estadocivil"] = reader2.GetString("estado_civil");
 
