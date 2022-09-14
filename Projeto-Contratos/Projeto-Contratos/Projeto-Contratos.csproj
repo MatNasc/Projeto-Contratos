@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Projeto_Contratos</RootNamespace>
     <AssemblyName>Projeto-Contratos</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -128,11 +128,8 @@
     <Content Include="Cadastros_info\Cad_Imovel.aspx" />
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
-
     <Content Include="Cadastros_info\Contrato.aspx" />
-
     <Content Include="imgs\LogoFinal.jpeg" />
-
     <Content Include="PaginasEditar\EditaImovel.aspx" />
     <Content Include="PaginasEditar\EditaInfoLocador.aspx" />
     <Content Include="PaginasEditar\EditaInfoLocatario.aspx" />
