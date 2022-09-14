@@ -7,8 +7,22 @@
 /**********INICIO DAS ALTERAÇÕES DO ESCOPO**********/
 body {
     padding: 50px;
-    background-image: url(../imgs/backcolor.jpg);
+    background-image: url(/imgs/backcolor.jpg);
+
     background-size:2500px;
+}
+
+
+header {
+    font-family:'Times New Roman', Times, serif;
+    font-size:50px;
+    text-align:center;
+}
+
+article {
+    font-family:'Times New Roman';
+    font-size:16px;
+    padding:10px;
 }
 /***********FINAL DAS ALTERAÇÕES DO ESCOPO**********/
 
@@ -19,6 +33,12 @@ body {
     display: grid;
     height: 100vh;    
     grid-template-rows: 1fr 10fr 1fr;
+}
+
+.container-principal2 {
+    display: grid;
+    height: 100vh;
+    margin-top:0;
 }
 
 .main-content {
@@ -167,15 +187,26 @@ body {
 
 }
 
-
-#contrato{
-    height:250mm;
-    width:210mm;
-    background-color:white;
-    margin:auto;
-    box-shadow:10px 10px 20px #030303;
+*/
+#contrato {
+    height: 250mm;
+    width: 210mm;
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 10px 10px 20px #030303;
+    overflow-y: scroll;
 }
+    #contrato::-webkit-scrollbar {
+        width: 2em;
+    }
 
+    #contrato::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
 
+    #contrato::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, rgb(204, 108, 207), rgb(76, 8, 94));
+    }
 
 /**********FINAL DA DISTRIBUIÇÃO DE DIVS**********/
