@@ -10,7 +10,7 @@ namespace Projeto_Contratos
     public partial class SiteMaster : MasterPage
     {
 
-        public static string ConnectionString = "Server=127.0.0.1;User ID=root;Password=;Database=imobiliaria";
+        public static string ConnectionString = "Server=127.0.0.1;User ID=root;Password=manager;Database=imobiliaria";
 
         protected void Page_Load(object sender, EventArgs e)
         {
