@@ -9,11 +9,11 @@
             <div class="content-box" style="margin-right: 150px; margin-left: 150px; padding-bottom: 150px; margin-top: 50px">
 
                 <asp:TextBox runat="server" ID="txtBusca" placeholder="Digite um Nome" Style="border-radius: 10px; border: 1px solid #ccc; width: 25%; height: 40px; padding: 20px 20px; display: inline-block; margin-top: 50px; margin-left: 36%; font-size: 16px"></asp:TextBox>
-                <asp:Button runat="server" ID="btnBusca" OnClick="btnBusca_Click" class="button" Style="margin-left: 20px; height: 65px;" Text="Procurar" />
+                <asp:Button runat="server" ID="btnBusca" OnClick="BtnBusca_Click" class="button" Style="margin-left: 20px; height: 65px;" Text="Procurar" />
 
                 <br />
-                <asp:RadioButton ID="RadioButton" Text="Locador" Checked="false" runat="server" GroupName="Pesquisa" Style="margin-left: 36%;" />
-                <asp:RadioButton ID="RadioButton2" Text="Locatário" Checked="false" runat="server" GroupName="Pesquisa" Style="margin-left: 10%;" />
+                <asp:RadioButton ID="RadioButton" Text="Locador" Checked="false" runat="server" GroupName="Pesquisa" Style="color:aliceblue;margin-left: 36%;" />
+                <asp:RadioButton ID="RadioButton2" Text="Locatário" Checked="false" runat="server" GroupName="Pesquisa" Style="color:aliceblue;margin-left: 10%;" />
                 <br />
                 <br />
                 <asp:GridView runat="server" ID="grdClientes" AutoGenerateColumns="false" OnRowCommand="grdClientes_RowCommand" Width="100%" AllowPaging="true" PageSize="20" CssClass="table" Style="background-color: black; color: white; width: 80%; margin-left: 120px; border: thin;">
