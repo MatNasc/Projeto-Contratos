@@ -166,9 +166,6 @@ namespace Projeto_Contratos.TelaBusca
             }
 
 
-        protected void grdClientes2_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-
         }
 
         protected void grdClientes2_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -185,9 +182,6 @@ namespace Projeto_Contratos.TelaBusca
             {
                 Response.Redirect("~/PaginasEditar/EditaInfoLocatario.aspx?id=" + locatario.Rows[index]["id"].ToString());
             }
-
-
-
         }
     }
 }

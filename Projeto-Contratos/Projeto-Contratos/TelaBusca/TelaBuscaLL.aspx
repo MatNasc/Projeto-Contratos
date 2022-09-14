@@ -35,9 +35,6 @@
                         <asp:ButtonField ButtonType="Link" CommandName="cad_imovel" ControlStyle-CssClass="btn btn-success" Text="Cadastrar Imóvel" />
                     </Columns>
                 </asp:GridView>
-
-                <asp:GridView runat="server" ID="grdClientes2" OnRowCommand="grdClientes2_RowCommand" AutoGenerateColumns="false"  Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
-
                 <asp:GridView runat="server" ID="grdClientes2" AutoGenerateColumns="false" OnRowCommand="grdClientes2_RowCommand"  Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
 
                     <Columns>
