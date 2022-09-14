@@ -86,7 +86,6 @@ namespace Projeto_Contratos.TelaBusca
 
         protected void btnBusca_Click(object sender, EventArgs e)
         {
-
             if (RadioButton.Checked == true)
             {
 
@@ -100,18 +99,17 @@ namespace Projeto_Contratos.TelaBusca
                 locador.Columns.Add("cpf");
                 locador.Columns.Add("rg");
                 locador.Columns.Add("endereco");
-
-                string FiltroLocador = " (1=1) ";
-                if (txtBusca.Text.Equals("") == false)
-                {
-                    FiltroLocador = FiltroLocador + $" AND nome like '%{txtBusca.Text}%'";
-                }
-
+                  
+                
                 connection.Open();
 
-
-                var commando1 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE @filtrolocador", connection);
-                commando1.Parameters.Add(new MySqlParameter("filtrolocador",FiltroLocador));
+                var commando1 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE (1=1)", connection);
+                if (txtBusca.Text.Equals("") == false)
+                {
+                    commando1.CommandText += $" AND nome like '%@nome%'";
+                    commando1.Parameters.Add(new MySqlParameter("nome", txtBusca.Text));
+                }
+                
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
 
@@ -152,22 +150,16 @@ namespace Projeto_Contratos.TelaBusca
                 locatario.Columns.Add("profissao");
                 locatario.Columns.Add("estadocivil");
 
-
-                string FiltroLocatario = " (1=1) ";
+                connection.Open();
+                var commando2 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil FROM locatario WHERE (1=1)", connection);
                 if (txtBusca.Text.Equals("") == false)
                 {
-                    FiltroLocatario = FiltroLocatario + $" AND nome like '%{txtBusca.Text}%'";
+                    commando2.CommandText += $" AND nome like @nome";
+                    commando2.Parameters.Add(new MySqlParameter("nome", $"%{txtBusca.Text}%"));
                 }
 
-
-                connection.Open();
-
-
-                var commando2 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil FROM locatario WHERE @filtrolocatario", connection);
-                commando2.Parameters.Add(new MySqlParameter("filtrolocatario", FiltroLocatario));
                 var reader2 = commando2.ExecuteReader();
                 while (reader2.Read())
-
                 {
                     var linha = locatario.NewRow();
 
@@ -182,6 +174,7 @@ namespace Projeto_Contratos.TelaBusca
 
                     locatario.Rows.Add(linha);
                 }
+
                 Session["tabela"] = locatario;
                 grdClientes2.DataSource = locatario;
                 grdClientes2.DataBind();
@@ -194,7 +187,7 @@ namespace Projeto_Contratos.TelaBusca
         }
 
 
-
+        /*
         protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int index = Convert.ToInt32(e.CommandArgument);
@@ -206,25 +199,15 @@ namespace Projeto_Contratos.TelaBusca
             }
 
 
-        }
-
-        protected void grdClientes2_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            int index = Convert.ToInt32(e.CommandArgument);
-            var locatario = (DataTable)Session["tabela"];
-
-            if (e.CommandName == "cad_imovel")
-            {
-                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locatario.Rows[index]["id"].ToString());
-            }
-
-            if (e.CommandName == "editar")
-            {
-                Response.Redirect("~/PaginasEditar/EditaInfoLocatario.aspx?id=" + locatario.Rows[index]["id"].ToString());
-            }
-
-
 
         }
+        */
+
+
+
+
+
+        
+
     }
-    }
+}
