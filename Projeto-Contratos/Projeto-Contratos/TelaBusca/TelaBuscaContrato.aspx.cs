@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -10,9 +11,13 @@ namespace Projeto_Contratos.TelaBusca
 {
     public partial class TelaBuscaContrato : System.Web.UI.Page
     {
+        private MySqlConnection connection;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+            }
+            connection = new MySqlConnection(SiteMaster.ConnectionString);
         }
 
         protected void grd_Contratos_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -31,9 +36,8 @@ namespace Projeto_Contratos.TelaBusca
             tabela.Columns.Add("Nº do Contrato");
             tabela.Columns.Add("Data de Inicio");
             tabela.Columns.Add("Data de Termino");
-            
-            
 
+           
             var linha = tabela.NewRow();
 
             linha["Locatario"] = "Matheus Carvalho";

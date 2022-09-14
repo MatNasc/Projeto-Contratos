@@ -10,8 +10,12 @@ namespace Projeto_Contratos.PaginasEditar
 {
     public partial class EditaInfoLocador : System.Web.UI.Page
     {
+        private MySqlConnection connection;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            connection = new MySqlConnection(SiteMaster.ConnectionString);
+
             if (!IsPostBack)
             {
                 var id = Request.QueryString["id"].ToString();
@@ -21,11 +25,25 @@ namespace Projeto_Contratos.PaginasEditar
                     SiteMaster.ExibirAlert(this, "Locador não identificado, realize a pesquisa novamente", "TelaBuscaLL.aspx");
                     return;
                 }
-                
-                
+
+                connection.Open();
+                var reader = new MySqlCommand($"SELECT nome,cpf,rg,profissao,estado_civil,endereco FROM locador WHERE id = {id}", connection).ExecuteReader();
+
+                if(reader.Read())
+                {
+                    txtNome.Text = reader.GetString("nome");
+                    txtCPF.Text = reader.GetString("cpf");
+                    txtRG.Text = reader.GetString("rg");
+                    txtProfissao.Text = reader.GetString("profissao");
+                    DropList.SelectedValue = reader.GetString("estado_civil");
+                }
 
 
-                
+                connection.Close();
+
+
+
+
             }
         }
 

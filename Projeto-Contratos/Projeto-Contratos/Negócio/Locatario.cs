@@ -94,7 +94,8 @@ namespace Projeto_Contratos.Negócio
         public void Update(Classe.Locatario locatario)
         {
             connection.Open();
-            var comand = new MySqlCommand($"UPDATE locatario SET nome= @nome,cpf= @cpf,rg= @rg profissao= @profissao, estado_civil= @estado_civil WHERE id = @id", connection);
+            var comand = new MySqlCommand($"UPDATE locatario SET nome= @nome,cpf= @cpf,rg= @rg, profissao= @profissao, estado_civil= @estado_civil WHERE id = @id", connection);
+            comand.Parameters.Add(new MySqlParameter("id", locatario.Id));
             comand.Parameters.Add(new MySqlParameter("nome", locatario.Nome));
             comand.Parameters.Add(new MySqlParameter("cpf", locatario.Cpf));
             comand.Parameters.Add(new MySqlParameter("rg", locatario.Rg));
