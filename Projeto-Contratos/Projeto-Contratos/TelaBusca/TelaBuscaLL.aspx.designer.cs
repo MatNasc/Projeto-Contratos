@@ -32,6 +32,10 @@ namespace Projeto_Contratos.TelaBusca
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBusca;
 
+        
+
+
+
         /// <summary>
         /// Controle RadioButton.
         /// </summary>
