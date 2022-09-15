@@ -50,26 +50,20 @@ namespace Projeto_Contratos.Cadastros_info
         }
 
         protected void txt_CPFlt_TextChanged(object sender, EventArgs e)
-        {
-            string nome = txt_NomeLT.Text;
-            string cpf = txt_CPFlt.Text;
-            string rg = txt_RGlt.Text;
-            string profissao = txt_ProfLT.Text;
-            string EstadoCivil = txt_EClt.Text;
+        { 
             try
             {
                 connection.Open();
-                var comand = new MySqlCommand($"SELECT * FROM locatario WHERE CPF= @cpf", connection);
-                comand.Parameters.Add(new MySqlParameter("cpd", cpf));
+                var comand = new MySqlCommand($"SELECT * FROM locatario WHERE CPF = @cpf", connection);
+                comand.Parameters.Add(new MySqlParameter("cpf", txt_CPFlt.Text));
                 var reader = comand.ExecuteReader();
                 if (reader.Read())
                 {
-                    nome = reader.GetString("nome");
-                    cpf = reader.GetString("cpf");
-                    rg = reader.GetString("rg");
-                    profissao = reader.GetString("profissao");
-                    EstadoCivil = reader.GetString("estado_civil");
-
+                    txt_NomeLT.Text = reader.GetString("nome");
+                    txt_CPFlt.Text = reader.GetString("cpf");
+                    txt_RGlt.Text = reader.GetString("rg");
+                    txt_EClt.Text = reader.GetString("estado_civil");
+                    txt_ProfLT.Text = reader.GetString("profissao");
                 }
 
             }

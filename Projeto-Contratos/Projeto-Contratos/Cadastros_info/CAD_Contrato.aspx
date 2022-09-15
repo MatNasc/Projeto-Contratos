@@ -20,7 +20,7 @@
                     <div class="col-md-5" >
                         <asp:Label runat="server" ID="lbl_CPFlt" Text="CPF:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                         <br />
-                        <asp:TextBox runat="server" ID="txt_CPFlt" AutoPostBack="true" OnTextChanged="txt_CPFlt_TextChanged" placeholder="Digite um CPF" Width="200px" Height="40px" Style="border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txt_CPFlt" OnTextChanged="txt_CPFlt_TextChanged" AutoPostBack="true" placeholder="Digite um CPF" Width="200px" Height="40px" Style="border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
