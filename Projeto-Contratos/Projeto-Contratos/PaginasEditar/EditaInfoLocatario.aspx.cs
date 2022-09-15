@@ -37,7 +37,7 @@ namespace Projeto_Contratos.PaginasEditar
                     txt_LTCPF.Text = reader.GetString("cpf");
                     txt_LTRG.Text = reader.GetString("rg");
                     txt_profLT.Text = reader.GetString("profissao");
-                    DropList.SelectedValue = reader.IsDBNull(5) ? "" : reader.GetString("estado_civil");
+                    DropList.SelectedValue = reader.IsDBNull(4) ? "Solteiro" : reader.GetString("estado_civil");
                 }
 
 
@@ -59,4 +59,6 @@ namespace Projeto_Contratos.PaginasEditar
             SiteMaster.ExibirAlert(this, "Locatario  alterado com sucesso!", "TelaBuscaLL.aspx");
 
         }
+
+      
     }   }  

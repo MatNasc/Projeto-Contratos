@@ -109,11 +109,10 @@ namespace Projeto_Contratos.TelaBusca
                     commando1.CommandText += $" AND nome like '%@nome%'";
                     commando1.Parameters.Add(new MySqlParameter("nome", txtBusca.Text));
                 }
+                connection.Close();
+
 
                 connection.Open();
-
-
-                var commando1 = new MySqlCommand($"SELECT id ,nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
 
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
@@ -190,21 +189,7 @@ namespace Projeto_Contratos.TelaBusca
         }
 
 
-        /*
-        protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            int index = Convert.ToInt32(e.CommandArgument);
-            var locadores = (DataTable)Session["tabela"];
-
-            if (e.CommandName == "cad_imovel")
-            {
-                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locadores.Rows[index]["id"].ToString());
-            }
-
-
-            
-        }
-        */
+      
 
         protected void grdClientes2_RowCommand2(object sender, GridViewCommandEventArgs e)
         {
