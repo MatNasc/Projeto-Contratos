@@ -192,39 +192,5 @@ namespace Projeto_Contratos.TelaBusca
                 connection.Close();
             }
         }
-
-
-
-        protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            int index = Convert.ToInt32(e.CommandArgument);
-            var locadores = (DataTable)Session["tabela"];
-
-            if (e.CommandName == "cad_imovel")
-            {
-                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locadores.Rows[index]["id"].ToString());
-            }
-
-
-        }
-
-        protected void grdClientes2_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            int index = Convert.ToInt32(e.CommandArgument);
-            var locatario = (DataTable)Session["tabela"];
-
-            if (e.CommandName == "cad_imovel")
-            {
-                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locatario.Rows[index]["id"].ToString());
-            }
-
-            if (e.CommandName == "editar")
-            {
-                Response.Redirect("~/PaginasEditar/EditaInfoLocatario.aspx?id=" + locatario.Rows[index]["id"].ToString());
-            }
-
-
-
-        }
     }
-    }
+}
