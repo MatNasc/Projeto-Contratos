@@ -5,7 +5,7 @@
         <div id="contrato" style="margin-bottom:50px">
             <header>Contrato de aluguel</header>
             <article style="text-align:justify">
-                <asp:Label runat="server" ID="lbl_NOMELOCADOR" Text="(NOME)"></asp:Label>, (CPF), (IDENTIDADE) (ENDEREÇO), doravante denominado LOCADOR; (NOME), (CPF), (IDENTIDADE) (ENDEREÇO), doravante denominado LOCATÁRIO, celebram o presente contrato de locação residencial, com as cláusulas e condições seguintes: 
+                <asp:Label runat="server" ID="lbl_NOMELOCADOR" BackColor="#003366" Text="(NOME)"></asp:Label>,  <asp:Label runat="server" ID="lbl_CPF" BackColor="#003366" Text="(NOME)"></asp:Label>, (IDENTIDADE) (ENDEREÇO), doravante denominado LOCADOR; (NOME), (CPF), (IDENTIDADE) (ENDEREÇO), doravante denominado LOCATÁRIO, celebram o presente contrato de locação residencial, com as cláusulas e condições seguintes: 
                 <br />
                 1)     O LOCADOR cede para locação residencial ao LOCATÁRIO, o imóvel situado (ENDEREÇO DO IMÓVEL).
                 <br />
