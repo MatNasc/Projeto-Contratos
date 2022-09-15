@@ -189,9 +189,11 @@ namespace Projeto_Contratos.TelaBusca
         }
 
 
+
       
 
         protected void grdClientes2_RowCommand2(object sender, GridViewCommandEventArgs e)
+
         {
             int index = Convert.ToInt32(e.CommandArgument);
             var locatario = (DataTable)Session["tabela"];
@@ -206,3 +208,6 @@ namespace Projeto_Contratos.TelaBusca
 
    
 }
+
+
+

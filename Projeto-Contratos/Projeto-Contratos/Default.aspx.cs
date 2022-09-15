@@ -39,7 +39,7 @@ namespace Projeto_Contratos
 
         protected void btnBuscaImovel_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("/TelaBusca/TelaBuscaImovel.aspx");
         }
 
         protected void btnbuscaLL_Click(object sender, EventArgs e)
