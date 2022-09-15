@@ -98,7 +98,7 @@
                         <br />
                         <asp:Label runat="server" ID="lbl_nLuz" Text="Nº Luz:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                         <br />
-                        <asp:TextBox runat="server" ID="tzt_nLuz" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txt_nLuz" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
                     </div>
                 </div>
                 <br />

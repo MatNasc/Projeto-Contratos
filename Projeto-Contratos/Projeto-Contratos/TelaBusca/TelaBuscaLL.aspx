@@ -12,8 +12,8 @@
                 <asp:Button runat="server" ID="BtnBusca" OnClick="btnBusca_Click" class="button" Style="margin-left: 20px; height: 65px;" Text="Procurar" />
 
                 <br />
-                <asp:RadioButton ID="RadioButton" Text="Locador" Checked="false" runat="server" GroupName="Pesquisa" Style="color:aliceblue;margin-left: 36%;" />
-                <asp:RadioButton ID="RadioButton2" Text="Locatário" Checked="false" runat="server" GroupName="Pesquisa" Style="color:aliceblue;margin-left: 10%;" />
+                <asp:RadioButton ID="RadioButton" Text="Locador" Checked="false" runat="server" GroupName="Pesquisa" Style="color: aliceblue; margin-left: 36%;" />
+                <asp:RadioButton ID="RadioButton2" Text="Locatário" Checked="false" runat="server" GroupName="Pesquisa" Style="color: aliceblue; margin-left: 10%;" />
                 <br />
                 <br />
                 <asp:GridView runat="server" ID="grdClientes" AutoGenerateColumns="false" OnRowCommand="grdClientes_RowCommand" Width="100%" AllowPaging="true" PageSize="20" CssClass="table" Style="background-color: black; color: white; width: 80%; margin-left: 120px; border: thin;">
@@ -30,13 +30,9 @@
                     </Columns>
                 </asp:GridView>
 
-<<<<<<< HEAD
-                <asp:GridView runat="server" ID="grdClientes2" AutoGenerateColumns="false" OnRowCommand="grdClientes2_RowCommand"  Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
-=======
-               
 
-              <asp:GridView runat="server" ID="grdClientes2" AutoGenerateColumns="false" OnRowCommand="grdClientes2_RowCommand"  Width="100%" AllowPaging="true" PageSize="20" CssClass="table" style="background-color:black; color:white; width:60%; margin-left:250px; border:thin;">
->>>>>>> c157781868fad15bccebac4a2b2454ae06ea0558
+                <asp:GridView runat="server" ID="grdClientes2" AutoGenerateColumns="false" OnRowCommand="grdClientes2_RowCommand" Width="100%" AllowPaging="true" PageSize="20" CssClass="table" Style="background-color: black; color: white; width: 60%; margin-left: 250px; border: thin;">
+
 
                     <Columns>
                         <asp:BoundField DataField="nome" HeaderText="NOME" />
