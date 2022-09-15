@@ -14,18 +14,18 @@ namespace Projeto_Contratos.TelaBusca
         private MySqlConnection connection;
         protected void Page_Load(object sender, EventArgs e)
         {
-            connection = new MySqlConnection(SiteMaster.ConnectionString);
             if (!IsPostBack)
             {
             }
 
-
+            connection = new MySqlConnection(SiteMaster.ConnectionString);
         }
 
         protected void grdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int index = Convert.ToInt32(e.CommandArgument);
             var locador = (DataTable)Session["tabela"];
+
 
             if (e.CommandName == "excluir")
             {
@@ -109,7 +109,11 @@ namespace Projeto_Contratos.TelaBusca
                     commando1.CommandText += $" AND nome like '%@nome%'";
                     commando1.Parameters.Add(new MySqlParameter("nome", txtBusca.Text));
                 }
-                
+                connection.Close();
+
+
+                connection.Open();
+
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
 
@@ -121,7 +125,7 @@ namespace Projeto_Contratos.TelaBusca
                     linha["cpf"] = reader1.GetString("cpf");
                     linha["rg"] = reader1.GetString("rg");
                     linha["profissao"] = reader1.GetString("profissao");
-                    linha["estadocivil"] = reader1.GetString("estado_civil");
+                    linha["estadocivil"] = reader1.IsDBNull(5) ? "" : reader1.GetString("estado_civil");
                     linha["endereco"] = reader1.GetString("endereco");
 
                     locador.Rows.Add(linha);
@@ -167,10 +171,8 @@ namespace Projeto_Contratos.TelaBusca
                     linha["nome"] = reader2.GetString("nome");
                     linha["cpf"] = reader2.GetString("cpf");
                     linha["rg"] = reader2.GetString("rg");
-
-                    linha["profissao"] = reader2.IsDBNull(4) ? "" : reader2.GetString("profissao");
-
-                    linha["estadocivil"] = reader2.GetString("estado_civil");
+                    linha["profissao"] =  reader2.GetString("profissao");
+                    linha["estadocivil"] = reader2.IsDBNull(5) ? "" : reader2.GetString("estado_civil");
 
                     locatario.Rows.Add(linha);
                 }
@@ -187,27 +189,25 @@ namespace Projeto_Contratos.TelaBusca
         }
 
 
-        /*
-        protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
+
+      
+
+        protected void grdClientes2_RowCommand2(object sender, GridViewCommandEventArgs e)
+
         {
             int index = Convert.ToInt32(e.CommandArgument);
-            var locadores = (DataTable)Session["tabela"];
+            var locatario = (DataTable)Session["tabela"];
 
-            if (e.CommandName == "cad_imovel")
-            {
-                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locadores.Rows[index]["id"].ToString());
-            }
 
 
 
         }
-        */
-
-
-
-
-
-        
-
     }
+
+
+
+   
 }
+
+
+

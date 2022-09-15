@@ -4,7 +4,7 @@
 
     <link rel="stylesheet" href="../projeto_contrato_css/estilo.css" />
 
-    <h1 class="box-title" style="font-family:'Times New Roman'; font-size: 70px">Editar Informações Locador</h1>
+    <h1 class="box-title" style="font-family: 'Times New Roman'; font-size: 70px">Editar Informações Locador</h1>
     <br />
 
     <div class="container">
@@ -94,7 +94,7 @@
 
             </div>
             <div class="text-center">
-                <asp:Button runat="server" ID="btnEditarLD" OnClick="btnEditar_Click" Text="Editar" Width="150px" Height="50px" CssClass="buttonT" Font-Size="25px" /> 
+                <asp:Button runat="server" ID="btnEditarLD" OnClick="btnEditar_Click" Text="Editar" Width="150px" Height="50px" CssClass="buttonT" Font-Size="25px" />
             </div>
         </div>
     </div>
