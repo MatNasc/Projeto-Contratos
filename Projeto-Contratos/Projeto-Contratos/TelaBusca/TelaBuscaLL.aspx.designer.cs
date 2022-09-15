@@ -22,19 +22,15 @@ namespace Projeto_Contratos.TelaBusca {
         protected global::System.Web.UI.WebControls.TextBox txtBusca;
         
         /// <summary>
-        /// Controle btnBusca.
+        /// Controle BtnBusca.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBusca;
 
+        protected global::System.Web.UI.WebControls.Button BtnBusca;
         
-
-
-
-
 
         /// <summary>
         /// Controle RadioButton.
