@@ -1,74 +1,68 @@
 ﻿//------------------------------------------------------------------------------
 // <gerado automaticamente>
-//     Esse código foi gerado por uma ferramenta.
+//     Este código foi gerado por uma ferramenta.
 //
 //     As alterações ao arquivo poderão causar comportamento incorreto e serão perdidas se
 //     o código for recriado
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Projeto_Contratos.TelaBusca
-{
-
-
-    public partial class TelaBuscaLL
-    {
-
+namespace Projeto_Contratos.TelaBusca {
+    
+    
+    public partial class TelaBuscaLL {
+        
         /// <summary>
         /// Controle txtBusca.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBusca;
-
+        
         /// <summary>
-        /// Controle btnBusca.
+        /// Controle BtnBusca.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBusca;
-
+        protected global::System.Web.UI.WebControls.Button BtnBusca;
         
-
-
-
         /// <summary>
         /// Controle RadioButton.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton RadioButton;
-
+        
         /// <summary>
         /// Controle RadioButton2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
-
+        
         /// <summary>
         /// Controle grdClientes.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdClientes;
-
+        
         /// <summary>
         /// Controle grdClientes2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdClientes2;
     }

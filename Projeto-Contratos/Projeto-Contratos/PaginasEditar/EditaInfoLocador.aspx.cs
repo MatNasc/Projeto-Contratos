@@ -35,7 +35,7 @@ namespace Projeto_Contratos.PaginasEditar
                     txtCPF.Text = reader.GetString("cpf");
                     txtRG.Text = reader.GetString("rg");
                     txtProfissao.Text = reader.GetString("profissao");
-                    DropList.SelectedValue = reader.GetString("estado_civil");
+                    DropList.SelectedValue = reader.IsDBNull(5) ? "" : reader.GetString("estado_civil");
                 }
 
 

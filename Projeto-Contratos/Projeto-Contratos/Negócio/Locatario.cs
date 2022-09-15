@@ -100,7 +100,7 @@ namespace Projeto_Contratos.Negócio
             comand.Parameters.Add(new MySqlParameter("cpf", locatario.Cpf));
             comand.Parameters.Add(new MySqlParameter("rg", locatario.Rg));
             comand.Parameters.Add(new MySqlParameter("profissao", locatario.Profissao));
-            comand.Parameters.Add(new MySqlParameter("estado_civil", locatario.Estado_civil));
+            comand.Parameters.Add(new MySqlParameter("estadocivil", locatario.Estado_civil));
             comand.ExecuteNonQuery();
             connection.Close();
         }
