@@ -29,15 +29,7 @@ namespace Projeto_Contratos.TelaBusca {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBusca;
-<<<<<<< HEAD
         
-=======
-
-        
-
-
-
->>>>>>> 7ec83e1195cb14251b6b5ab7b6daa5f99eed29aa
         /// <summary>
         /// Controle RadioButton.
         /// </summary>
