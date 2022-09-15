@@ -187,6 +187,7 @@ namespace Projeto_Contratos.TelaBusca
         }
 
 
+
         /*
         protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -211,3 +212,4 @@ namespace Projeto_Contratos.TelaBusca
 
     }
 }
+
