@@ -13,15 +13,6 @@ namespace Projeto_Contratos.Cadastros_info {
     public partial class Contrato {
         
         /// <summary>
-        /// Controle lbl_NOMELOCADOR.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_NOMELOCADOR;
-        
-        /// <summary>
         /// Controle btn_imprimir.
         /// </summary>
         /// <remarks>

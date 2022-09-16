@@ -14,18 +14,18 @@ namespace Projeto_Contratos.TelaBusca
         private MySqlConnection connection;
         protected void Page_Load(object sender, EventArgs e)
         {
+            connection = new MySqlConnection(SiteMaster.ConnectionString);
             if (!IsPostBack)
             {
             }
 
-            connection = new MySqlConnection(SiteMaster.ConnectionString);
+
         }
 
         protected void grdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int index = Convert.ToInt32(e.CommandArgument);
             var locador = (DataTable)Session["tabela"];
-
 
             if (e.CommandName == "excluir")
             {
@@ -42,10 +42,28 @@ namespace Projeto_Contratos.TelaBusca
                 Response.Redirect("~/PaginasEditar/EditaInfoLocador.aspx?id=" + locador.Rows[index]["id"].ToString());
             }
 
+
+        }
+
+
+        protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+            var locadores = (DataTable)Session["tabela"];
+
+
             if (e.CommandName == "cad_imovel")
             {
                 Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locador.Rows[index]["id"].ToString());
             }
+
+
+            if (e.CommandName == "editar")
+            {
+                Response.Redirect("~/PaginasEditar/EditarInfoLocador.aspx?id=" + locadores.Rows[index]["id"].ToString());
+            }
+
+            
 
         }
 
@@ -80,20 +98,17 @@ namespace Projeto_Contratos.TelaBusca
                 locador.Columns.Add("cpf");
                 locador.Columns.Add("rg");
                 locador.Columns.Add("endereco");
-                  
-                
-                connection.Open();
 
-                var commando1 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE (1=1)", connection);
+                string FiltroLocador = " (1=1) ";
                 if (txtBusca.Text.Equals("") == false)
                 {
-                    commando1.CommandText += $" AND nome like '%@nome%'";
-                    commando1.Parameters.Add(new MySqlParameter("nome", txtBusca.Text));
+                    FiltroLocador = FiltroLocador + $" AND nome like '%{txtBusca.Text}%'";
                 }
-                connection.Close();
-
 
                 connection.Open();
+
+
+                var commando1 = new MySqlCommand($"SELECT nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
 
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
@@ -101,12 +116,11 @@ namespace Projeto_Contratos.TelaBusca
                 {
 
                     var linha = locador.NewRow();
-                    linha["id"] = reader1.GetInt32("id");
                     linha["nome"] = reader1.GetString("nome");
                     linha["cpf"] = reader1.GetString("cpf");
                     linha["rg"] = reader1.GetString("rg");
                     linha["profissao"] = reader1.GetString("profissao");
-                    linha["estadocivil"] = reader1.IsDBNull(5) ? "" : reader1.GetString("estado_civil");
+                    linha["estadocivil"] = reader1.GetString("estado_civil");
                     linha["endereco"] = reader1.GetString("endereco");
 
                     locador.Rows.Add(linha);
@@ -135,16 +149,21 @@ namespace Projeto_Contratos.TelaBusca
                 locatario.Columns.Add("profissao");
                 locatario.Columns.Add("estadocivil");
 
-                connection.Open();
-                var commando2 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil FROM locatario WHERE (1=1)", connection);
+
+                string FiltroLocatario = " (1=1) ";
                 if (txtBusca.Text.Equals("") == false)
                 {
-                    commando2.CommandText += $" AND nome like @nome";
-                    commando2.Parameters.Add(new MySqlParameter("nome", $"%{txtBusca.Text}%"));
+                    FiltroLocatario = FiltroLocatario + $" AND nome like '%{txtBusca.Text}%'";
                 }
 
+
+                connection.Open();
+
+
+                var commando2 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil FROM locatario WHERE {FiltroLocatario}", connection);
                 var reader2 = commando2.ExecuteReader();
                 while (reader2.Read())
+
                 {
                     var linha = locatario.NewRow();
 
@@ -152,12 +171,13 @@ namespace Projeto_Contratos.TelaBusca
                     linha["nome"] = reader2.GetString("nome");
                     linha["cpf"] = reader2.GetString("cpf");
                     linha["rg"] = reader2.GetString("rg");
-                    linha["profissao"] =  reader2.GetString("profissao");
-                    linha["estadocivil"] = reader2.IsDBNull(5) ? "" : reader2.GetString("estado_civil");
+
+                    linha["profissao"] = reader2.IsDBNull(4) ? "" : reader2.GetString("profissao");
+
+                    linha["estadocivil"] = reader2.GetString("estado_civil");
 
                     locatario.Rows.Add(linha);
                 }
-
                 Session["tabela"] = locatario;
                 grdClientes2.DataSource = locatario;
                 grdClientes2.DataBind();
@@ -167,28 +187,9 @@ namespace Projeto_Contratos.TelaBusca
 
                 connection.Close();
             }
+
+            /*CODIGO DE BUSCA DO LOCADOR E LOCATARIO*/
         }
 
-
-
-      
-
-        protected void grdClientes2_RowCommand2(object sender, GridViewCommandEventArgs e)
-
-        {
-            int index = Convert.ToInt32(e.CommandArgument);
-            var locatario = (DataTable)Session["tabela"];
-
-
-
-
-        }
     }
-
-
-
-   
 }
-
-
-

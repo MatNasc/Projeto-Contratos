@@ -5,15 +5,15 @@
         <div id="contrato" style="margin-bottom:50px">
             <header>Contrato de aluguel</header>
             <article style="text-align:justify">
-                <asp:Label runat="server" ID="lbl_NOMELOCADOR" Text="(NOME)"></asp:Label>, (CPF), (IDENTIDADE) (ENDEREÇO), doravante denominado LOCADOR; (NOME), (CPF), (IDENTIDADE) (ENDEREÇO), doravante denominado LOCATÁRIO, celebram o presente contrato de locação residencial, com as cláusulas e condições seguintes: 
+                <%=nomeld %>,  <%=cpf %>, <%=rg %> <%=endereçold %>, doravante denominado LOCADOR; <%=nomeld %>, <%=cpf %>, <%=rg %> <%=endereçolt %>, doravante denominado LOCATÁRIO, celebram o presente contrato de locação residencial, com as cláusulas e condições seguintes: 
                 <br />
-                1)     O LOCADOR cede para locação residencial ao LOCATÁRIO, o imóvel situado (ENDEREÇO DO IMÓVEL).
+                1)     O LOCADOR cede para locação residencial ao LOCATÁRIO, o imóvel situado <%=endereçoim %>.
                 <br />
                 2)     A locação destina-se ao uso exclusivo como residência e domicilio do LOCATÁRIO.
                 <br />
-                3)     O prazo de locação é de (TEMPO DE LOCAÇÃO), iniciando-se em (DATA) e terminando em (DATA), limite de tempo em que o imóvel objeto do presente deverá ser restituído independentemente de qualquer notificação ou interpelação sob pena de caracterizar infração contratual.
+                3)     O prazo de locação é de <%=tempttllocação %>, iniciando-se em <%=datainicio%> e terminando em <%=datatermino %>, limite de tempo em que o imóvel objeto do presente deverá ser restituído independentemente de qualquer notificação ou interpelação sob pena de caracterizar infração contratual.
                 <br />
-                4)     O aluguel mensal será de (R$) e deverá ser pago até a data de seu vencimento, todo dia (DIA) do mês seguinte ao vencido, no local do endereço do LOCADOR ou outro que o mesma venha a designar.
+                4)     O aluguel mensal será de <%=valor %> e deverá ser pago até a data de seu vencimento, todo dia (DIA) do mês seguinte ao vencido, no local do endereço do LOCADOR ou outro que o mesma venha a designar.
                 <br />
                 4.1) A impontualidade acarretará juros moratórios na base de 1% (um por cento) ao mês calculado sobre o valor do aluguel. O atraso superior a 30 (trinta) dias implicará em correção monetária do valor do aluguel e encargos de cobrança correspondentes a 10% (dez por cento) do valor assim corrigido.
                 <br />
@@ -57,7 +57,7 @@
                 <br />
                 23) O LOCATÁRIO declara, para todos os fins e efeitos de direito, que recebe o imóvel locado em condições plenas de uso, em perfeito estado de conservação, higiene e limpeza, obrigando-se e comprometendo-se a devolvê-lo em iguais condições, independente de qualquer aviso ou notificação prévia, e qualquer que seja o motivo da devolução, sob pena de incorrer nas cominações previstas neste contrato ou estipuladas em lei, além da obrigação de indenizar por danos ou prejuízos decorrentes da inobservância desta obrigação, salvo as deteriorações decorrentes de uso normal do imóvel.
                 <br />
-                24) Assina também o presente contrato como FIADOR e PRINCIPAL PAGADOR, solidariamente com o LOCATÁRIO, por todas as obrigações e responsabilidades constantes deste acordo com disposições dos artigos 827 e seguintes do Novo Código Civil Brasileiro, inclusive aluguéis vencidos, danos ao imóvel e demais encargos decorrentes da locação, (NOME) (CPF) (IDENTIDADE) (ENDEREÇO), consoante o artigo 818 do Novo Código Civil Brasileiro, declarando expressamente, desistir da faculdade estabelecida nos artigos 835 e 838 e renunciando  ao benefício de ordem do artigo 827 do mesmo código, perdurando sua responsabilidade até a entrega das chaves, inclusive em caso de prorrogação.
+                24) Assina também o presente contrato como FIADOR e PRINCIPAL PAGADOR, solidariamente com o LOCATÁRIO, por todas as obrigações e responsabilidades constantes deste acordo com disposições dos artigos 827 e seguintes do Novo Código Civil Brasileiro, inclusive aluguéis vencidos, danos ao imóvel e demais encargos decorrentes da locação, <%=nomeld %> <%=cpf %> <%=rg %> <%=endereçold %>, consoante o artigo 818 do Novo Código Civil Brasileiro, declarando expressamente, desistir da faculdade estabelecida nos artigos 835 e 838 e renunciando  ao benefício de ordem do artigo 827 do mesmo código, perdurando sua responsabilidade até a entrega das chaves, inclusive em caso de prorrogação.
                 <br />
                 25) Em caso de ausência, interdição, recuperação judicial, falência ou insolvência do fiador, declaradas judicialmente, suas obrigações se transferem aos seus herdeiros e/ou sucessores e o LOCATÁRIO se obriga, dentro de 30 (trinta) dias a dar substituto idôneo, a juízo do LOCADOR, ficando aquele em mora e sujeito à multa contratual e despejo, se não o fizer nesses dias de mera tolerância.
                 <br />
@@ -67,12 +67,11 @@
                 <br />
                 <br />
                 <br />
-                Local e Data: 
                 <br />
                 <br />
-                LOCADOR (nome)
+                LOCADOR : <%=nomeld %>
                 <br />
-                LOCATÁRIO (nome)
+                LOCATÁRIO : <%=nomelt %>
                 <br />
             </article>
             <footer style="text-align:center" >
