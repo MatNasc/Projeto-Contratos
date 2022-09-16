@@ -58,7 +58,7 @@ namespace Projeto_Contratos.TelaBusca
         protected void btnbuscaIM_Click(object sender, EventArgs e)
         {
             DataTable imovel = new DataTable();
-
+            imovel.Columns.Add("id");
             imovel.Columns.Add("locador");
             imovel.Columns.Add("rua");
             imovel.Columns.Add("numero");
@@ -70,7 +70,7 @@ namespace Projeto_Contratos.TelaBusca
 
             connection.Open();
 
-            var comando = new MySqlCommand($"SELECT nome,id_locador,rua,numero,bairro,cidade,n_agua,n_luz,valor FROM imovel I INNER JOIN locador L ON I.id_locador = L.id WHERE (1=1) ", connection);
+            var comando = new MySqlCommand($"SELECT I.id,nome,id_locador,rua,numero,bairro,cidade,n_agua,n_luz,valor FROM imovel I INNER JOIN locador L ON I.id_locador = L.id WHERE (1=1) ", connection);
             
             if (droplistCidade.SelectedIndex>0)
             {
@@ -87,6 +87,7 @@ namespace Projeto_Contratos.TelaBusca
             while (reader.Read())
             {
                 var linha = imovel.NewRow();
+                linha["id"] = reader.GetInt32("id");
                 linha["locador"] = reader.GetString("nome");
                 linha["rua"] = reader.GetString("rua");
                 linha["numero"] = reader.GetInt32("numero");
@@ -108,7 +109,12 @@ namespace Projeto_Contratos.TelaBusca
 
         protected void grdImovel_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-
+            int index = Convert.ToInt32(e.CommandArgument);
+            var imovel = (DataTable)Session["tabela"];
+            if (e.CommandName == "alugar")
+            {
+                Response.Redirect("~/Cadastros_info/CAD_Contrato.aspx?id=" + imovel.Rows[index]["id"].ToString());
+            }
         }
     }
 }
