@@ -24,7 +24,6 @@
                         <asp:BoundField DataField="profissao" HeaderText="PROFISSÃO" />
                         <asp:BoundField DataField="estadocivil" HeaderText="ESTADO CIVIL" />
                         <asp:BoundField DataField="endereco" HeaderText="ENDEREÇO" />
-                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-danger" CommandName="ExcluirLocador" Text="Excluir" />
                         <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-primary" Text="Editar" />
                         <asp:ButtonField ButtonType="Link" CommandName="cad_imovel" ControlStyle-CssClass="btn btn-success" Text="Cadastrar Imóvel" />
                     </Columns>
@@ -40,7 +39,6 @@
                         <asp:BoundField DataField="rg" HeaderText="RG" />
                         <asp:BoundField DataField="profissao" HeaderText="PROFISSÃO" />
                         <asp:BoundField DataField="estadocivil" HeaderText="ESTADO CIVIL" />
-                        <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-danger" CommandName="ExcluirLocatario" Text="Excluir" />
                         <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-primary" Text="Editar" />
                     </Columns>
 
