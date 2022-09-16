@@ -55,8 +55,9 @@ namespace Projeto_Contratos.PaginasEditar
             locatario.Cpf = txt_LTCPF.Text;
             locatario.Rg = txt_LTRG.Text;
             locatario.Profissao = txt_profLT.Text;
+            locatario.Estado_civil = DropList.Text;
             new Negócio.Locatario().Update(locatario);
-            SiteMaster.ExibirAlert(this, "Locatario  alterado com sucesso!", "TelaBuscaLL.aspx");
+            SiteMaster.ExibirAlert(this, "Locatario  alterado com sucesso!", "/TelaBusca/TelaBuscaLL.aspx");
 
         }
 
