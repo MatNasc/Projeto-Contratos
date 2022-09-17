@@ -22,7 +22,7 @@ namespace Projeto_Contratos.Cadastros_info
             var id = Request.QueryString["id"].ToString();
             connection.Open();
 
-            var comando = new MySqlCommand($@"INSERT INTO imovel (id_locador, rua, numero,bairro,cidade,n_agua,n_luz) VALUES (@id_locador,@rua,@numero,@bairro,@cidade,@n_agua,@n_luz)", connection);
+            var comando = new MySqlCommand($@"INSERT INTO imovel (id_locador, rua, numero,bairro,cidade,n_agua,n_luz,valor) VALUES (@id_locador,@rua,@numero,@bairro,@cidade,@n_agua,@n_luz,@valor)", connection);
             comando.Parameters.Add(new MySqlParameter("id_locador", id));
             comando.Parameters.Add(new MySqlParameter("rua", txtRua_IM.Text));
             comando.Parameters.Add(new MySqlParameter("numero", txtNum_IM.Text));
@@ -30,6 +30,7 @@ namespace Projeto_Contratos.Cadastros_info
             comando.Parameters.Add(new MySqlParameter("cidade", txtCidade_IM.Text));
             comando.Parameters.Add(new MySqlParameter("n_agua", txtAgua.Text));
             comando.Parameters.Add(new MySqlParameter("n_luz", txtLuz.Text));
+            comando.Parameters.Add(new MySqlParameter("valor", txt_valor.Text));
             comando.ExecuteNonQuery();
             connection.Close();
 

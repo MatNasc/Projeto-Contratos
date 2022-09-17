@@ -95,7 +95,7 @@ namespace Projeto_Contratos.TelaBusca
                 linha["cidade"] = reader.GetString("cidade");
                 linha["n_agua"] = reader.GetString("n_agua");
                 linha["n_luz"] = reader.GetString("n_luz");
-                //linha["valor"] = reader3.IsDBNull(7) ? "" : reader.GetString("valor");
+                linha["valor"] = reader.IsDBNull(9) ? "" : reader.GetFloat("valor").ToString("C");
 
                 imovel.Rows.Add(linha);
             }
