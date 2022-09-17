@@ -22,7 +22,7 @@ namespace Projeto_Contratos.PaginasEditar
                 var locador = new Negócio.Locador().LocadorPorId(id);
                 if (locador == null)
                 {
-                    SiteMaster.ExibirAlert(this, "Locador não identificado, realize a pesquisa novamente", "TelaBuscaLL.aspx");
+                    SiteMaster.ExibirAlert(this, "Locador não identificado, realize a pesquisa novamente", "../TelaBusca/TelaBuscaLL.aspx");
                     return;
                 }
 

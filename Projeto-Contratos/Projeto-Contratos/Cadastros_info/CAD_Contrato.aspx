@@ -6,7 +6,7 @@
     <div class="container-principal">
         <div id="main">
             <h1 class="box-title" style="font-family: 'Times New Roman'; font-size: 70px">Novo Contrato</h1>
-            <div class="content-box" style="margin-right: 150px; padding-bottom: 0; margin-left: 150px; margin-top: 50px; height: auto; padding-left:50px; padding-top:50px">
+            <div class="content-box" style="margin-right: 150px; padding-bottom: 0; margin-left: 150px; margin-top: 50px; height: auto; padding-left: 50px; padding-top: 50px">
                 <div class="row">
                     <div class="col-md-5">
                         <h1 class="box-title" style="font-family: 'Times New Roman'; font-size: 40px;">Dados do Locatário</h1>
@@ -17,22 +17,36 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-5" >
+                    <div class="col-md-5">
                         <asp:Label runat="server" ID="lbl_CPFlt" Text="CPF:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                         <br />
                         <asp:TextBox runat="server" ID="txt_CPFlt" OnTextChanged="txt_CPFlt_TextChanged" AutoPostBack="true" placeholder="Digite um CPF" Width="200px" Height="40px" Style="border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
-                        <div class="col-sm-6" style="padding:0; ">
-                            <asp:Label runat="server" ID="lbl_NomeLD" Text="Nome do locador:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                            <br />
-                            <asp:TextBox runat="server" ID="txt_NomeLD" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <asp:Label runat="server" ID="lbl_NomeLD" Text="Nome do locador:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                                <br />
+                                <asp:TextBox runat="server" ID="txt_NomeLD" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+                            </div>
+                            <div class="row">
+                                <asp:Label runat="server" ID="lbl_CPFLD" Text="CPF do locador:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                                <br />
+                                <asp:TextBox runat="server" ID="txt_cpfLD" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+                            </div>
                         </div>
-                        <div class="col-sm-6" style="padding:0; width:245.33px;">
-                            <asp:Label runat="server" ID="lbl_Valor" Text="Valor do imóvel:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                            <br />
-                            <asp:TextBox runat="server" ID="txt_Valor" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <asp:Label runat="server" ID="lbl_Valor" Text="Valor do imóvel:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                                <br />
+                                <asp:TextBox runat="server" ID="txt_Valor" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+                            </div>
+                            <div class="row">
+                                <asp:Label runat="server" ID="lbl_RGLD" Text="RG do locador:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                                <br />
+                                <asp:TextBox runat="server" ID="txt_RGLD" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+                            </div>
                         </div>
                     </div>
                 </div>

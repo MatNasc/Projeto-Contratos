@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <link rel="stylesheet" href="../projeto_contrato_css/estilo.css" />
+    <link rel="stylesheet" href="../TelaBusca/Estilo_CAD.css" />
 
     <h1 class="box-title" style="font-family: 'Times New Roman'; font-size: 70px">Editar Informações Locador</h1>
     <br />

@@ -1,14 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cad_Locador.aspx.cs" Inherits="Projeto_Contratos.Cadastros_info.Cad_Locador" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <link rel="stylesheet" href="../TelaBusca/Estilo_CAD.css" />
 
-    <link rel="stylesheet" href="../projeto_contrato_css/estilo.css" />
-
-    <br />
     <h1 class="box-title" style="font-family: 'Times New Roman'; font-size: 70px">Cadastro de Locador</h1>
-    <br />
-    <br />
-    <div class="container">
+    <div class="container" style="margin-top: 50px">
         <!--Os campos para inserção dos dados ficam todos organizados dentro de um "Jumbotron" -->
         <div class="content-box" style="border: outset; border-radius: 30px; width: 1000px; height: 400px; padding: 35px; margin: auto">
 
@@ -23,43 +19,45 @@
                             de "estado civíl".-->
                     <div class="col-sm-5">
                         <!-- Campos para inserção de "Nome" e "Profissão" -->
-                        <asp:Label runat="server" ID="lblNome" Text="Nome:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                        <br />
-                        <asp:TextBox runat="server" ID="txtNome" placeholder="Digite seu Nome" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
-                        <br />
-                        <br />
-                        <asp:Label runat="server" ID="lblProfissao" Text="Profissão:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                        <br />
-
-                        <asp:TextBox runat="server" ID="txtProfissao" placeholder="Digite sua Profissão" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
-
-                        <br />
-                        <br />
-                        <!-- DropdownList para "Estado Civíl" -->
-                        <asp:Label runat="server" ID="lblEC" Text="Estado Civíl: " Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                        <asp:DropDownList ID="DropList" AutoPostBack="true" runat="Server">
-                            <asp:ListItem Text="Solteiro" Value="Solteiro" />
-                            <asp:ListItem Text="Casado" Value="Casado" />
-                            <asp:ListItem Text="Divorciado" Value="Divorciado" />
-                            <asp:ListItem Text="Separado" Value="Separado" />
-                            <asp:ListItem Text="Viúvo" Value="Viúvo" />
-                        </asp:DropDownList>
+                        <div class="row" style="margin-left: 5px">
+                            <asp:Label runat="server" ID="lblNome" Text="Nome:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                            <br />
+                            <asp:TextBox runat="server" ID="txtNome" placeholder="Digite seu Nome" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                        </div>
+                        <div class="row" style="margin-top: 20px; margin-left: 5px">
+                            <asp:Label runat="server" ID="lblProfissao" Text="Profissão:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                            <br />
+                            <asp:TextBox runat="server" ID="txtProfissao" placeholder="Digite sua Profissão" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                        </div>
+                        <div class="row" style="margin-top: 20px; margin-left: 5px">
+                            <!-- DropdownList para "Estado Civíl" -->
+                            <asp:Label runat="server" ID="lblEC" Text="Estado Civíl: " Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                            <asp:DropDownList ID="DropList" AutoPostBack="true" runat="Server">
+                                <asp:ListItem Text="Solteiro" Value="Solteiro" />
+                                <asp:ListItem Text="Casado" Value="Casado" />
+                                <asp:ListItem Text="Divorciado" Value="Divorciado" />
+                                <asp:ListItem Text="Separado" Value="Separado" />
+                                <asp:ListItem Text="Viúvo" Value="Viúvo" />
+                            </asp:DropDownList>
+                        </div>
                     </div>
                     <!-- Coluna para dar um espaçamento entre as "TextBox" -->
                     <div class=" col-sm-2">
                     </div>
                     <div class="col-sm-5">
                         <!-- Do lado direito, ficaram os campos para inserção de documentos -->
-                        <asp:Label runat="server" ID="lblCPF" Text="CPF:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                        <br />
-                        <asp:TextBox runat="server" ID="txtCPF" placeholder="Digite seu CPF" OnTextChanged="txtCPF_TextChanged" AutoPostBack="true" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
-                        <asp:Label runat="server" ID="lblAlertaCpf"></asp:Label>
-                        <br />
-                        <br />
-                        <asp:Label runat="server" ID="lblRG" Text="RG:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                        <br />
-                        <asp:TextBox runat="server" ID="txtRG" placeholder="Digite seu RG" OnTextChanged="txtRG_TextChanged" AutoPostBack="true" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
-                        <asp:Label runat="server" ID="lblAlertaRG"></asp:Label>
+                        <div class="row" style="margin-left: 5px">
+                            <asp:Label runat="server" ID="lblCPF" Text="CPF:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                            <br />
+                            <asp:TextBox runat="server" ID="txtCPF" placeholder="Digite seu CPF" OnTextChanged="txtCPF_TextChanged" AutoPostBack="true" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                            <asp:Label runat="server" ID="lblAlertaCpf"></asp:Label>
+                        </div>
+                        <div class="row" style="margin-top: 20px; margin-left: 5px">
+                            <asp:Label runat="server" ID="lblRG" Text="RG:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                            <br />
+                            <asp:TextBox runat="server" ID="txtRG" placeholder="Digite seu RG" OnTextChanged="txtRG_TextChanged" AutoPostBack="true" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                            <asp:Label runat="server" ID="lblAlertaRG"></asp:Label>
+                        </div>
                     </div>
                 </div>
                 <!-- Coluna do meio -->
