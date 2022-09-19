@@ -94,7 +94,8 @@ namespace Projeto_Contratos.Negócio
         public void Update(Classe.Locatario locatario)
         {
             connection.Open();
-            var comand = new MySqlCommand($"UPDATE locatario SET nome= @nome,cpf= @cpf,rg= @rg profissao= @profissao, estado_civil= @estado_civil WHERE id = @id", connection);
+            var comand = new MySqlCommand($"UPDATE locatario SET nome= @nome,cpf= @cpf,rg= @rg,profissao= @profissao,estado_civil= @estado_civil WHERE id = @id", connection);
+            comand.Parameters.Add(new MySqlParameter("id", locatario.Id));
             comand.Parameters.Add(new MySqlParameter("nome", locatario.Nome));
             comand.Parameters.Add(new MySqlParameter("cpf", locatario.Cpf));
             comand.Parameters.Add(new MySqlParameter("rg", locatario.Rg));
@@ -104,38 +105,38 @@ namespace Projeto_Contratos.Negócio
             connection.Close();
         }
 
-        public List<Classe.Locatario> Verifica_Locatario(string nome, string cpf, string rg, string profissao, string estado_civil)
+        public List<Classe.Locatario> Verifica_Locatario(string Nome, string Cpf, string Rg, string Profissao, string Estado_civil)
         {
             var locatario = new List<Classe.Locatario>();
 
             try
             {
                 var comando = new MySqlCommand($"SELECT * FROM locatario WHERE (1=1)", connection);
-                if (nome.Equals("") == false)
+                if (Nome.Equals("") == false)
                 {
                     comando.CommandText += $" AND nome like @nome";
-                    comando.Parameters.Add(new MySqlParameter("nome", $"%{nome}%"));
+                    comando.Parameters.Add(new MySqlParameter("nome", $"%{Nome}%"));
                 }
-                if (cpf.Equals("") == false)
+                if (Cpf.Equals("") == false)
                 {
                     comando.CommandText += $" AND cpf = @cpf";
-                    comando.Parameters.Add(new MySqlParameter("cpf", cpf));
+                    comando.Parameters.Add(new MySqlParameter("cpf", Cpf));
                 }
-                if (rg.Equals("") == false)
+                if (Rg.Equals("") == false)
                 {
                     comando.CommandText += $" AND rg= @rg";
-                    comando.Parameters.Add(new MySqlParameter("rg", rg));
+                    comando.Parameters.Add(new MySqlParameter("rg", Rg));
 
-                    if (rg.Equals("") == false)
+                    if (Rg.Equals("") == false)
                     {
                         comando.CommandText += $" AND profissao= @profissao";
-                        comando.Parameters.Add(new MySqlParameter("profissao", profissao));
+                        comando.Parameters.Add(new MySqlParameter("profissao", Profissao));
 
                     }
-                    if (rg.Equals("") == false)
+                    if (Rg.Equals("") == false)
                     {
                         comando.CommandText += $" AND estado_civil= @estado_civil";
-                        comando.Parameters.Add(new MySqlParameter("estado_civil", estado_civil));
+                        comando.Parameters.Add(new MySqlParameter("estado_civil", Estado_civil));
 
                     }
                    

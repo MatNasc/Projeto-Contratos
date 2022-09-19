@@ -49,6 +49,24 @@ namespace Projeto_Contratos.Cadastros_info {
         protected global::System.Web.UI.WebControls.TextBox txt_NomeLD;
         
         /// <summary>
+        /// Controle lbl_CPFLD.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_CPFLD;
+        
+        /// <summary>
+        /// Controle txt_cpfLD.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_cpfLD;
+        
+        /// <summary>
         /// Controle lbl_Valor.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,24 @@ namespace Projeto_Contratos.Cadastros_info {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_Valor;
+        
+        /// <summary>
+        /// Controle lbl_RGLD.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_RGLD;
+        
+        /// <summary>
+        /// Controle txt_RGLD.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_RGLD;
         
         /// <summary>
         /// Controle lbl_RGlt.
@@ -274,13 +310,13 @@ namespace Projeto_Contratos.Cadastros_info {
         protected global::System.Web.UI.WebControls.Label lbl_nLuz;
         
         /// <summary>
-        /// Controle tzt_nLuz.
+        /// Controle txt_nLuz.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tzt_nLuz;
+        protected global::System.Web.UI.WebControls.TextBox txt_nLuz;
         
         /// <summary>
         /// Controle btnCadastrarCont.
