@@ -8,7 +8,6 @@
 body {
     padding: 50px;
     background-image: url(/imgs/backcolor.jpg);
-
     background-size:2500px;
 }
 
@@ -189,15 +188,14 @@ article {
 
 */
 #contrato {
-    height: 250mm;
+    height: auto;
     width: 210mm;
     background-color: white;
     margin: auto;
     padding: 30px;
     box-shadow: 10px 10px 20px #030303;
-    overflow-y: scroll;
 }
-    #contrato::-webkit-scrollbar {
+    /*#contrato::-webkit-scrollbar {
         width: 2em;
     }
 
@@ -207,6 +205,6 @@ article {
 
     #contrato::-webkit-scrollbar-thumb {
         background: linear-gradient(45deg, rgb(204, 108, 207), rgb(76, 8, 94));
-    }
+    }*/
 
 /**********FINAL DA DISTRIBUIÇÃO DE DIVS**********/

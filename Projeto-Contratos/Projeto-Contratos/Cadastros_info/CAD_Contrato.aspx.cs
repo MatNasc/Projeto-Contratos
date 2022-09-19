@@ -21,7 +21,7 @@ namespace Projeto_Contratos.Cadastros_info
                 var locador = new Negócio.Locador().LocadorPorId(idlocador);
                 if (locador == null)
                 {
-                    SiteMaster.ExibirAlert(this, "Impossivel de alugar", "TelaBuscaImovel.aspx");
+                    SiteMaster.ExibirAlert(this, "Impossivel de alugar", "~/TelaBusca/TelaBuscaImovel.aspx");
                     return;
                 }
 

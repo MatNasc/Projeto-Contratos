@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <link rel="stylesheet" href="../projeto_contrato_css/estilo.css" />
+    <link rel="stylesheet" href="../TelaBusca/Estilo_CAD.css" />
 
     <h1 class="box-title" style="font-family: 'Times New Roman'; font-size: 70px">Editar Informações Locador</h1>
     <br />
@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-1 text-center">
+                <div class="col-sm-2 text-center">
                     <br />
                     <br />
                     <br />
@@ -64,33 +64,11 @@
                     </div>
                 </div>
 
-                <div class="col-sm-5">
-
-                    <div class="col-sm-5">
-                        <asp:Label runat="server" ID="lblRua" Text="Rua:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                        <br />
-                        <asp:TextBox runat="server" ID="txtRua" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
-                        <br />
-                        <br />
-                        <asp:Label runat="server" ID="lblNum" Text="Numero:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                        <br />
-                        <asp:TextBox runat="server" ID="txtNum" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
-                    </div>
-                    <div class="col-sm-2">
-                    </div>
-
-                    <div class="col-sm-5">
-                        <asp:Label runat="server" ID="lblBairro" Text="Bairro:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                        <br />
-                        <asp:TextBox runat="server" ID="txtBairro" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
-                        <br />
-                        <br />
-                        <asp:Label runat="server" ID="lblCidade" Text="Cidade:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                        <br />
-                        <asp:TextBox runat="server" ID="txtCidade" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
-                    </div>
+                <div class="col-sm-5" >
+                    <asp:Label runat="server" ID="lbl_endereco" Text="Endereço:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                    <br />
+                    <asp:TextBox runat="server" ID="txt_endereco" Width="300px" Height="60px" Style="border-radius: 10px"></asp:TextBox>
                 </div>
-                <div class="col-sm-1"></div>
 
             </div>
             <div class="text-center">
