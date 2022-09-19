@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-                        <img src="../imgs/LogoFinal.jpeg" width="200" />
+                        <<img src="../imgs/LogoFinal.jpeg" width="200" />
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
