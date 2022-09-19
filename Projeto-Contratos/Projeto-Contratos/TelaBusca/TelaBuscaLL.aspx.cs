@@ -106,8 +106,8 @@ namespace Projeto_Contratos.TelaBusca
                 var commando1 = new MySqlCommand($"SELECT id, nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE (1=1)", connection);
                 if (txtBusca.Text.Equals("") == false)
                 {
-                    commando1.CommandText += $" AND nome like '%@nome%'";
-                    commando1.Parameters.Add(new MySqlParameter("nome", txtBusca.Text));
+                    commando1.CommandText += $" AND nome like @nome";
+                    commando1.Parameters.Add(new MySqlParameter("nome", $"%{txtBusca.Text}%"));
                 }
                 
                 var reader1 = commando1.ExecuteReader();
