@@ -24,7 +24,9 @@
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
+
                         <div class="col-sm-6">
+
                             <div class="row">
                                 <asp:Label runat="server" ID="lbl_NomeLD" Text="Nome do locador:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                                 <br />
@@ -33,10 +35,13 @@
                             <div class="row">
                                 <asp:Label runat="server" ID="lbl_CPFLD" Text="CPF do locador:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                                 <br />
-                                <asp:TextBox runat="server" ID="txt_cpfLD" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+
+                                <asp:TextBox runat="server" ID="txt_CPFLD" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" style="padding: 0; width: 245.33px;">
+
+
                             <div class="row">
                                 <asp:Label runat="server" ID="lbl_Valor" Text="Valor do imóvel:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                                 <br />
@@ -65,7 +70,7 @@
                         <br />
                         <asp:Label runat="server" ID="lbl_DataI" Text="Data de início:" Style="font-size: 30px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                         <br />
-                        <asp:TextBox runat="server" ID="txt_DataI" placeholder="Data de início do contrato" Width="200px" Height="40px" Style="border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txt_DataI" placeholder="Data de início do contrato" TextMode="Date" Width="200px" Height="40px" Style="border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
                     </div>
                     <div id="cont-2" style="margin-bottom: 200px">
                         <asp:Label runat="server" ID="lbl_NomeLT" Text="Nome:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
@@ -81,7 +86,7 @@
                         <br />
                         <asp:Label runat="server" ID="lbl_DataF" Text="Data de término:" Style="font-size: 30px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                         <br />
-                        <asp:TextBox runat="server" ID="txt_DataF" placeholder="Data de término do contrato" Width="200px" Height="40px" Style="border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txt_DataF" placeholder="Data de término do contrato" TextMode="Date" Width="200px" Height="40px" Style="border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
                     </div>
                     <div id="cont-3" style="margin-bottom: 200px"></div>
                     <div id="cont-4" style="margin-bottom: 200px">
