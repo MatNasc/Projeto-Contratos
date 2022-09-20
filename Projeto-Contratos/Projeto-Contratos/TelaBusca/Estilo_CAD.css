@@ -127,7 +127,17 @@ article {
     border-radius: 15px;
   }
 
-
+.ddl {
+    border: 2px solid #030303;
+    border-radius: 10px;
+    width: 150px;
+    height: 35px;
+    padding: 3px;
+    -webkit-appearance: button;
+    background-position: 88px;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
   .button:hover {
     background-color: rgb(53, 53, 53)
