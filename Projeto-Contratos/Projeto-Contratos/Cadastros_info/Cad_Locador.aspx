@@ -32,7 +32,7 @@
                         <div class="row" style="margin-top: 20px; margin-left: 5px">
                             <!-- DropdownList para "Estado Civíl" -->
                             <asp:Label runat="server" ID="lblEC" Text="Estado Civíl: " Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
-                            <asp:DropDownList ID="DropList" AutoPostBack="true" runat="Server">
+                            <asp:DropDownList ID="DropList" AutoPostBack="true" runat="Server" Style="border-radius: 10px; border: solid; padding: 5px; border-width: 2px;">
                                 <asp:ListItem Text="Solteiro" Value="Solteiro" />
                                 <asp:ListItem Text="Casado" Value="Casado" />
                                 <asp:ListItem Text="Divorciado" Value="Divorciado" />

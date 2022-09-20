@@ -11,7 +11,7 @@
 
     <div class="row">
 
-        <div class="content-box" style="border-radius: 30px; border: outset; height: 350px; width: 900px; padding: 35px; margin: auto">
+        <div class="content-box" style="border-radius: 30px; border: outset; height: auto; width: 900px; padding: 35px; margin:auto;">
             <div class="col-sm-5">
                 <div class="col-sm-5">
                     <div class="row">
