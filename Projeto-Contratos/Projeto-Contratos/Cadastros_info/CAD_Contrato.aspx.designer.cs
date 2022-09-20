@@ -274,13 +274,13 @@ namespace Projeto_Contratos.Cadastros_info {
         protected global::System.Web.UI.WebControls.Label lbl_nLuz;
         
         /// <summary>
-        /// Controle tzt_nLuz.
+        /// Controle txt_nLuz.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tzt_nLuz;
+        protected global::System.Web.UI.WebControls.TextBox txt_nLuz;
         
         /// <summary>
         /// Controle btnCadastrarCont.
