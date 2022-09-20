@@ -25,8 +25,9 @@ namespace Projeto_Contratos.TelaBusca
         protected void grdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int index = Convert.ToInt32(e.CommandArgument);
-            var locador = (DataTable)Session["tabela"];
+            var locador = (DataTable)Session["tabelaLD"];
 
+            /*
             if (e.CommandName == "excluir")
             {
                 if (new Negócio.Locador().Delete(locador.Rows[index]["id"].ToString()))
@@ -36,42 +37,25 @@ namespace Projeto_Contratos.TelaBusca
                 TelaBusca.TelaBuscaLL buscaLL = new TelaBusca.TelaBuscaLL();
                 buscaLL.btnBusca_Click(null, null);
             }
+            */
+            if (e.CommandName == "cad_imovel")
+            {
+                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locador.Rows[index]["id"].ToString());
+            }
 
             if (e.CommandName == "editar")
             {
                 Response.Redirect("~/PaginasEditar/EditaInfoLocador.aspx?id=" + locador.Rows[index]["id"].ToString());
             }
 
+
         }
 
-
-        protected void GrdClientes_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            int index = Convert.ToInt32(e.CommandArgument);
-            var locadores = (DataTable)Session["tabela"];
-
-            if (e.CommandName == "cad_imovel")
-            {
-                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locadores.Rows[index]["id"].ToString());
-            }
-
-            if (e.CommandName == "editar")
-            {
-                Response.Redirect("~/PaginasEditar/EditarInfoLocador.aspx?id=" + locadores.Rows[index]["id"].ToString());
-            }
-
-            
-        }
 
         protected void grdClientes2_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int index = Convert.ToInt32(e.CommandArgument);
-            var locatario = (DataTable)Session["tabela"];
-
-            if (e.CommandName == "cad_imovel")
-            {
-                Response.Redirect("~/Cadastros_info/Cad_Imovel.aspx?id=" + locatario.Rows[index]["id"].ToString());
-            }
+            var locatario = (DataTable)Session["tabelaLT"];
 
             if (e.CommandName == "editar")
             {
@@ -82,6 +66,7 @@ namespace Projeto_Contratos.TelaBusca
 
         }
 
+        /*CODIGO DE BUSCA DO LOCADOR E LOCATARIO*/
         protected void btnBusca_Click(object sender, EventArgs e)
         {
             if (RadioButton.Checked == true)
@@ -101,13 +86,16 @@ namespace Projeto_Contratos.TelaBusca
                 string FiltroLocador = " (1=1) ";
                 if (txtBusca.Text.Equals("") == false)
                 {
-                    FiltroLocador = FiltroLocador + $" AND nome like '%{txtBusca.Text}%'";
+
+                    commando1.CommandText += $" AND nome like @nome";
+                    commando1.Parameters.Add(new MySqlParameter("nome", $"%{txtBusca.Text}%"));
+
                 }
 
                 connection.Open();
 
 
-                var commando1 = new MySqlCommand($"SELECT nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
+                var commando1 = new MySqlCommand($"SELECT id,nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
 
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
@@ -115,6 +103,7 @@ namespace Projeto_Contratos.TelaBusca
                 {
 
                     var linha = locador.NewRow();
+                    linha["id"] = reader1.GetInt32("id");
                     linha["nome"] = reader1.GetString("nome");
                     linha["cpf"] = reader1.GetString("cpf");
                     linha["rg"] = reader1.GetString("rg");
@@ -125,7 +114,7 @@ namespace Projeto_Contratos.TelaBusca
                     locador.Rows.Add(linha);
                 }
 
-                Session["tabela"] = locador;
+                Session["tabelaLD"] = locador;
                 grdClientes.DataSource = locador;
                 grdClientes.DataBind();
 
@@ -177,7 +166,7 @@ namespace Projeto_Contratos.TelaBusca
 
                     locatario.Rows.Add(linha);
                 }
-                Session["tabela"] = locatario;
+                Session["tabelaLT"] = locatario;
                 grdClientes2.DataSource = locatario;
                 grdClientes2.DataBind();
 
@@ -186,8 +175,6 @@ namespace Projeto_Contratos.TelaBusca
 
                 connection.Close();
             }
-
-            /*CODIGO DE BUSCA DO LOCADOR E LOCATARIO*/
         }
 
     }

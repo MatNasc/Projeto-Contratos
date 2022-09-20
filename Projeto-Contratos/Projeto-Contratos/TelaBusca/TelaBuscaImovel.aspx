@@ -26,6 +26,7 @@
                         <asp:BoundField DataField="cidade" HeaderText="CIDADE" />
                         <asp:BoundField DataField="n_agua" HeaderText="N°CONTA DE ÁGUA" />
                         <asp:BoundField DataField="n_luz" HeaderText="N° CONTA DE LUZ" />
+                        <asp:BoundField DataField="valor" HeaderText="VALOR" />
                         <asp:ButtonField ButtonType="Link" CommandName="alugar" ControlStyle-CssClass="btn btn-primary" Text="Alugar" />
                     </Columns>
                 </asp:GridView>

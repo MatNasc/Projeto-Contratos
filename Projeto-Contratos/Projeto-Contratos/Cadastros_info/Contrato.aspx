@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="../TelaBusca/Estilo_CAD.css" />
     <div class="container-principal2" style="margin-top:20px; margin-bottom:50px">
-        <div id="contrato" style="margin-bottom:50px">
+        <div id="contrato" style="margin-bottom:auto;">
             <header>Contrato de aluguel</header>
             <article style="text-align:justify">
                 <%=nomeld %>,  <%=cpf %>, <%=rg %> <%=endereçold %>, doravante denominado LOCADOR; <%=nomeld %>, <%=cpf %>, <%=rg %> <%=endereçolt %>, doravante denominado LOCATÁRIO, celebram o presente contrato de locação residencial, com as cláusulas e condições seguintes: 
@@ -75,7 +75,9 @@
                 <br />
             </article>
             <footer style="text-align:center" >
-                <asp:Button runat="server" Text="imprimir" ID="btn_imprimir" CssClass="buttonT" style="align-content:center" />
+                <div class="no-print">
+                    <button type="button" value="imprimir" onclick="window.print();" class="buttonT" style="align-content:center">Imprimir</button>
+                </div>
             </footer>
         </div>
     </div>
