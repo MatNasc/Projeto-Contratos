@@ -22,7 +22,7 @@ namespace Projeto_Contratos.TelaBusca
                 connection.Open();
 
                 droplistCidade.Items.Clear();
-                var reader = new MySqlCommand("SELECT cidade FROM imovel",connection).ExecuteReader();
+                var reader = new MySqlCommand("SELECT DISTINCT cidade FROM imovel", connection).ExecuteReader();
 
                 droplistCidade.Items.Add("");
 
@@ -38,7 +38,7 @@ namespace Projeto_Contratos.TelaBusca
                 connection.Open();
 
                 droplistBairro.Items.Clear();
-                var reader2 = new MySqlCommand("SELECT bairro FROM imovel", connection).ExecuteReader();
+                var reader2 = new MySqlCommand("SELECT DISTINCT bairro FROM imovel", connection).ExecuteReader();
 
                 droplistBairro.Items.Add("");
 
@@ -95,7 +95,9 @@ namespace Projeto_Contratos.TelaBusca
                 linha["cidade"] = reader.GetString("cidade");
                 linha["n_agua"] = reader.GetString("n_agua");
                 linha["n_luz"] = reader.GetString("n_luz");
-                linha["valor"] = reader.IsDBNull(9) ? "" : reader.GetFloat("valor").ToString("C");
+
+                //linha["valor"] = reader.IsDBNull(9) ? "" : reader.GetString("valor");
+
 
                 imovel.Rows.Add(linha);
             }

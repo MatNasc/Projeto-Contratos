@@ -83,16 +83,18 @@ namespace Projeto_Contratos.TelaBusca
                 locador.Columns.Add("rg");
                 locador.Columns.Add("endereco");
 
+                connection.Open();
                 string FiltroLocador = " (1=1) ";
+                var commando1 = new MySqlCommand($"SELECT id,nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
+
+                
                 if (txtBusca.Text.Equals("") == false)
                 {
-                    FiltroLocador = FiltroLocador + $" AND nome like '%{txtBusca.Text}%'";
+
+                    commando1.CommandText += $" AND nome like @nome";
+                    commando1.Parameters.Add(new MySqlParameter("nome", $"%{txtBusca.Text}%"));
+
                 }
-
-                connection.Open();
-
-
-                var commando1 = new MySqlCommand($"SELECT id,nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
 
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
