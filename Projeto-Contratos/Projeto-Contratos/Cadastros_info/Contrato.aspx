@@ -78,12 +78,17 @@
                 <br />
             </article>
 
+
+
             <footer style="text-align:center" >
                 <div class="no-print">
                     <button type="button" value="imprimir" onclick="window.print();" class="buttonT" style="align-content:center">Imprimir</button>
                 </div>
 
+
             </footer>
+
+
         </div>
     </div>
 </asp:Content>
