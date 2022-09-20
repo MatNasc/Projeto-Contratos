@@ -37,6 +37,9 @@ namespace Projeto_Contratos
               );
         }
 
-
+        protected void btnSair_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Tela_Login/Tela_Inicial.aspx");
+        }
     }
 }
