@@ -23,7 +23,11 @@ namespace Projeto_Contratos.Cadastros_info
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                        
+          
+        }
+
+        protected void btn_imprimir_Click(object sender, EventArgs e)
+        {
         }
     }
 }

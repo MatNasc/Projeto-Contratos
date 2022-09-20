@@ -86,7 +86,10 @@ namespace Projeto_Contratos.TelaBusca
                 string FiltroLocador = " (1=1) ";
                 if (txtBusca.Text.Equals("") == false)
                 {
-                    FiltroLocador = FiltroLocador + $" AND nome like '%{txtBusca.Text}%'";
+
+                    commando1.CommandText += $" AND nome like @nome";
+                    commando1.Parameters.Add(new MySqlParameter("nome", $"%{txtBusca.Text}%"));
+
                 }
 
                 connection.Open();
