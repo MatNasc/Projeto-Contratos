@@ -22,7 +22,7 @@ namespace Projeto_Contratos.PaginasEditar
                 var locador = new Negócio.Locador().LocadorPorId(id);
                 if (locador == null)
                 {
-                    SiteMaster.ExibirAlert(this, "Locador não identificado, realize a pesquisa novamente", "TelaBuscaLL.aspx");
+                    SiteMaster.ExibirAlert(this, "Locador não identificado, realize a pesquisa novamente", "../TelaBusca/TelaBuscaLL.aspx");
                     return;
                 }
 
@@ -35,7 +35,8 @@ namespace Projeto_Contratos.PaginasEditar
                     txtCPF.Text = reader.GetString("cpf");
                     txtRG.Text = reader.GetString("rg");
                     txtProfissao.Text = reader.GetString("profissao");
-                    DropList.SelectedValue = reader.IsDBNull(5) ? "" : reader.GetString("estado_civil");
+                    DropList.SelectedValue = reader.IsDBNull(4) ? "" : reader.GetString("estado_civil");
+                    txt_endereco.Text = reader.GetString("endereco");
                 }
 
 
@@ -48,17 +49,17 @@ namespace Projeto_Contratos.PaginasEditar
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)
-        {
-            string Endereco = txtRua.Text + "," + txtNum.Text + "," + txtBairro.Text + "," + txtCidade.Text;
+        {        
             var locador = new Classe.Locador();
             locador.Id = Convert.ToInt32(Request.QueryString["id"].ToString());
             locador.Nome=txtNome.Text;
             locador.Cpf = txtCPF.Text;
             locador.Rg = txtRG.Text;
             locador.Profissao = txtProfissao.Text;
-            locador.Endereco = Endereco;
+            locador.Estado_civil = DropList.Text;
+            locador.Endereco = txt_endereco.Text;
             new Negócio.Locador().Update(locador);
-            SiteMaster.ExibirAlert(this, "Locador  alterado com sucesso!", "TelaBuscaLL.aspx");
+            SiteMaster.ExibirAlert(this, "Locador  alterado com sucesso!", "/TelaBusca/TelaBuscaLL.aspx");
 
         }
     }
