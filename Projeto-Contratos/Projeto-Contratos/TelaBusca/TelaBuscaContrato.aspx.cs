@@ -22,7 +22,25 @@ namespace Projeto_Contratos.TelaBusca
 
         protected void grd_Contratos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            
+            if (e.CommandName == "excluir")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                var tabela = (DataTable)Session["tabela"];
+                connection.Open();
+                var comando = new MySqlCommand("DELETE FROM contrato WHERE id = " + tabela.Rows[index]["id"].ToString(), connection);
+                comando.ExecuteNonQuery();
+                connection.Close();
+
+                SiteMaster.ExibirAlert(this, "Contrato excluído com sucesso!");
+                BtnPesquisar_Click(null, null);
+            }
+
+            if (e.CommandName == "editar")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                var tabela = (DataTable)Session["tabela"];
+                Response.Redirect("PaginasEditar/EditaImovel.aspx?id=" + tabela.Rows[index]["id"].ToString());
+            }
 
         }
 
@@ -30,29 +48,42 @@ namespace Projeto_Contratos.TelaBusca
         {
             DataTable tabela = new DataTable();
 
-            tabela.Columns.Add("Locatario");
+            tabela.Columns.Add("id");
             tabela.Columns.Add("Locador");
+            tabela.Columns.Add("Locatario");
             tabela.Columns.Add("Código do Imóvel");
             tabela.Columns.Add("Nº do Contrato");
             tabela.Columns.Add("Data de Inicio");
             tabela.Columns.Add("Data de Termino");
 
-           
-            var linha = tabela.NewRow();
 
-            linha["Locatario"] = "Matheus Carvalho";
-            linha["Locador"] = "Israel Venancio";
-            linha["Código do Imóvel"] = "0118";
-            linha["Nº do Contrato"] = "2345678";
-            linha["Data de Inicio"] = "20/10/2022";
-            linha["Data de Termino"] = "20/10/2023";
-            
-            
-            tabela.Rows.Add(linha);
+            string filtro = " (1=1) ";
 
+            if (Consultar.Text.Equals("") == false)
+            {
+                var id = Convert.ToInt32(Consultar.Text) - 10000;
+                filtro = filtro + $" AND id= {id}";
+            } 
+
+            connection.Open();
+          
+            
+            var commando = new MySqlCommand($@"SELECT id_locador,id_locatario,id_imovel,data_inicio,data_fim FROM contrato WHERE {filtro}", connection);
+            var reader = commando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var linha = tabela.NewRow();
+                linha["Locador"] = reader.GetInt32("id_locador");
+                linha["Locatario"] = reader.GetInt32("id_locatario");
+                linha["Código do Imóvel"] = reader.GetInt32("id_imovel");
+                linha["Data de Inicio"] =reader.GetDateTime("data_inicio");
+                linha["Data de Termino"] = reader.GetDateTime("data_fim");
+                tabela.Rows.Add(linha);
+            }
+            Session["tabela"] = tabela;
             grd_Contratos.DataSource = tabela;
             grd_Contratos.DataBind();
-
         }
     }
 }
