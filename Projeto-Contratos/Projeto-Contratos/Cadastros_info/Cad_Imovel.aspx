@@ -17,7 +17,8 @@
                     <div class="row">
                         <asp:Label runat="server" ID="lblCEP" Text="CEP:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                         <br />
-                        <asp:TextBox runat="server" ID="txtCEP" placeholder="Digite seu CEP" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txtCEP" OnTextChanged="txtCEP_TextChanged" AutoPostBack="true" placeholder="Digite seu CEP" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                        <asp:Literal ID="litResultado" runat="server"/>
                     </div>
                     <div class="row" style="margin-top: 20px">
                         <asp:Label runat="server" ID="lblNum_IM" Text="Número:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
