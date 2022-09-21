@@ -90,6 +90,8 @@ namespace Projeto_Contratos.TelaBusca
                 var commando1 = new MySqlCommand($"SELECT id,nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
 
 
+
+
                 if (txtBusca.Text.Equals("") == false)
                 {
 
@@ -100,8 +102,10 @@ namespace Projeto_Contratos.TelaBusca
                 
 
 
+
                 
                 connection.Open();
+
 
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
