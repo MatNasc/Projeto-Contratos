@@ -16,7 +16,6 @@
                         <asp:BoundField DataField="Locatario" HeaderText="Locatario" />
                         <asp:BoundField DataField="Locador" HeaderText="Locador" />
                         <asp:BoundField DataField="Código do Imóvel" HeaderText="Código do Imóvel" />
-                        <asp:BoundField DataField="Nº do Contrato" HeaderText="Nº do Contrato" />
                         <asp:BoundField DataField="Data de Inicio" HeaderText="Data de Inicio" />
                         <asp:BoundField DataField="Data de Termino" HeaderText="Data de Termino" />
                         <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="Visualizar" Text="Visualizar" />

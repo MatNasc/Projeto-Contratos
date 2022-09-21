@@ -1,11 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contrato.aspx.cs" Inherits="Projeto_Contratos.Cadastros_info.Contrato" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="../TelaBusca/Estilo_CAD.css" />
+
     <div class="container-principal2" style="margin-top:20px; margin-bottom:50px">
         <div id="contrato" style="margin-bottom:auto;">
+
             <header>Contrato de aluguel</header>
+
             <article style="text-align:justify">
-                <%=nomeld %>,  <%=cpf %>, <%=rg %> <%=endereçold %>, doravante denominado LOCADOR; <%=nomeld %>, <%=cpf %>, <%=rg %> <%=endereçolt %>, doravante denominado LOCATÁRIO, celebram o presente contrato de locação residencial, com as cláusulas e condições seguintes: 
+                <%=nomeld %>,  <%=cpf_locador %>, <%=rg_locador %> <%=endereçold %>, doravante denominado LOCADOR; <%=nomeld %>, <%=cpf_locatario %>, <%=rg_locatario %>, doravante denominado LOCATÁRIO, celebram o presente contrato de locação residencial, com as cláusulas e condições seguintes: 
                 <br />
                 1)     O LOCADOR cede para locação residencial ao LOCATÁRIO, o imóvel situado <%=endereçoim %>.
                 <br />
@@ -57,7 +61,7 @@
                 <br />
                 23) O LOCATÁRIO declara, para todos os fins e efeitos de direito, que recebe o imóvel locado em condições plenas de uso, em perfeito estado de conservação, higiene e limpeza, obrigando-se e comprometendo-se a devolvê-lo em iguais condições, independente de qualquer aviso ou notificação prévia, e qualquer que seja o motivo da devolução, sob pena de incorrer nas cominações previstas neste contrato ou estipuladas em lei, além da obrigação de indenizar por danos ou prejuízos decorrentes da inobservância desta obrigação, salvo as deteriorações decorrentes de uso normal do imóvel.
                 <br />
-                24) Assina também o presente contrato como FIADOR e PRINCIPAL PAGADOR, solidariamente com o LOCATÁRIO, por todas as obrigações e responsabilidades constantes deste acordo com disposições dos artigos 827 e seguintes do Novo Código Civil Brasileiro, inclusive aluguéis vencidos, danos ao imóvel e demais encargos decorrentes da locação, <%=nomeld %> <%=cpf %> <%=rg %> <%=endereçold %>, consoante o artigo 818 do Novo Código Civil Brasileiro, declarando expressamente, desistir da faculdade estabelecida nos artigos 835 e 838 e renunciando  ao benefício de ordem do artigo 827 do mesmo código, perdurando sua responsabilidade até a entrega das chaves, inclusive em caso de prorrogação.
+                24) Assina também o presente contrato como FIADOR e PRINCIPAL PAGADOR, solidariamente com o LOCATÁRIO, por todas as obrigações e responsabilidades constantes deste acordo com disposições dos artigos 827 e seguintes do Novo Código Civil Brasileiro, inclusive aluguéis vencidos, danos ao imóvel e demais encargos decorrentes da locação, <%=nomeld %> <%=cpf_locador %> <%=rg_locador %> <%=endereçold %>, consoante o artigo 818 do Novo Código Civil Brasileiro, declarando expressamente, desistir da faculdade estabelecida nos artigos 835 e 838 e renunciando  ao benefício de ordem do artigo 827 do mesmo código, perdurando sua responsabilidade até a entrega das chaves, inclusive em caso de prorrogação.
                 <br />
                 25) Em caso de ausência, interdição, recuperação judicial, falência ou insolvência do fiador, declaradas judicialmente, suas obrigações se transferem aos seus herdeiros e/ou sucessores e o LOCATÁRIO se obriga, dentro de 30 (trinta) dias a dar substituto idôneo, a juízo do LOCADOR, ficando aquele em mora e sujeito à multa contratual e despejo, se não o fizer nesses dias de mera tolerância.
                 <br />
@@ -68,17 +72,26 @@
                 <br />
                 <br />
                 <br />
-                <br />
+                <br />                
                 LOCADOR : <%=nomeld %>
                 <br />
                 LOCATÁRIO : <%=nomelt %>
                 <br />
             </article>
+
+
+
             <footer style="text-align:center" >
                 <div class="no-print">
                     <button type="button" value="imprimir" onclick="window.print();" class="buttonT" style="align-content:center">Imprimir</button>
                 </div>
+
+
+
             </footer>
+
+
+
         </div>
     </div>
 </asp:Content>
