@@ -27,7 +27,7 @@ namespace Projeto_Contratos.Negócio
             try
             {
                 connection.Open();
-                var comand = new MySqlCommand($"SELECT id FROM usuario WHERE usuario = @usuario AND senha = @senha ", connection);
+                var comand = new MySqlCommand($"SELECT id, usuario FROM usuario WHERE usuario = @usuario AND senha = @senha ", connection);
                 comand.Parameters.Add(new MySqlParameter("usuario", usuario));
                 comand.Parameters.Add(new MySqlParameter("senha", senha));
 
@@ -36,7 +36,7 @@ namespace Projeto_Contratos.Negócio
                 {
                     user.ID = reader.GetInt32("id");
                     user.User = reader.GetString("usuario");
-                   
+
                 }
                 else
                 {
