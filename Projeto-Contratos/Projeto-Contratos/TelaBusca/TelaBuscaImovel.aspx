@@ -8,11 +8,17 @@
         <div id="main">
             <h1 class="box-title" style="font-family: 'Times New Roman'; font-size: 70px">Busca de Imóveis</h1>
             <div class="content-box" style="margin-right: 150px; margin-left: 150px; padding-bottom: 150px; margin-top: 50px; height: auto">
+
+
+
                 <asp:Label runat="server" Text="Cidade" Style="color: white; height: 40px; padding: 20px; display: inline-block; margin-top: 50px; margin-left: 19%; font-size: 25px"></asp:Label>
                 <asp:DropDownList runat="server" ID="droplistCidade" AutoPostBack="true" BackColor="White" ForeColor="#000000" CssClass="ddl">
                 </asp:DropDownList>
                 <asp:Label runat="server" Text="Bairro" Style="color: white; height: 40px; padding: 20px 20px; display: inline-block; margin-top: 50px; font-size: 25px"></asp:Label>
                 <asp:DropDownList runat="server" ID="droplistBairro" AutoPostBack="true" BackColor="White" ForeColor="#000000" CssClass="ddl">
+
+
+
                 </asp:DropDownList>
                 <asp:Button runat="server" ID="btnbuscaIM" OnClick="btnbuscaIM_Click" Text="Buscar" CssClass="button" Style="margin-left: 20px; height: 65px" />
                 <br />
