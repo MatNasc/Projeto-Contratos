@@ -54,6 +54,7 @@
                         <li><a runat="server" href="~/">Página inicial</a></li>
                         <!--<li><a runat="server" href="~/About">Sobre</a></li>-->
                         <!--<li><a runat="server" href="~/Contact">Contato</a></li>-->
+                        <asp:Button runat="server" ID="btnSair" OnClick="btnSair_Click" Text="Sair" CssClass="btn btn-danger" Style="padding:7px; width:80px;font-size:17px;margin:10px;margin-left:930px " />
                     </ul>
                 </div>
             </div>

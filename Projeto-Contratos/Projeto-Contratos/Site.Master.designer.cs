@@ -13,6 +13,15 @@ namespace Projeto_Contratos {
     public partial class SiteMaster {
         
         /// <summary>
+        /// Controle btnSair.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSair;
+        
+        /// <summary>
         /// Controle MainContent.
         /// </summary>
         /// <remarks>
