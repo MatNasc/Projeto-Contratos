@@ -13,22 +13,22 @@ namespace Projeto_Contratos.Cadastros_info {
     public partial class Cad_Imovel {
         
         /// <summary>
-        /// Controle lblRua_IM.
+        /// Controle lblCEP.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRua_IM;
+        protected global::System.Web.UI.WebControls.Label lblCEP;
         
         /// <summary>
-        /// Controle txtRua_IM.
+        /// Controle txtCEP.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRua_IM;
+        protected global::System.Web.UI.WebControls.TextBox txtCEP;
         
         /// <summary>
         /// Controle lblNum_IM.
@@ -65,6 +65,24 @@ namespace Projeto_Contratos.Cadastros_info {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_valor;
+        
+        /// <summary>
+        /// Controle lblRua_IM.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRua_IM;
+        
+        /// <summary>
+        /// Controle txtRua_IM.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRua_IM;
         
         /// <summary>
         /// Controle lblBairro_IM.
