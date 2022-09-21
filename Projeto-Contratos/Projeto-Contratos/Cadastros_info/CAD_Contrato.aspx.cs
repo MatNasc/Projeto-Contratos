@@ -87,7 +87,7 @@ namespace Projeto_Contratos.Cadastros_info
             int id_imovel = (int)Session["id_imovel"];
             var comando = new MySqlCommand($@"INSERT INTO `contrato`(`id_locador`, `id_locatario`, `id_imovel`, `data_inicio`, `data_fim`) VALUES ('{id_locador}','{id_locatario}','{id_imovel}','{txt_DataI.Text}','{txt_DataF.Text}')", connection);
             comando.ExecuteNonQuery();
-            Response.Redirect($"contrato.aspx?id_locador={id_locador},id_locatario={id_locatario},id_imovel={id_imovel} ");
+            Response.Redirect($"contrato.aspx?id_locador={id_locador}&id_locatario={id_locatario}&id_imovel={id_imovel}");
             connection.Close();
         }
     }
