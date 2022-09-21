@@ -14,7 +14,7 @@
                 <asp:Label runat="server" Text="Bairro" Style="color: white; height: 40px; padding: 20px 20px; display: inline-block; margin-top: 50px; font-size: 25px"></asp:Label>
                 <asp:DropDownList runat="server" ID="droplistBairro" AutoPostBack="true" BackColor="White" ForeColor="#000000" CssClass="ddl">
                 </asp:DropDownList>
-                <asp:Button runat="server" ID="btnbuscaIM" OnClick="btnbuscaIM_Click" Text="Buscar" class="button" Style="margin-left: 20px; height: 65px" />
+                <asp:Button runat="server" ID="btnbuscaIM" OnClick="btnbuscaIM_Click" Text="Buscar" CssClass="button" Style="margin-left: 20px; height: 65px" />
                 <br />
                 <br />
                 <asp:GridView runat="server" ID="grdImovel" OnRowCommand="grdImovel_RowCommand" AutoGenerateColumns="false" Width="100%" AllowPaging="true" PageSize="20" CssClass="table" Style="background-color: black; color: white; width: 60%; margin-left: 225px; border: thin">

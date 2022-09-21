@@ -84,6 +84,8 @@ namespace Projeto_Contratos.TelaBusca
                 locador.Columns.Add("endereco");
 
                 string FiltroLocador = " (1=1) ";
+                var commando1 = new MySqlCommand($"SELECT id,nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
+
                 if (txtBusca.Text.Equals("") == false)
                 {
 
@@ -95,7 +97,7 @@ namespace Projeto_Contratos.TelaBusca
                 connection.Open();
 
 
-                var commando1 = new MySqlCommand($"SELECT id,nome, cpf, rg, profissao, estado_civil, endereco FROM locador WHERE {FiltroLocador}", connection);
+               
 
                 var reader1 = commando1.ExecuteReader();
                 while (reader1.Read())
