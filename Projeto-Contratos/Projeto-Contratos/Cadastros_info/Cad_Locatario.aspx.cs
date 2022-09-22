@@ -122,6 +122,12 @@ namespace Projeto_Contratos.Cadastros_info
             connection.Open();
             
             var comando = new MySqlCommand($@"INSERT INTO locatario (nome, cpf, rg,profissao,estado_civil) VALUES (@nome,@cpf,@rg,@profissao,@estadocivil)", connection);
+            if (txt_nomeLT.Text =="" || txt_profLT.Text == "" || txt_LTCPF.Text == "" || txt_LTRG.Text == "" || txt_profLT.Text == "" )
+            {
+                SiteMaster.ExibirAlert(this, "Preencha todos os campos!");
+                return;
+            }
+
             comando.Parameters.Add(new MySqlParameter("nome", txt_nomeLT.Text));
             comando.Parameters.Add(new MySqlParameter("cpf", txt_LTCPF.Text));
             comando.Parameters.Add(new MySqlParameter("rg", txt_LTRG.Text));
@@ -129,6 +135,7 @@ namespace Projeto_Contratos.Cadastros_info
             comando.Parameters.Add(new MySqlParameter("estadocivil", DropList.Text));
             comando.ExecuteNonQuery();
             connection.Close();
+
 
             SiteMaster.ExibirAlert(this, " Locatário cadastrado com sucesso!");
             txt_nomeLT.Text = "";
@@ -142,6 +149,10 @@ namespace Projeto_Contratos.Cadastros_info
                 lblAlertaRG.Text = "RG invalido!";
                 lblAlertaRG.ForeColor = Color.Red;
             }
+            else
+            {
+                lblAlertaRG.Text = "";
+            }
 
         }
 
@@ -151,6 +162,10 @@ namespace Projeto_Contratos.Cadastros_info
             {
                 lblAlertaCpf.Text = "CPF invalido!";
                 lblAlertaCpf.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblAlertaCpf.Text = "";
             }
 
         }

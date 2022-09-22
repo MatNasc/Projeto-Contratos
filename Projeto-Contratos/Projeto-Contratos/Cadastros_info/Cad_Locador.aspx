@@ -80,7 +80,7 @@
                         <asp:TextBox runat="server" ID="txtRua" placeholder="Digite o nome da Rua" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:Label runat="server" ID="lblNum" Text="Numero:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
+                        <asp:Label runat="server" ID="lblNum" Text="Número:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                         <br />
                         <asp:TextBox runat="server" ID="txtNum" placeholder="Digite o numero da casa" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                     </div>
