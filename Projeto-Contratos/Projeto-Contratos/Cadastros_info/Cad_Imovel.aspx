@@ -23,7 +23,7 @@
                     <div class="row" style="margin-top: 20px">
                         <asp:Label runat="server" ID="lblNum_IM" Text="Número:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                         <br />
-                        <asp:TextBox runat="server" ID="txtNum_IM" placeholder="Digite o Numero da casa" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txtNum_IM" placeholder="Digite o Número da casa" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                     </div>
                     <div class="row" style="margin-top: 20px">
                         <asp:Label runat="server" ID="lbl_valor" Text="Valor:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>

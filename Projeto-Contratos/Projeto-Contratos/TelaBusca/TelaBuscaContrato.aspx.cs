@@ -77,7 +77,7 @@ namespace Projeto_Contratos.TelaBusca
                 linha["Locador"] = reader.GetInt32("id_locador");
                 linha["Locatario"] = reader.GetInt32("id_locatario");
                 linha["Código do Imóvel"] = reader.GetInt32("id_imovel");
-                linha["Data de Inicio"] =reader.GetDateTime("data_inicio");
+                linha["Data de Inicio"] =reader.GetDateTime("data_inicio").ToString();
                 linha["Data de Termino"] = reader.GetDateTime("data_fim");
                 tabela.Rows.Add(linha);
             }

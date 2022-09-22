@@ -119,26 +119,44 @@ namespace Projeto_Contratos.Cadastros_info
 
         protected void btnCadastrarLT_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            
-            var comando = new MySqlCommand($@"INSERT INTO locatario (nome, cpf, rg,profissao,estado_civil) VALUES (@nome,@cpf,@rg,@profissao,@estadocivil)", connection);
-            if (txt_nomeLT.Text =="" || txt_profLT.Text == "" || txt_LTCPF.Text == "" || txt_LTRG.Text == "" || txt_profLT.Text == "" )
+            if (validateRg(txt_LTRG.Text) == false)
             {
-                SiteMaster.ExibirAlert(this, "Preencha todos os campos!");
+                SiteMaster.ExibirAlert(this, "Dados inválidos.");
                 return;
             }
+            else
+            {
+                if (IsCpf(txt_LTCPF.Text) == false)
+                {
+                    SiteMaster.ExibirAlert(this, "Dados inválidos.");
+                    return;
+                }
+                else
+                {
+                    connection.Open();
 
-            comando.Parameters.Add(new MySqlParameter("nome", txt_nomeLT.Text));
-            comando.Parameters.Add(new MySqlParameter("cpf", txt_LTCPF.Text));
-            comando.Parameters.Add(new MySqlParameter("rg", txt_LTRG.Text));
-            comando.Parameters.Add(new MySqlParameter("profissao", txt_profLT.Text));
-            comando.Parameters.Add(new MySqlParameter("estadocivil", DropList.Text));
-            comando.ExecuteNonQuery();
-            connection.Close();
+                    var comando = new MySqlCommand($@"INSERT INTO locatario (nome, cpf, rg,profissao,estado_civil) VALUES (@nome,@cpf,@rg,@profissao,@estadocivil)", connection);
+                    if (txt_nomeLT.Text == "" || txt_profLT.Text == "" || txt_LTCPF.Text == "" || txt_LTRG.Text == "" || txt_profLT.Text == "")
+                    {
+                        SiteMaster.ExibirAlert(this, "Preencha todos os campos!");
+                        return;
+                    }
+
+                    comando.Parameters.Add(new MySqlParameter("nome", txt_nomeLT.Text));
+                    comando.Parameters.Add(new MySqlParameter("cpf", txt_LTCPF.Text));
+                    comando.Parameters.Add(new MySqlParameter("rg", txt_LTRG.Text));
+                    comando.Parameters.Add(new MySqlParameter("profissao", txt_profLT.Text));
+                    comando.Parameters.Add(new MySqlParameter("estadocivil", DropList.Text));
+                    comando.ExecuteNonQuery();
+                    connection.Close();
 
 
-            SiteMaster.ExibirAlert(this, " Locatário cadastrado com sucesso!");
-            txt_nomeLT.Text = "";
+                    SiteMaster.ExibirAlert(this, " Locatário cadastrado com sucesso!");
+                    txt_nomeLT.Text = "";
+                }
+            }
+
+            
         }
 
         protected void txt_LTRG_TextChanged(object sender, EventArgs e)

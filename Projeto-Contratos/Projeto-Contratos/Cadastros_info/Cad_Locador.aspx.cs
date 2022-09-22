@@ -124,25 +124,41 @@ namespace Projeto_Contratos.Cadastros_info
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            string Endereco = txtRua.Text + "," + txtNum.Text + "," + txtBairro.Text + "," + txtCidade.Text;
-            var comando = new MySqlCommand($@"INSERT INTO locador (nome, cpf, rg,profissao, estado_civil, endereco) VALUES (@nome,@cpf,@rg,@profissao,@estadocivil,@endereco)", connection);
-            if(txtNome.Text == "" ||txtCPF.Text == "" || txtRG.Text == "" || txtProfissao.Text == "" ||txtNum.Text == "" ||txtRua.Text == "" ||txtCidade.Text == "" ||txtBairro.Text == "" )
+            if (IsCpf(txtCPF.Text) == false)
             {
-                SiteMaster.ExibirAlert(this, "Preencha todos os campos!");
+                SiteMaster.ExibirAlert(this, "Dados inválidos.");
                 return;
             }
-            comando.Parameters.Add(new MySqlParameter("nome", txtNome.Text));
-            comando.Parameters.Add(new MySqlParameter("cpf", txtCPF.Text));
-            comando.Parameters.Add(new MySqlParameter("rg", txtRG.Text));
-            comando.Parameters.Add(new MySqlParameter("profissao", txtProfissao.Text));
-            comando.Parameters.Add(new MySqlParameter("estadocivil", DropList.Text));
-            comando.Parameters.Add(new MySqlParameter("endereco", Endereco));
-            comando.ExecuteNonQuery();
-            connection.Close();
+            else
+            {
+                if (validateRg(txtRG.Text) == false)
+                {
+                    SiteMaster.ExibirAlert(this, "Dados inválidos.");                    
+                    return;                   
+                }
+                else
+                {                    
+                    connection.Open();
+                    string Endereco = txtRua.Text + "," + txtNum.Text + "," + txtBairro.Text + "," + txtCidade.Text;
+                    var comando = new MySqlCommand($@"INSERT INTO locador (nome, cpf, rg,profissao, estado_civil, endereco) VALUES (@nome,@cpf,@rg,@profissao,@estadocivil,@endereco)", connection);
+                    if (txtNome.Text == "" || txtCPF.Text == "" || txtRG.Text == "" || txtProfissao.Text == "" || txtNum.Text == "" || txtRua.Text == "" || txtCidade.Text == "" || txtBairro.Text == "")
+                    {
+                        SiteMaster.ExibirAlert(this, "Preencha todos os campos!");
+                        return;
+                    }
+                    comando.Parameters.Add(new MySqlParameter("nome", txtNome.Text));
+                    comando.Parameters.Add(new MySqlParameter("cpf", txtCPF.Text));
+                    comando.Parameters.Add(new MySqlParameter("rg", txtRG.Text));
+                    comando.Parameters.Add(new MySqlParameter("profissao", txtProfissao.Text));
+                    comando.Parameters.Add(new MySqlParameter("estadocivil", DropList.Text));
+                    comando.Parameters.Add(new MySqlParameter("endereco", Endereco));
+                    comando.ExecuteNonQuery();
+                    connection.Close();
 
-            SiteMaster.ExibirAlert(this, " Locador cadastrado com sucesso!");
-            txtNome.Text = "";
+                    SiteMaster.ExibirAlert(this, " Locador cadastrado com sucesso!");
+                    txtNome.Text = "";
+                }
+            }
         }
 
         protected void txtCPF_TextChanged(object sender, EventArgs e)
@@ -155,8 +171,8 @@ namespace Projeto_Contratos.Cadastros_info
             else
             {
                 lblAlertaCpf.Text = "";
-
             }
+
         }
 
         protected void txtRG_TextChanged(object sender, EventArgs e)
@@ -165,11 +181,16 @@ namespace Projeto_Contratos.Cadastros_info
             {
                 lblAlertaRG.Text = "RG invalido";
                 lblAlertaRG.ForeColor = Color.Red;
+                               
             }
             else
             {
                 lblAlertaRG.Text = "";
             }
+
         }
     }
+
+
+
 }
