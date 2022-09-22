@@ -31,6 +31,15 @@ namespace Projeto_Contratos.Cadastros_info {
         protected global::System.Web.UI.WebControls.TextBox txtCEP;
         
         /// <summary>
+        /// Controle litResultado.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litResultado;
+        
+        /// <summary>
         /// Controle lblNum_IM.
         /// </summary>
         /// <remarks>

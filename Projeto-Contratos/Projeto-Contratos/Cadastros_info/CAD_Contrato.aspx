@@ -39,7 +39,7 @@
                                 <asp:TextBox runat="server" ID="txt_CPFLD" ReadOnly="true" Width="200px" Height="40px" Style="background-color: lightgrey; border: thin; border-radius: 10px; padding-left: 10px"></asp:TextBox>
                             </div>
                         </div>
-                        <div class="col-sm-6" style="padding: 0; width: 245.33px;">
+                        <div class="col-sm-6" >
 
 
                             <div class="row">

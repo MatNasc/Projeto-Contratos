@@ -27,7 +27,7 @@ namespace Projeto_Contratos.Cadastros_info
 
                 connection.Open();
 
-                var reader = new MySqlCommand($"SELECT I.id,nome,id_locador,rua,numero,bairro,cidade,cpf,n_agua,n_luz,valor FROM imovel I INNER JOIN locador L ON I.id_locador = L.id WHERE id_locador=" + idlocador, connection).ExecuteReader();
+                var reader = new MySqlCommand($"SELECT I.id,nome,id_locador,rua,rg,numero,bairro,cidade,cpf,n_agua,n_luz,valor FROM imovel I INNER JOIN locador L ON I.id_locador = L.id WHERE id_locador=" + idlocador, connection).ExecuteReader();
 
                 if (reader.Read())
                 {
@@ -35,6 +35,7 @@ namespace Projeto_Contratos.Cadastros_info
                     Session["id_imovel"] = reader.GetInt32("id");
                     txt_NomeLD.Text = reader.GetString("nome");
                     txt_CPFLD.Text = reader.GetString("cpf");
+                    txt_RGLD.Text = reader.GetString("rg");
                     txt_Valor.Text = reader.GetFloat("valor").ToString();
                     txt_Rua.Text = reader.GetString("rua");
                     txt_num.Text = reader.GetInt32("numero").ToString();
