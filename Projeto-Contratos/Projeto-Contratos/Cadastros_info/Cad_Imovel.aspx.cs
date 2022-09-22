@@ -27,6 +27,11 @@ namespace Projeto_Contratos.Cadastros_info
             connection.Open();
 
             var comando = new MySqlCommand($@"INSERT INTO imovel (id_locador, rua, numero,bairro,cidade,n_agua,n_luz,valor) VALUES (@id_locador,@rua,@numero,@bairro,@cidade,@n_agua,@n_luz,@valor)", connection);
+            if(txtAgua.Text == "" ||txtLuz.Text == "" ||txtCEP.Text == "" ||txtBairro_IM.Text == "" ||txtCidade_IM.Text == "" ||txtRua_IM.Text == "" ||txtNum_IM.Text == "" ||txt_valor.Text == "" )
+            {
+                SiteMaster.ExibirAlert(this, "Preencha todos os campos!");
+                return;
+            }
             comando.Parameters.Add(new MySqlParameter("id_locador", id));
             comando.Parameters.Add(new MySqlParameter("rua", txtRua_IM.Text));
             comando.Parameters.Add(new MySqlParameter("numero", txtNum_IM.Text));

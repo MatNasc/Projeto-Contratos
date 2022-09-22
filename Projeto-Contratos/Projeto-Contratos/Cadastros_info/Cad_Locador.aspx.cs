@@ -21,42 +21,42 @@ namespace Projeto_Contratos.Cadastros_info
         }
 
 
-        
-            public static bool IsCpf(string cpf)
-            {
-                int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
-                int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
-                string tempCpf;
-                string digito;
-                int soma;
-                int resto;
-                cpf = cpf.Trim();
-                cpf = cpf.Replace(".", "").Replace("-", "");
-                if (cpf.Length != 11)
-                    return false;
-                tempCpf = cpf.Substring(0, 9);
-                soma = 0;
 
-                for (int i = 0; i < 9; i++)
-                    soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
-                resto = soma % 11;
-                if (resto < 2)
-                    resto = 0;
-                else
-                    resto = 11 - resto;
-                digito = resto.ToString();
-                tempCpf = tempCpf + digito;
-                soma = 0;
-                for (int i = 0; i < 10; i++)
-                    soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
-                resto = soma % 11;
-                if (resto < 2)
-                    resto = 0;
-                else
-                    resto = 11 - resto;
-                digito = digito + resto.ToString();
-                return cpf.EndsWith(digito);
-            }
+        public static bool IsCpf(string cpf)
+        {
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            string tempCpf;
+            string digito;
+            int soma;
+            int resto;
+            cpf = cpf.Trim();
+            cpf = cpf.Replace(".", "").Replace("-", "");
+            if (cpf.Length != 11)
+                return false;
+            tempCpf = cpf.Substring(0, 9);
+            soma = 0;
+
+            for (int i = 0; i < 9; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = resto.ToString();
+            tempCpf = tempCpf + digito;
+            soma = 0;
+            for (int i = 0; i < 10; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = digito + resto.ToString();
+            return cpf.EndsWith(digito);
+        }
 
         public bool validateRg(string rg)
         {
@@ -127,6 +127,11 @@ namespace Projeto_Contratos.Cadastros_info
             connection.Open();
             string Endereco = txtRua.Text + "," + txtNum.Text + "," + txtBairro.Text + "," + txtCidade.Text;
             var comando = new MySqlCommand($@"INSERT INTO locador (nome, cpf, rg,profissao, estado_civil, endereco) VALUES (@nome,@cpf,@rg,@profissao,@estadocivil,@endereco)", connection);
+            if(txtNome.Text == "" ||txtCPF.Text == "" || txtRG.Text == "" || txtProfissao.Text == "" ||txtNum.Text == "" ||txtRua.Text == "" ||txtCidade.Text == "" ||txtBairro.Text == "" )
+            {
+                SiteMaster.ExibirAlert(this, "Preencha todos os campos!");
+                return;
+            }
             comando.Parameters.Add(new MySqlParameter("nome", txtNome.Text));
             comando.Parameters.Add(new MySqlParameter("cpf", txtCPF.Text));
             comando.Parameters.Add(new MySqlParameter("rg", txtRG.Text));
@@ -142,19 +147,28 @@ namespace Projeto_Contratos.Cadastros_info
 
         protected void txtCPF_TextChanged(object sender, EventArgs e)
         {
-            if (IsCpf(txtCPF.Text)==false)
+            if (IsCpf(txtCPF.Text) == false)
             {
                 lblAlertaCpf.Text = "CPF invalido!";
                 lblAlertaCpf.ForeColor = Color.Red;
-            }                                                       
+            }
+            else
+            {
+                lblAlertaCpf.Text = "";
+
+            }
         }
 
         protected void txtRG_TextChanged(object sender, EventArgs e)
         {
-            if (validateRg(txtRG.Text)==false)
+            if (validateRg(txtRG.Text) == false)
             {
                 lblAlertaRG.Text = "RG invalido";
                 lblAlertaRG.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblAlertaRG.Text = "";
             }
         }
     }
