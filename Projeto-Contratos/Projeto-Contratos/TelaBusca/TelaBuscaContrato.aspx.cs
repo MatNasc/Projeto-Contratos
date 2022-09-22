@@ -11,6 +11,7 @@ namespace Projeto_Contratos.TelaBusca
 {
     public partial class TelaBuscaContrato : System.Web.UI.Page
     {
+
         private MySqlConnection connection;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -35,11 +36,27 @@ namespace Projeto_Contratos.TelaBusca
                 BtnPesquisar_Click(null, null);
             }
 
-            if (e.CommandName == "editar")
+            if (e.CommandName == "Visualizar")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
                 var tabela = (DataTable)Session["tabela"];
-                Response.Redirect("PaginasEditar/EditaImovel.aspx?id=" + tabela.Rows[index]["id"].ToString());
+                var id_contrato = tabela.Rows[index]["id"].ToString();
+
+                int id_locador = 0;
+                int id_locatario = 0;
+                int id_imovel = 0;
+                connection.Open();
+                var commando = new MySqlCommand($"SELECT id_locador, id_locatario, id_imovel FROM contrato WHERE id = {id_contrato}", connection);
+                var reader1 = commando.ExecuteReader();
+                while (reader1.Read())
+                {
+                   id_locador = reader1.GetInt32("id_locador");
+                   id_locatario = reader1.GetInt32("id_locatario");
+                   id_imovel = reader1.GetInt32("id_imovel");
+                }
+                connection.Close();
+                Response.Redirect($"../Cadastros_info/contrato.aspx?id_locador={ id_locador}&id_locatario={ id_locatario}&id_imovel={ id_imovel}&id_contrato={ id_contrato}");
+
             }
 
         }
@@ -68,12 +85,13 @@ namespace Projeto_Contratos.TelaBusca
             connection.Open();
           
             
-            var commando = new MySqlCommand($@"SELECT id_locador,id_locatario,id_imovel,data_inicio,data_fim FROM contrato WHERE {filtro}", connection);
+            var commando = new MySqlCommand($@"SELECT id,id_locador,id_locatario,id_imovel,data_inicio,data_fim FROM contrato WHERE {filtro}", connection);
             var reader = commando.ExecuteReader();
 
             while (reader.Read())
             {
                 var linha = tabela.NewRow();
+                linha["id"] = reader.GetInt32("id");
                 linha["Locador"] = reader.GetInt32("id_locador");
                 linha["Locatario"] = reader.GetInt32("id_locatario");
                 linha["Código do Imóvel"] = reader.GetInt32("id_imovel");

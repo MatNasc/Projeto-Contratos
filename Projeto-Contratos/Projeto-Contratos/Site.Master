@@ -51,7 +51,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Página inicial</a></li>
+                        <li><a runat="server" style="color:aliceblue; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-top:5px; font-size:14px" href="~/">Página inicial</a></li>
                         <!--<li><a runat="server" href="~/About">Sobre</a></li>-->
                         <!--<li><a runat="server" href="~/Contact">Contato</a></li>-->
                         <asp:Button runat="server" ID="btnSair" OnClick="btnSair_Click" Text="Sair" CssClass="btn btn-danger" Style="padding:7px; width:80px;font-size:17px;margin:10px;margin-left:930px " />

@@ -31,13 +31,13 @@ namespace Projeto_Contratos.Cadastros_info
             var id_locador = Request.QueryString["id_locador"].ToString();
             var id_locatario = Request.QueryString["id_locatario"].ToString();
             var id_imovel = Request.QueryString["id_imovel"].ToString();
+            var id_contrato = Request.QueryString["id_contrato"].ToString();
 
             connection.Open();
-            var comando = new MySqlCommand($"SELECT `id`, `data_inicio`, `data_fim` FROM `contrato` WHERE id = (SELECT MAX(id) FROM `contrato`)", connection);
+            var comando = new MySqlCommand($"SELECT `data_inicio`, `data_fim` FROM `contrato` WHERE id = {id_contrato}", connection);
             var reader = comando.ExecuteReader();
             if (reader.Read())
             {
-                var id_contrato = reader.GetInt32("id");
                 datainicio = reader.GetDateTime("data_inicio").ToShortDateString();
                 datatermino = reader.GetDateTime("data_fim").ToShortDateString();
                 var nContrato = id_contrato + 10000;

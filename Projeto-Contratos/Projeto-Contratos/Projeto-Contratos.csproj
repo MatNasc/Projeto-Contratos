@@ -137,6 +137,7 @@
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
     <Content Include="Cadastros_info\Contrato.aspx" />
+    <Content Include="Cadastros_info\print.css" />
 
     <None Include="Connected Services\WSCorreios\configuration91.svcinfo" />
     <None Include="Connected Services\WSCorreios\configuration.svcinfo" />
