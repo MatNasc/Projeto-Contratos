@@ -133,6 +133,7 @@
     <Content Include="Cadastros_info\Cad_Locador.aspx" />
     <Content Include="Cadastros_info\Cad_Locatario.aspx" />
     <Content Include="Cadastros_info\Contrato.aspx" />
+    <Content Include="Cadastros_info\print.css" />
     <Content Include="imgs\backcolor-desf.png" />
     <Content Include="imgs\LogoFinal.jpeg" />
     <Content Include="PaginasEditar\EditaImovel.aspx" />

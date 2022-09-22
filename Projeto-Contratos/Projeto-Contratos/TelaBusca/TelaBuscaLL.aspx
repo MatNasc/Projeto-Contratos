@@ -35,7 +35,7 @@
 
 
 
-                <asp:GridView runat="server" ID="grdClientes2" AutoGenerateColumns="false" OnRowCommand="grdClientes2_RowCommand" Width="100%" AllowPaging="true" PageSize="2" CssClass="table" Style="background-color: black; color: white; width: 60%; margin-left: 250px; border: thin;">
+                <asp:GridView runat="server" ID="grdClientes2" AutoGenerateColumns="false" OnRowCommand="grdClientes2_RowCommand" Width="100%"  CssClass="table" Style="background-color: black; color: white; width: 60%; margin-left: 250px; border: thin;">
 
                     <Columns>
                         <asp:BoundField DataField="nome" HeaderText="NOME" />

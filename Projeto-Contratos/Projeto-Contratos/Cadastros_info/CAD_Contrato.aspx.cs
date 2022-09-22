@@ -89,7 +89,7 @@ namespace Projeto_Contratos.Cadastros_info
             comando.ExecuteNonQuery();
             connection.Close();
             connection.Open();
-            comando = new MySqlCommand($@"SELECT MAX(id) from `contrato`", connection);
+            comando = new MySqlCommand($@"SELECT * from `contrato` WHERE id=(SELECT MAX(id) FROM `contrato`)", connection);
             var reader = comando.ExecuteReader();
             var id_contrato = 0;
             if (reader.Read())
