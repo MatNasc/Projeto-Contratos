@@ -49,13 +49,13 @@
                         <div class="row" style="margin-left: 5px">
                             <asp:Label runat="server" ID="lblCPF" Text="CPF:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                             <br />
-                            <asp:TextBox runat="server" ID="txtCPF" placeholder="Digite seu CPF" OnTextChanged="txtCPF_TextChanged" AutoPostBack="true" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtCPF" OnTextChanged="txtCPF_TextChanged" AutoPostBack="true" placeholder="Digite seu CPF"  Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                             <asp:Label runat="server" ID="lblAlertaCpf"></asp:Label>
                         </div>
                         <div class="row" style="margin-top: 20px; margin-left: 5px">
                             <asp:Label runat="server" ID="lblRG" Text="RG:" Style="font-size: 15px; color: white; font-family: 'Times New Roman', Times, serif"></asp:Label>
                             <br />
-                            <asp:TextBox runat="server" ID="txtRG" placeholder="Digite seu RG" OnTextChanged="txtRG_TextChanged" AutoPostBack="true" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtRG" OnTextChanged="txtRG_TextChanged" AutoPostBack="true" placeholder="Digite seu RG" Width="200px" Height="40px" Style="border-radius: 10px"></asp:TextBox>
                             <asp:Label runat="server" ID="lblAlertaRG"></asp:Label>
                         </div>
                     </div>
