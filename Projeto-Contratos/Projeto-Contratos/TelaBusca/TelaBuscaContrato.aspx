@@ -6,7 +6,7 @@
     <div class="container-principal">
         <div id="main">
             <h1 class="box-title" style="font-family:'Times New Roman'; font-size:70px">Busca de Contratos</h1>
-            <div class="content-box" style="margin-right: 150px; margin-left: 150px; padding-bottom: 150px; margin-top:50px">         
+            <div class="content-box" style="margin-right: 150px; margin-left: 150px; padding-bottom: 150px; margin-top:50px; height:auto;">         
                 <asp:TextBox runat="server" ID="Consultar" placeholder="Digite o nome de um cliente" style="border-radius:10px; border:1px solid #ccc;width:25%; height:40px; padding:20px 20px; display:inline-block; margin-top:50px; margin-left:36%; font-size:16px"></asp:TextBox>
                 <asp:Button runat="server" ID="BtnPesquisar" OnClick="BtnPesquisar_Click" Text="Buscar" class="button" Style="margin-left: 20px; height: 65px;" />
                 <br />

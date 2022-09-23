@@ -24,7 +24,6 @@ namespace Projeto_Contratos.Cadastros_info
         protected string endereçold;
         protected string endereçoim;
         protected string valor;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             connection = new MySqlConnection(SiteMaster.ConnectionString);
@@ -44,6 +43,7 @@ namespace Projeto_Contratos.Cadastros_info
                 tempttllocação = (reader.GetDateTime("data_fim") - reader.GetDateTime("data_inicio")).TotalDays.ToString();
                
             }
+
 
             connection.Close();
 
