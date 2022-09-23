@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Meu aplicativo ASP.NET</title>
+    <title><%: Page.Title %> - Consultoria e ADM</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -47,26 +47,26 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Nome do aplicativo</a>
+                    <!--<a class="navbar-brand"> NOME DO APLICATIVO </a>-->
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Página inicial</a></li>
-                        <li><a runat="server" href="~/About">Sobre</a></li>
-                        <li><a runat="server" href="~/Contact">Contato</a></li>
+                        <li><a runat="server" style="color:aliceblue; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-top:5px; font-size:14px" href="~/">Página inicial</a></li>
+                        <!--<li><a runat="server" href="~/About">Sobre</a></li>-->
+                        <!--<li><a runat="server" href="~/Contact">Contato</a></li>-->
+                        <asp:Button runat="server" ID="btnSair" OnClick="btnSair_Click" Text="Sair" CssClass="btn btn-danger" Style="padding:7px; width:80px;font-size:17px;margin:10px;margin-left:930px " />
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container body-content">
+        <div class="container-fluid">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Meu aplicativo ASP.NET</p>
+                <!--<p>&copy; <%: DateTime.Now.Year %> - Consultoria e Administrção</p>-->
             </footer>
         </div>
-
+       
     </form>
 </body>
 </html>
