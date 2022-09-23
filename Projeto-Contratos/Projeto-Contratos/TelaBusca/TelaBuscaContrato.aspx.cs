@@ -85,18 +85,20 @@ namespace Projeto_Contratos.TelaBusca
             connection.Open();
           
             
-            var commando = new MySqlCommand($@"SELECT id,id_locador,id_locatario,id_imovel,data_inicio,data_fim FROM contrato WHERE {filtro}", connection);
+            var commando = new MySqlCommand($@"SELECT C.id,id_locador,id_locatario,id_imovel,data_inicio,data_fim,LT.nome n_lt,LD.nome n_ld FROM contrato C 
+                INNER JOIN locador LD ON C.id_locador = LD.id 
+                INNER JOIN locatario LT ON C.id_locatario = LT.id WHERE {filtro}", connection);
             var reader = commando.ExecuteReader();
 
             while (reader.Read())
             {
                 var linha = tabela.NewRow();
                 linha["id"] = reader.GetInt32("id");
-                linha["Locador"] = reader.GetInt32("id_locador");
-                linha["Locatario"] = reader.GetInt32("id_locatario");
+                linha["Locador"] = reader.GetString("n_ld");
+                linha["Locatario"] = reader.GetString("n_lt");
                 linha["Código do Imóvel"] = reader.GetInt32("id_imovel");
-                linha["Data de Inicio"] =reader.GetDateTime("data_inicio").ToString();
-                linha["Data de Termino"] = reader.GetDateTime("data_fim");
+                linha["Data de Inicio"] =reader.GetDateTime("data_inicio").ToShortDateString();
+                linha["Data de Termino"] = reader.GetDateTime("data_fim").ToShortDateString();
                 tabela.Rows.Add(linha);
             }
             Session["tabela"] = tabela;
